@@ -36,29 +36,28 @@
         body { background-color: #FDFBF7; color: #1e293b; -webkit-font-smoothing: antialiased; overflow-x: hidden; padding-bottom: 80px; }
         @media (min-width: 768px) { body { padding-bottom: 0; } }
         
-        /* Noise textúra (Digitális mélység) */
         .noise::after {
-            content: "";
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
             background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
             opacity: 0.02; z-index: 100; pointer-events: none;
         }
 
-        /* Háttér Blobok stílusa */
-        .animated-bg-blob {
-            position: absolute; filter: blur(100px); z-index: 0; opacity: 0.4;
-            pointer-events: none; /* Ne akadályozza a kattintást */
-        }
-
-        /* Hover és árnyékok */
+        .animated-bg-blob { position: absolute; filter: blur(100px); z-index: 0; opacity: 0.4; pointer-events: none; }
         .soft-shadow { box-shadow: 0 10px 40px -10px rgba(11, 79, 54, 0.08); }
-        
-        /* GSAP kezdeti állapot (elrejtve) */
         .gsap-reveal { opacity: 0; visibility: hidden; }
+        
+        .card-hover { transition: all 0.4s ease; }
+        .card-hover:hover { transform: translateY(-5px); box-shadow: 0 20px 40px -10px rgba(11, 79, 54, 0.12); }
+        
+        .img-card { overflow: hidden; position: relative; }
+        .img-card img { transition: transform 0.6s ease; width: 100%; height: 100%; object-fit: cover; }
+        .img-card:hover img { transform: scale(1.05); }
 
-        /* Naptár egyedi stílusa */
         .flatpickr-calendar { background: white !important; border-radius: 20px !important; border: 1px solid rgba(0,0,0,0.05) !important; box-shadow: 0 10px 40px -10px rgba(11, 79, 54, 0.1) !important; font-family: 'Plus Jakarta Sans', sans-serif !important; }
         .flatpickr-day.selected { background: #10B981 !important; border-color: #10B981 !important; }
+        
+        /* Biztonsági szürke háttér, ha a képet még nem töltötted fel a GitHubra */
+        .img-fallback { background-color: #cbd5e1; display: flex; align-items: center; justify-content: center; color: #64748b; font-size: 0.875rem; text-align: center; padding: 1rem;}
     </style>
 </head>
 <body class="bg-earthbeige relative noise">
@@ -109,13 +108,12 @@
             </div>
 
             <div id="hero-image" class="relative lg:ml-10">
-                <div class="relative w-full aspect-[4/3] rounded-[2.5rem] shadow-2xl overflow-hidden bg-gradient-to-br from-turq to-deepgreen">
-                    <img src="https://images.pexels.com/photos/11545041/pexels-photo-11545041.jpeg?auto=compress&cs=tinysrgb&w=800" 
-                         alt="Modern ipari logisztika" 
-                         class="absolute inset-0 w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-deepgreen/60 to-transparent"></div>
+                <div class="relative w-full aspect-[4/3] rounded-[2.5rem] shadow-2xl overflow-hidden img-fallback">
+                    <img src="hero.jpg" alt="Kérjük, töltse fel a hero.jpg képet a GitHubra" class="absolute inset-0 w-full h-full object-cover z-10">
+                    <div class="absolute inset-0 bg-gradient-to-t from-deepgreen/60 to-transparent z-20"></div>
+                    <span class="relative z-0">Ha ezt látod, töltsd fel a hero.jpg-t a GitHub mappába!</span>
                 </div>
-                <div id="hero-badge" class="absolute -left-6 top-16 bg-white rounded-2xl p-4 shadow-xl border border-gray-100 flex gap-4">
+                <div id="hero-badge" class="absolute -left-6 top-16 bg-white rounded-2xl p-4 shadow-xl border border-gray-100 flex gap-4 z-30">
                     <div class="w-12 h-12 bg-turq/10 text-turq rounded-full flex items-center justify-center text-xl">
                         <i class="fa-solid fa-truck-fast"></i>
                     </div>
@@ -137,7 +135,6 @@
                     <h3 class="text-xl font-bold text-deepgreen mb-2 tracking-tight">Hulladéknaptár</h3>
                     <p class="text-sm text-slate mb-6 font-light">Válassza ki a dátumot, és megmutatjuk a szállítási rendet!</p>
                 </div>
-                
                 <div class="flex gap-2 relative">
                     <i class="fa-regular fa-calendar-check absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"></i>
                     <input type="text" id="datepicker-input" placeholder="Kattintson ide..." class="w-full bg-gray-50 border border-gray-200 rounded-full px-5 py-3 pl-12 text-sm focus:outline-none focus:border-turq cursor-pointer transition">
@@ -152,12 +149,10 @@
                     <h3 class="text-xl font-bold text-white mb-2 tracking-tight">Szelektív Kisokos Pro</h3>
                     <p class="text-sm text-white/80 mb-6 font-light">Írja be a hulladékot, és megmondjuk, hova dobja! (Pl: 'PET palack')</p>
                 </div>
-                
                 <div class="flex gap-2 relative z-10 mb-2">
                     <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-white/50"></i>
                     <input type="text" id="kisokos-kereso" placeholder="Mit dobna ki? Írja be..." class="w-full bg-white/10 border border-white/10 rounded-full px-5 py-3 pl-12 text-sm text-white placeholder-white/50 focus:outline-none focus:border-turq transition">
                 </div>
-                
                 <a onclick="openKisokos()" class="text-center bg-white/20 text-white w-full py-3 rounded-full text-sm font-semibold hover:bg-white/30 transition backdrop-blur-sm cursor-pointer">
                     Teljes böngészés <i class="fa-solid fa-arrow-right ml-1"></i>
                 </a>
@@ -178,15 +173,16 @@
 
     <section id="szolgaltatasok" class="py-24 px-4 bg-white relative z-10">
         <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16 reveal">
+            <div class="text-center mb-16 gsap-reveal">
                 <h2 class="text-3xl md:text-5xl font-extrabold text-deepgreen mb-4">Komplex Megoldások</h2>
-                <p class="text-slate max-w-2xl mx-auto text-lg font-light">Hulladékok szakszerű kezelése a legmagasabb minőségi sztenderdek szerint, staggered animációval.</p>
+                <p class="text-slate max-w-2xl mx-auto text-lg font-light">Hulladékok szakszerű kezelése a legmagasabb minőségi sztenderdek szerint.</p>
             </div>
 
             <div id="service-grid" class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="service-card img-card bg-earthbeige rounded-[2.5rem] reveal border border-gray-100 flex flex-col card-hover gsap-reveal">
-                    <div class="h-52 overflow-hidden rounded-t-[2.5rem]">
-                        <img src="https://images.pexels.com/photos/11545041/pexels-photo-11545041.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Ipari" class="w-full h-full object-cover">
+                <div class="service-card img-card bg-earthbeige rounded-[2.5rem] border border-gray-100 flex flex-col card-hover gsap-reveal">
+                    <div class="h-52 overflow-hidden rounded-t-[2.5rem] img-fallback relative">
+                        <img src="szolg1.jpg" alt="Veszélyes hulladék" class="absolute inset-0 z-10">
+                        <span class="relative z-0">Hiányzik: szolg1.jpg</span>
                     </div>
                     <div class="p-8 flex-grow">
                         <div class="inline-block px-3 py-1 bg-turq/10 text-turq rounded-full text-xs font-bold mb-4 uppercase">ADR Szállítás</div>
@@ -195,9 +191,10 @@
                     </div>
                 </div>
 
-                <div class="service-card img-card bg-earthbeige rounded-[2.5rem] reveal border border-gray-100 flex flex-col card-hover gsap-reveal">
-                    <div class="h-52 overflow-hidden rounded-t-[2.5rem]">
-                        <img src="https://images.pexels.com/photos/12386/pexels-photo-12386.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Konténer" class="w-full h-full object-cover">
+                <div class="service-card img-card bg-earthbeige rounded-[2.5rem] border border-gray-100 flex flex-col card-hover gsap-reveal">
+                    <div class="h-52 overflow-hidden rounded-t-[2.5rem] img-fallback relative">
+                        <img src="szolg2.jpg" alt="Inert hulladék" class="absolute inset-0 z-10">
+                        <span class="relative z-0">Hiányzik: szolg2.jpg</span>
                     </div>
                     <div class="p-8 flex-grow">
                         <div class="inline-block px-3 py-1 bg-accent/10 text-accent rounded-full text-xs font-bold mb-4 uppercase">Nagy Kapacitás</div>
@@ -206,9 +203,10 @@
                     </div>
                 </div>
 
-                <div class="service-card img-card bg-earthbeige rounded-[2.5rem] reveal border border-gray-100 flex flex-col card-hover gsap-reveal">
-                    <div class="h-52 overflow-hidden rounded-t-[2.5rem]">
-                        <img src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Tanácsadás" class="w-full h-full object-cover">
+                <div class="service-card img-card bg-earthbeige rounded-[2.5rem] border border-gray-100 flex flex-col card-hover gsap-reveal">
+                    <div class="h-52 overflow-hidden rounded-t-[2.5rem] img-fallback relative">
+                        <img src="szolg3.jpg" alt="Tanácsadás" class="absolute inset-0 z-10">
+                        <span class="relative z-0">Hiányzik: szolg3.jpg</span>
                     </div>
                     <div class="p-8 flex-grow">
                         <div class="inline-block px-3 py-1 bg-deepgreen/10 text-deepgreen rounded-full text-xs font-bold mb-4 uppercase">Körforgás</div>
@@ -220,12 +218,13 @@
         </div>
     </section>
 
-    <section id="geppark" class="relative py-40 px-4 flex items-center justify-center overflow-hidden">
-        <div class="absolute inset-0 z-0 bg-deepgreen">
-            <img src="https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?auto=format&fit=crop&w=1920&q=80" alt="Modern válogató üzem" class="w-full h-full object-cover opacity-30 mix-blend-overlay">
+    <section id="geppark" class="relative py-40 px-4 flex items-center justify-center overflow-hidden img-fallback">
+        <div class="absolute inset-0 z-0 bg-deepgreen flex items-center justify-center text-white/50">
+            <span>Hiányzik a háttér: tech.jpg</span>
+            <img src="tech.jpg" alt="Válogató üzem" class="absolute inset-0 w-full h-full object-cover opacity-30 mix-blend-overlay z-10">
         </div>
         
-        <div id="tech-content" class="relative z-10 text-center max-w-4xl mx-auto gsap-reveal">
+        <div id="tech-content" class="relative z-20 text-center max-w-4xl mx-auto gsap-reveal">
             <h2 class="text-4xl md:text-6xl font-extrabold text-white mb-6">M.I. alapú Hulladékválogatás</h2>
             <p class="text-lg md:text-xl text-white/80 mb-10 font-light px-4 leading-relaxed">
                 A 2026-os hazai trendeknek megfelelően gépparkunk AI-támogatott optikai szortírozókkal dolgozik. Minimalizáljuk a lerakóba kerülő hulladékot, és maximalizáljuk az újrahasznosítást.
@@ -244,8 +243,42 @@
         </div>
     </section>
 
-    <section id="kapcsolat" class="py-24 px-4 bg-earthbeige border-t border-gray-100 relative z-10">
-        <div class="max-w-4xl mx-auto bg-white rounded-[2.5rem] p-8 md:p-16 soft-shadow border border-gray-100 reveal gsap-reveal relative overflow-hidden">
+    <section id="blog" class="py-24 px-4 bg-earthbeige relative z-10">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 gsap-reveal">
+                <h2 class="text-3xl md:text-5xl font-extrabold text-deepgreen mb-4">Szakmai Hírek</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <article class="bg-white rounded-[2rem] p-6 soft-shadow flex flex-col sm:flex-row gap-6 card-hover cursor-pointer border border-gray-100 gsap-reveal">
+                    <div class="w-full sm:w-40 h-40 rounded-xl overflow-hidden img-fallback relative flex-shrink-0">
+                        <img src="blog1.jpg" alt="Blog 1" class="absolute inset-0 w-full h-full object-cover z-10">
+                        <span class="relative z-0 text-xs">blog1.jpg</span>
+                    </div>
+                    <div class="flex flex-col justify-center">
+                        <div class="text-xs font-bold text-accent uppercase tracking-wider mb-2">Technológia</div>
+                        <h3 class="text-xl font-bold text-deepgreen mb-2">MI-alapú válogatók a hazai hulladékgazdálkodásban</h3>
+                        <p class="text-sm text-slate line-clamp-2">Hogyan segíti a mesterséges intelligencia a körforgásos gazdaságot.</p>
+                    </div>
+                </article>
+                
+                <article class="bg-white rounded-[2rem] p-6 soft-shadow flex flex-col sm:flex-row gap-6 card-hover cursor-pointer border border-gray-100 gsap-reveal">
+                    <div class="w-full sm:w-40 h-40 rounded-xl overflow-hidden img-fallback relative flex-shrink-0">
+                        <img src="blog2.jpg" alt="Blog 2" class="absolute inset-0 w-full h-full object-cover z-10">
+                        <span class="relative z-0 text-xs">blog2.jpg</span>
+                    </div>
+                    <div class="flex flex-col justify-center">
+                        <div class="text-xs font-bold text-turq uppercase tracking-wider mb-2">Jogszabályok 2026</div>
+                        <h3 class="text-xl font-bold text-deepgreen mb-2">Digitális Termékútlevél (DPP) bevezetése</h3>
+                        <p class="text-sm text-slate line-clamp-2">Az új uniós előírások értelmében az alapanyagok nyomon követhetővé válnak.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="kapcsolat" class="py-24 px-4 bg-white border-t border-gray-100 relative z-10">
+        <div class="max-w-4xl mx-auto bg-earthbeige rounded-[2.5rem] p-8 md:p-16 soft-shadow border border-gray-100 gsap-reveal relative overflow-hidden">
             <div class="absolute top-0 right-0 w-32 h-32 bg-accent/10 rounded-bl-full"></div>
             
             <h2 class="text-3xl md:text-4xl font-extrabold text-deepgreen mb-2 relative z-10">Kérjen árajánlatot!</h2>
@@ -254,14 +287,14 @@
             <form id="contact-form" class="space-y-6 relative z-10">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                        <input type="text" required placeholder="Név / Cégnév" class="form-input w-full bg-gray-50 border border-gray-200 rounded-2xl px-5 py-4 focus:outline-none focus:border-turq focus:ring-1 focus:ring-turq transition text-sm">
+                        <input type="text" required placeholder="Név / Cégnév" class="form-input w-full bg-white border border-gray-200 rounded-2xl px-5 py-4 focus:outline-none focus:border-turq focus:ring-1 focus:ring-turq transition text-sm">
                     </div>
                     <div>
-                        <input type="email" required placeholder="E-mail cím" class="form-input w-full bg-gray-50 border border-gray-200 rounded-2xl px-5 py-4 focus:outline-none focus:border-turq focus:ring-1 focus:ring-turq transition text-sm">
+                        <input type="email" required placeholder="E-mail cím" class="form-input w-full bg-white border border-gray-200 rounded-2xl px-5 py-4 focus:outline-none focus:border-turq focus:ring-1 focus:ring-turq transition text-sm">
                     </div>
                 </div>
                 <div>
-                    <select required class="form-input w-full bg-gray-50 border border-gray-200 rounded-2xl px-5 py-4 focus:outline-none focus:border-turq focus:ring-1 focus:ring-turq text-slate-600 transition text-sm">
+                    <select required class="form-input w-full bg-white border border-gray-200 rounded-2xl px-5 py-4 focus:outline-none focus:border-turq focus:ring-1 focus:ring-turq text-slate-600 transition text-sm">
                         <option value="" disabled selected>Válasszon szolgáltatást...</option>
                         <option>Ipari / Veszélyes hulladék szállítás</option>
                         <option>Építési / Inert konténer rendelés</option>
@@ -269,7 +302,7 @@
                     </select>
                 </div>
                 <div>
-                    <textarea rows="4" required placeholder="Hulladék pontos típusa és becsült mennyisége..." class="form-input w-full bg-gray-50 border border-gray-200 rounded-2xl px-5 py-4 focus:outline-none focus:border-turq focus:ring-1 focus:ring-turq transition resize-none text-sm"></textarea>
+                    <textarea rows="4" required placeholder="Hulladék pontos típusa és becsült mennyisége..." class="form-input w-full bg-white border border-gray-200 rounded-2xl px-5 py-4 focus:outline-none focus:border-turq focus:ring-1 focus:ring-turq transition resize-none text-sm"></textarea>
                 </div>
                 <button type="submit" id="submit-btn" class="w-full bg-deepgreen text-white font-bold py-5 rounded-2xl hover:bg-[#083A28] transition-all duration-300 shadow-lg shadow-deepgreen/20 text-base md:text-lg">
                     Üzenet Küldése <i class="fa-solid fa-paper-plane ml-2"></i>
@@ -278,8 +311,8 @@
         </div>
     </section>
 
-    <footer class="py-12 px-6 border-t border-gray-100 text-center bg-white relative z-10">
-        <p class="text-sm text-gray-500 font-light">
+    <footer class="py-12 px-6 border-t border-gray-100 text-center bg-deepgreen text-white relative z-10">
+        <p class="text-sm text-white/60 font-light">
             &copy; 2026 VeszélyesHulladék.net Elite Pro. Tiszta környezet, biztonságos jövő.
         </p>
     </footer>
@@ -314,208 +347,87 @@
             <button onclick="closeKisokos()" class="absolute top-5 right-5 w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-slate-600 hover:bg-gray-200 transition">
                 <i class="fa-solid fa-xmark text-xl"></i>
             </button>
-            
             <h2 class="text-3xl font-extrabold text-deepgreen mb-6 flex items-center gap-3">
                 <i class="fa-solid fa-recycle text-turq"></i> Szelektív Kisokos
             </h2>
-            
             <div class="relative mb-6">
                 <i class="fa-solid fa-magnifying-glass absolute left-5 top-1/2 -translate-y-1/2 text-slate-400"></i>
-                <input type="text" id="modal-kereso" placeholder="Mit dobna ki? Írja be ide... (Pl: sörösüveg)" class="w-full bg-gray-50 border border-gray-200 rounded-full px-6 py-4 pl-14 focus:outline-none focus:border-turq transition text-sm">
+                <input type="text" id="modal-kereso" placeholder="Mit dobna ki? (Pl: sörösüveg)" class="w-full bg-gray-50 border border-gray-200 rounded-full px-6 py-4 pl-14 focus:outline-none focus:border-turq transition text-sm">
             </div>
-            
             <div id="kisokos-eredmeny-doboz" class="hidden min-h-[150px] p-6 rounded-2xl bg-earthbeige border border-gray-100 flex flex-col items-center justify-center text-center animate-[fadeUp_0.3s_ease]">
-                </div>
+            </div>
         </div>
     </div>
 
     <script>
-        // --- 1. GSAP ALAP BEÁLLÍTÁSOK ---
         gsap.registerPlugin(ScrollTrigger);
 
-        // GSAP Vajpuha megjelenési animációk az oldal betöltésekor
         window.addEventListener("load", () => {
-            gsap.set(".gsap-reveal", { autoAlpha: 1 }); // Láthatóvá tesszük, de GSAP kezeli az animációt
-            
+            gsap.set(".gsap-reveal", { autoAlpha: 1 }); 
             const tlHero = gsap.timeline({ defaults: { ease: "power4.out" } });
             tlHero.from("#navbar", { y: -100, opacity: 0, duration: 1 })
                   .from("#hero-text > *", { y: 50, opacity: 0, duration: 1.2, stagger: 0.1 }, "-=0.8")
                   .from("#hero-image", { x: 50, opacity: 0, scale: 0.9, duration: 1.5 }, "-=1")
                   .from("#hero-badge", { x: -30, opacity: 0, scale: 0.8, duration: 1 }, "-=1");
 
-            // AI Robot folyamatos, lassú pulzálása
             gsap.to("#ai-robot", { scale: 1.05, duration: 1.5, repeat: -1, yoyo: true, ease: "sine.inOut" });
         });
 
-        // --- 2. GSAP SCROLLANIMÁCIÓK ---
-        // Bento kártyák és szolgáltatások fokozatos megjelenése (stagger)
-        gsap.from(".bento-item", {
-            scrollTrigger: { trigger: "#ux-centre", start: "top 80%" },
-            y: 60, opacity: 0, duration: 1, stagger: 0.2, ease: "back.out(1.2)"
+        gsap.from(".bento-item", { scrollTrigger: { trigger: "#ux-centre", start: "top 80%" }, y: 60, opacity: 0, duration: 1, stagger: 0.2, ease: "back.out(1.2)" });
+        gsap.utils.toArray('.gsap-reveal').forEach((el) => {
+            gsap.from(el, { scrollTrigger: { trigger: el, start: "top 85%" }, y: 50, opacity: 0, duration: 1, ease: "power3.out" });
         });
 
-        // Szolgáltatás kártyák beúszása
-        gsap.from(".service-card", {
-            scrollTrigger: { trigger: "#service-grid", start: "top 85%" },
-            y: 50, opacity: 0, duration: 1.2, stagger: 0.15, ease: "power4.out"
-        });
-
-        // Tech banner mélységérzete (zoom és parallax)
-        gsap.from("#tech-content", {
-            scrollTrigger: { trigger: "#geppark", start: "top 70%", toggleActions: "play none none reverse" },
-            scale: 0.9, opacity: 0, duration: 1.5, ease: "expo.out"
-        });
-
-        // --- 3. DINAMIKUS, EGÉRKÖVETŐ HÁTTÉR (GSAP) ---
-        // Asztali gépen követi az egeret
         if (window.innerWidth >= 768) {
             document.addEventListener("mousemove", (event) => {
-                const mouseX = event.clientX;
-                const mouseY = event.clientY;
-                // Mozgatjuk a blobokat finom parallax effektussal
+                const mouseX = event.clientX; const mouseY = event.clientY;
                 gsap.to("#blob-1", { x: (mouseX / 30), y: (mouseY / 30), duration: 1.5, ease: "power2.out" });
                 gsap.to("#blob-2", { x: -(mouseX / 40), y: -(mouseY / 40), duration: 2, ease: "power2.out" });
             });
-        } else {
-            // Mobilon csak magától mozog lassan (Blob 1)
-            gsap.to("#blob-1", { x: 50, y: -30, duration: 10, repeat: -1, yoyo: true, ease: "sine.inOut" });
         }
 
-        // --- 4. VALÓDI INTERAKTÍV NAPTÁR (Flatpickr) ---
         flatpickr("#datepicker-input", {
-            locale: "hu",
-            dateFormat: "Y. F d., l", // Magyaros dátumformátum
-            minDate: "today", // Csak jövőbeli dátumokat lehet választani
-            onChange: function(selectedDates, dateStr, instance) {
-                const eredmenyDooboz = document.getElementById('naptar-eredmeny');
-                
-                // Mivel demó, szimuláljuk az eredményt
-                eredmenyDooboz.innerHTML = `
-                    <div class="p-4 bg-green-50 border border-green-200 rounded-xl text-sm text-green-800 flex items-start gap-3 animate-[fadeUp_0.4s_ease]">
-                        <i class="fa-solid fa-truck-ramp-box mt-0.5 text-green-600 text-base"></i>
-                        <div>
-                            A választott dátumon (<strong class="text-green-950">${dateStr}</strong>) a területén a következő szállítás várható: 
-                            <br><strong class="text-green-950">Veszélyes Vegyi- és Fáradt olaj hulladék.</strong> 
-                            <br>Kérjük, legkésőbb 07:00-ig helyezze ki a tárolót!
-                        </div>
-                    </div>`;
-                
-                // GSAP-pel ráanimálunk az eredményre
-                gsap.from(eredmenyDooboz.firstChild, { opacity: 0, y: 10, duration: 0.4, ease: "power2.out" });
+            locale: "hu", dateFormat: "Y. F d., l", minDate: "today",
+            onChange: function(selectedDates, dateStr) {
+                const eredmeny = document.getElementById('naptar-eredmeny');
+                eredmeny.innerHTML = `<div class="p-4 bg-green-50 border border-green-200 rounded-xl text-sm text-green-800"><i class="fa-solid fa-truck text-green-600"></i> Választott dátum: <b>${dateStr}</b> - Szállítás: Veszélyes hulladék.</div>`;
+                gsap.from(eredmeny.firstChild, { opacity: 0, y: 10, duration: 0.4 });
             }
         });
 
-        // --- 5. VALÓDI INTERAKTÍV KISOKOS KERESŐVEL ÉS ADATBÁZISSAL ---
-        // Demó adatbázis a leggyakoribb hulladékokhoz
         const HULLADEK_ADATBAZIS = {
-            "pet palack": { "hova": "Szelektív Műanyag (Sárga)", "icon": "fa-bottle-water", "color": "text-yellow-500", "szov": "Kérjük, lapítsa ki a palackot!" },
-            "pet": { "hova": "Szelektív Műanyag (Sárga)", "icon": "fa-bottle-water", "color": "text-yellow-500", "szov": "PET palackok, flakonok helye." },
-            "doboz": { "hova": "Szelektív Papír (Kék)", "icon": "fa-box", "color": "text-blue-500", "szov": "Tisztán, kilapítva kerülhet ide!" },
-            "karton": { "hova": "Szelektív Papír (Kék)", "icon": "fa-box", "color": "text-blue-500", "szov": "Mindenféle karton és papírdoboz." },
-            "ujsag": { "hova": "Szelektív Papír (Kék)", "icon": "fa-newspaper", "color": "text-blue-500", "szov": "Újságok, magazinok, irodai papír." },
-            "soros doboz": { "hova": "Szelektív Fém (Szürke)", "icon": "fa-can-food", "color": "text-slate-500", "szov": "Kérjük, öblítse ki!" },
-            "konzerv": { "hova": "Szelektív Fém (Szürke)", "icon": "fa-can-food", "color": "text-slate-500", "szov": "Üres konzervdobozok." },
-            "uveg": { "hova": "Szelektív Üveg (Zöld)", "icon": "fa-wine-bottle", "color": "text-green-500", "szov": "Öblítse ki, és kupak nélkül dobja be!" },
-            "sorosuveg": { "hova": "Szelektív Üveg (Zöld)", "icon": "fa-wine-bottle", "color": "text-green-500", "szov": "Szín szerint válogatva!" },
-            "festek": { "hova": "Veszélyes Hulladék (Szigorúan TILOS!)", "icon": "fa-flask-vial", "color": "text-red-500", "szov": "TILOS a háztartási kukába dobni! Kérjen tőlünk elszállítást!" },
-            "olaj": { "hova": "Veszélyes Hulladék (Szigorúan TILOS!)", "icon": "fa-droplet", "color": "text-red-500", "szov": "Használt étolaj és fáradt olaj." },
-            "akku": { "hova": "Veszélyes Hulladék (Szigorúan TILOS!)", "icon": "fa-car-battery", "color": "text-red-500", "szov": "Akkumulátorok és elemek." },
-            "elem": { "hova": "Veszélyes Hulladék", "icon": "fa-battery-half", "color": "text-red-500", "szov": "Gyűjtőpontokra vagy elszállítással." },
-            "gyogyszer": { "hova": "Veszélyes Hulladék", "icon": "fa-pills", "color": "text-red-500", "szov": "Lejárt gyógyszerek a gyógyszertárakba!" }
+            "pet": { "hova": "Sárga (Műanyag)", "icon": "fa-bottle-water", "color": "text-yellow-500", "szov": "Lapítsa ki!" },
+            "papir": { "hova": "Kék (Papír)", "icon": "fa-box", "color": "text-blue-500", "szov": "Csak tiszta papír!" },
+            "uveg": { "hova": "Zöld (Üveg)", "icon": "fa-wine-bottle", "color": "text-green-500", "szov": "Kupak nélkül!" },
+            "festek": { "hova": "Veszélyes", "icon": "fa-flask", "color": "text-red-500", "szov": "Tilos a kukába dobni!" }
         };
-
-        // Keresés figyelése a főoldali bentón
-        document.getElementById('kisokos-kereso').addEventListener('input', function(e) {
-            kisokosKereses(e.target.value);
-        });
-
-        // Keresés figyelése a modalban
-        document.getElementById('modal-kereso').addEventListener('input', function(e) {
-            kisokosKereses(e.target.value);
-        });
 
         function kisokosKereses(inputScov) {
             const input = inputScov.toLowerCase().trim();
-            const eredmenyDoboz = document.getElementById('kisokos-eredmeny-doboz');
+            const e = document.getElementById('kisokos-eredmeny-doboz');
+            if(!input) { e.classList.add('hidden'); return; }
             
-            if(input.length === 0) {
-                eredmenyDoboz.classList.add('hidden');
-                return;
-            }
-            
-            if(HULLADEK_ADATBAZIS[input]) {
-                const data = HULLADEK_ADATBAZIS[input];
-                eredmenyDoboz.innerHTML = `
-                    <div class="w-20 h-20 rounded-full border border-gray-100 bg-white flex items-center justify-center ${data.color} text-4xl shadow-sm mb-4">
-                        <i class="fa-solid ${data.icon}"></i>
-                    </div>
-                    <p class="font-light text-sm text-slate-500 uppercase tracking-widest mb-1">A helyes kuka:</p>
-                    <p class="text-xl md:text-2xl font-bold text-deepgreen mb-3">${data.hova}</p>
-                    <p class="text-xs text-slate-600 font-medium">${data.szov}</p>`;
-                eredmenyDoboz.classList.remove('hidden');
+            // Egyszerűsített keresés a demó kedvéért
+            let found = Object.keys(HULLADEK_ADATBAZIS).find(k => input.includes(k));
+            if(found) {
+                const data = HULLADEK_ADATBAZIS[found];
+                e.innerHTML = `<div class="text-4xl ${data.color} mb-2"><i class="fa-solid ${data.icon}"></i></div><p class="text-xl font-bold">${data.hova}</p><p class="text-sm">${data.szov}</p>`;
+                e.classList.remove('hidden');
             } else {
-                // Ha nincs találat
-                eredmenyDoboz.innerHTML = `
-                    <div class="text-accent text-3xl mb-3"><i class="fa-solid fa-circle-xmark"></i></div>
-                    <p class="text-sm font-semibold text-deepgreen">Nem találjuk ezt a hulladékot (${inputScov}).</p>
-                    <p class="text-xs text-slate-600 mt-1">Próbáljon meg más keresőszót, vagy kérjen segítséget!</p>`;
-                eredmenyDoboz.classList.remove('hidden');
+                e.innerHTML = `<p class="text-red-500 font-bold">Nincs találat.</p>`;
+                e.classList.remove('hidden');
             }
         }
+        document.getElementById('kisokos-kereso').addEventListener('input', e => kisokosKereses(e.target.value));
+        document.getElementById('modal-kereso').addEventListener('input', e => kisokosKereses(e.target.value));
 
-        // 6. Felugró Ablak (Modal) Kezelése (GSAP-pel)
-        const modal = document.getElementById('kisokos-modal');
-        const modalContent = document.getElementById('kisokos-content');
-
-        function openKisokos() {
-            modal.classList.remove('hidden');
-            // GSAP vajpuha fade-in
-            gsap.to(modal, { opacity: 1, duration: 0.3, ease: "power2.out" });
-            gsap.fromTo(modalContent, { scale: 0.9, y: 30 }, { scale: 1, y: 0, duration: 0.5, ease: "back.out(1.5)" });
-            
-            // Fókusz a keresőre a modalban
-            document.getElementById('modal-kereso').focus();
-        }
-
-        function closeKisokos() {
-            // GSAP fade-out
-            gsap.to(modalContent, { scale: 0.9, y: 30, duration: 0.3, ease: "power2.in" });
-            gsap.to(modal, { opacity: 0, duration: 0.3, ease: "power2.in", onComplete: () => {
-                modal.classList.add('hidden');
-                // Alaphelyzetbe állítjuk a keresőt
-                document.getElementById('modal-kereso').value = '';
-                document.getElementById('kisokos-eredmeny-doboz').classList.add('hidden');
-            } });
-        }
-
-        // Zárás Esc billentyűre vagy a háttérre kattintva
-        modal.addEventListener('click', (e) => {
-            if(e.target === modal) closeKisokos();
-        });
-        document.addEventListener('keydown', (e) => {
-            if(e.key === 'Escape' && !modal.classList.contains('hidden')) closeKisokos();
-        });
-
-        // 7. Form Validáció és Interakció (Szimulálva)
+        const modal = document.getElementById('kisokos-modal'), modalContent = document.getElementById('kisokos-content');
+        function openKisokos() { modal.classList.remove('hidden'); gsap.to(modal, { opacity: 1, duration: 0.3 }); gsap.fromTo(modalContent, { scale: 0.9, y: 30 }, { scale: 1, y: 0, duration: 0.5 }); }
+        function closeKisokos() { gsap.to(modal, { opacity: 0, duration: 0.3, onComplete: () => modal.classList.add('hidden') }); }
+        
         document.getElementById('contact-form').addEventListener('submit', function(e) {
             e.preventDefault();
-            const inputs = document.querySelectorAll('.form-input');
-            const submitBtn = document.getElementById('submit-btn');
-            
-            // GSAP vajpuha sikeres animáció a gombra
-            gsap.to(submitBtn, { scale: 1.05, duration: 0.2, yoyo: true, repeat: 1, onComplete: () => {
-                alert('Tökéletes! Üzenetét és adatait megkaptuk. Mérnökeink hamarosan felveszik Önnel a kapcsolatot.');
-                inputs.forEach(i => i.value = ''); // Űrlap törlése
-            } });
-        });
-
-        // Felső menü elhomályosodás görgetéskor
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 10) {
-                document.getElementById('navbar').classList.add('shadow-md');
-            } else {
-                document.getElementById('navbar').classList.remove('shadow-md');
-            }
+            gsap.to('#submit-btn', { scale: 1.05, duration: 0.2, yoyo: true, repeat: 1, onComplete: () => alert('Sikeres küldés!') });
         });
     </script>
 </body>
