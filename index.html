@@ -56,7 +56,6 @@
         .flatpickr-calendar { background: white !important; border-radius: 20px !important; border: 1px solid rgba(0,0,0,0.05) !important; box-shadow: 0 10px 40px -10px rgba(11, 79, 54, 0.1) !important; font-family: 'Plus Jakarta Sans', sans-serif !important; }
         .flatpickr-day.selected { background: #10B981 !important; border-color: #10B981 !important; }
         
-        /* Biztonsági szürke háttér, ha a képet még nem töltötted fel a GitHubra */
         .img-fallback { background-color: #cbd5e1; display: flex; align-items: center; justify-content: center; color: #64748b; font-size: 0.875rem; text-align: center; padding: 1rem;}
     </style>
 </head>
@@ -109,9 +108,8 @@
 
             <div id="hero-image" class="relative lg:ml-10">
                 <div class="relative w-full aspect-[4/3] rounded-[2.5rem] shadow-2xl overflow-hidden img-fallback">
-                    <img src="hero.jpg" alt="Kérjük, töltse fel a hero.jpg képet a GitHubra" class="absolute inset-0 w-full h-full object-cover z-10">
+                    <img src="hero.png" alt="Professzionális hulladékkezelés" class="absolute inset-0 w-full h-full object-cover z-10">
                     <div class="absolute inset-0 bg-gradient-to-t from-deepgreen/60 to-transparent z-20"></div>
-                    <span class="relative z-0">Ha ezt látod, töltsd fel a hero.jpg-t a GitHub mappába!</span>
                 </div>
                 <div id="hero-badge" class="absolute -left-6 top-16 bg-white rounded-2xl p-4 shadow-xl border border-gray-100 flex gap-4 z-30">
                     <div class="w-12 h-12 bg-turq/10 text-turq rounded-full flex items-center justify-center text-xl">
@@ -181,8 +179,7 @@
             <div id="service-grid" class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="service-card img-card bg-earthbeige rounded-[2.5rem] border border-gray-100 flex flex-col card-hover gsap-reveal">
                     <div class="h-52 overflow-hidden rounded-t-[2.5rem] img-fallback relative">
-                        <img src="szolg1.jpg" alt="Veszélyes hulladék" class="absolute inset-0 z-10">
-                        <span class="relative z-0">Hiányzik: szolg1.jpg</span>
+                        <img src="szolg1.png" alt="Veszélyes hulladék" class="absolute inset-0 z-10">
                     </div>
                     <div class="p-8 flex-grow">
                         <div class="inline-block px-3 py-1 bg-turq/10 text-turq rounded-full text-xs font-bold mb-4 uppercase">ADR Szállítás</div>
@@ -193,8 +190,7 @@
 
                 <div class="service-card img-card bg-earthbeige rounded-[2.5rem] border border-gray-100 flex flex-col card-hover gsap-reveal">
                     <div class="h-52 overflow-hidden rounded-t-[2.5rem] img-fallback relative">
-                        <img src="szolg2.jpg" alt="Inert hulladék" class="absolute inset-0 z-10">
-                        <span class="relative z-0">Hiányzik: szolg2.jpg</span>
+                        <img src="szolg2.png" alt="Inert hulladék" class="absolute inset-0 z-10">
                     </div>
                     <div class="p-8 flex-grow">
                         <div class="inline-block px-3 py-1 bg-accent/10 text-accent rounded-full text-xs font-bold mb-4 uppercase">Nagy Kapacitás</div>
@@ -205,8 +201,7 @@
 
                 <div class="service-card img-card bg-earthbeige rounded-[2.5rem] border border-gray-100 flex flex-col card-hover gsap-reveal">
                     <div class="h-52 overflow-hidden rounded-t-[2.5rem] img-fallback relative">
-                        <img src="szolg3.jpg" alt="Tanácsadás" class="absolute inset-0 z-10">
-                        <span class="relative z-0">Hiányzik: szolg3.jpg</span>
+                        <img src="szolg3.png" alt="Tanácsadás" class="absolute inset-0 z-10">
                     </div>
                     <div class="p-8 flex-grow">
                         <div class="inline-block px-3 py-1 bg-deepgreen/10 text-deepgreen rounded-full text-xs font-bold mb-4 uppercase">Körforgás</div>
@@ -220,8 +215,7 @@
 
     <section id="geppark" class="relative py-40 px-4 flex items-center justify-center overflow-hidden img-fallback">
         <div class="absolute inset-0 z-0 bg-deepgreen flex items-center justify-center text-white/50">
-            <span>Hiányzik a háttér: tech.jpg</span>
-            <img src="tech.jpg" alt="Válogató üzem" class="absolute inset-0 w-full h-full object-cover opacity-30 mix-blend-overlay z-10">
+            <img src="tech.png" alt="Válogató üzem" class="absolute inset-0 w-full h-full object-cover opacity-30 mix-blend-overlay z-10">
         </div>
         
         <div id="tech-content" class="relative z-20 text-center max-w-4xl mx-auto gsap-reveal">
@@ -252,8 +246,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <article class="bg-white rounded-[2rem] p-6 soft-shadow flex flex-col sm:flex-row gap-6 card-hover cursor-pointer border border-gray-100 gsap-reveal">
                     <div class="w-full sm:w-40 h-40 rounded-xl overflow-hidden img-fallback relative flex-shrink-0">
-                        <img src="blog1.jpg" alt="Blog 1" class="absolute inset-0 w-full h-full object-cover z-10">
-                        <span class="relative z-0 text-xs">blog1.jpg</span>
+                        <img src="blog1.png" alt="Blog 1" class="absolute inset-0 w-full h-full object-cover z-10">
                     </div>
                     <div class="flex flex-col justify-center">
                         <div class="text-xs font-bold text-accent uppercase tracking-wider mb-2">Technológia</div>
@@ -264,8 +257,7 @@
                 
                 <article class="bg-white rounded-[2rem] p-6 soft-shadow flex flex-col sm:flex-row gap-6 card-hover cursor-pointer border border-gray-100 gsap-reveal">
                     <div class="w-full sm:w-40 h-40 rounded-xl overflow-hidden img-fallback relative flex-shrink-0">
-                        <img src="blog2.jpg" alt="Blog 2" class="absolute inset-0 w-full h-full object-cover z-10">
-                        <span class="relative z-0 text-xs">blog2.jpg</span>
+                        <img src="blog2.png" alt="Blog 2" class="absolute inset-0 w-full h-full object-cover z-10">
                     </div>
                     <div class="flex flex-col justify-center">
                         <div class="text-xs font-bold text-turq uppercase tracking-wider mb-2">Jogszabályok 2026</div>
@@ -407,7 +399,6 @@
             const e = document.getElementById('kisokos-eredmeny-doboz');
             if(!input) { e.classList.add('hidden'); return; }
             
-            // Egyszerűsített keresés a demó kedvéért
             let found = Object.keys(HULLADEK_ADATBAZIS).find(k => input.includes(k));
             if(found) {
                 const data = HULLADEK_ADATBAZIS[found];
