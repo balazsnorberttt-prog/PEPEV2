@@ -2,9 +2,44 @@
 <html lang="hu" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>VeszélyesHulladék.net | Tiszta Jövő | Elite Pro</title>
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>VeszélyesHulladék.net | Professzionális Hulladékkezelés & Veszélyes Hulladék Elszállítás</title>
+    <meta name="description" content="Magyarország vezető veszélyes hulladékkezelő vállalata. ADR szállítás, ipari hulladék elszállítás, ESG tanácsadás és AI-alapú válogatás. 24 órás kiszállás, 100% jogszabályi megfelelés.">
+    <meta name="keywords" content="veszélyes hulladék, hulladékkezelés, ADR szállítás, ipari hulladék, szelektív hulladékgyűjtés, ESG tanácsadás, hulladék elszállítás Budapest, körforgásos gazdaság">
+    <meta name="author" content="VeszélyesHulladék.net">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.veszelyeshulladek.net/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.veszelyeshulladek.net/">
+    <meta property="og:title" content="VeszélyesHulladék.net | Professzionális Hulladékkezelés">
+    <meta property="og:description" content="ADR szállítás, ipari hulladék elszállítás és AI-alapú válogatás. 24 órás kiszállás, 100% jogszabályi megfelelés.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=1200">
+    <meta property="og:locale" content="hu_HU">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="VeszélyesHulladék.net | Hulladékkezelés">
+    <meta name="twitter:description" content="Professzionális veszélyes hulladékkezelés AI-alapú technológiával.">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "VeszélyesHulladék.net",
+      "description": "Professzionális veszélyes hulladékkezelés, ADR szállítás és ESG tanácsadás",
+      "url": "https://www.veszelyeshulladek.net",
+      "telephone": "+36-1-234-5678",
+      "address": {"@type": "PostalAddress", "addressCountry": "HU", "addressLocality": "Budapest"},
+      "openingHours": "Mo-Fr 07:00-18:00",
+      "priceRange": "$$"
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
@@ -12,334 +47,1436 @@
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="https://npmcdn.com/flatpickr/dist/l10n/hu.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: { deepgreen: '#0B4F36', earthbeige: '#FDFBF7', slate: '#475569', accent: '#F97316', turq: '#0D9488' },
-                    fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'], }
+                    colors: {
+                        forest: '#0B4F36',
+                        forestlight: '#166347',
+                        cream: '#FDFBF7',
+                        ink: '#1a2332',
+                        muted: '#64748b',
+                        ember: '#E55B2A',
+                        teal: '#0D9488',
+                        teallight: '#14b8a6',
+                        sage: '#84a98c'
+                    },
+                    fontFamily: {
+                        sans: ['DM Sans', 'sans-serif'],
+                        serif: ['Instrument Serif', 'Georgia', 'serif']
+                    }
                 }
             }
         }
     </script>
 
     <style>
-        body { background-color: #FDFBF7; color: #1e293b; -webkit-font-smoothing: antialiased; overflow-x: hidden; padding-bottom: 80px; }
-        @media (min-width: 768px) { body { padding-bottom: 0; } }
-        .animated-bg-blob { position: absolute; filter: blur(100px); z-index: 0; opacity: 0.4; pointer-events: none; }
-        .soft-shadow { box-shadow: 0 10px 40px -10px rgba(11, 79, 54, 0.08); }
-        .card-hover { transition: all 0.4s ease; }
-        .card-hover:hover { transform: translateY(-5px); box-shadow: 0 20px 40px -10px rgba(11, 79, 54, 0.12); }
-        .img-card { overflow: hidden; position: relative; background-color: #cbd5e1; } /* Szürke háttér betöltésig */
-        .img-card img { transition: transform 0.6s ease; width: 100%; height: 100%; object-fit: cover; }
-        .img-card:hover img { transform: scale(1.05); }
-        .flatpickr-calendar { font-family: 'Plus Jakarta Sans', sans-serif !important; border-radius: 16px !important; border: none !important; box-shadow: 0 10px 40px -10px rgba(0,0,0,0.1) !important;}
-        .flatpickr-day.selected { background: #10B981 !important; border-color: #10B981 !important; }
+        *, *::before, *::after { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            background-color: #FDFBF7;
+            color: #1a2332;
+            font-family: 'DM Sans', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        /* ---- NOISE TEXTURE ---- */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.4;
+        }
+
+        /* ---- BLOBS ---- */
+        .blob {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(120px);
+            pointer-events: none;
+            z-index: 0;
+            animation: blobDrift 20s ease-in-out infinite alternate;
+        }
+        .blob-1 { width: 600px; height: 600px; background: radial-gradient(circle, rgba(13,148,136,0.15), transparent); top: -200px; right: -150px; animation-delay: 0s; }
+        .blob-2 { width: 500px; height: 500px; background: radial-gradient(circle, rgba(11,79,54,0.1), transparent); bottom: 10%; left: -150px; animation-delay: -8s; }
+        .blob-3 { width: 400px; height: 400px; background: radial-gradient(circle, rgba(229,91,42,0.08), transparent); top: 40%; right: 20%; animation-delay: -4s; }
+
+        @keyframes blobDrift {
+            0% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(30px, -20px) scale(1.05); }
+            100% { transform: translate(-15px, 30px) scale(0.97); }
+        }
+
+        /* ---- NAVBAR ---- */
+        #navbar {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            background: rgba(253,251,247,0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        #navbar.scrolled {
+            box-shadow: 0 2px 40px -8px rgba(11,79,54,0.12);
+            background: rgba(253,251,247,0.95);
+        }
+
+        /* ---- HERO ---- */
+        .hero-badge {
+            background: linear-gradient(135deg, rgba(13,148,136,0.12), rgba(13,148,136,0.06));
+            border: 1px solid rgba(13,148,136,0.2);
+            backdrop-filter: blur(8px);
+        }
+
+        /* ---- IMAGE CARDS ---- */
+        .img-wrap {
+            overflow: hidden;
+            position: relative;
+            background: linear-gradient(135deg, #cbd5e1, #94a3b8);
+        }
+        .img-wrap img {
+            transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+            width: 100%; height: 100%; object-fit: cover;
+            display: block;
+        }
+        .img-wrap:hover img { transform: scale(1.06); }
+        .img-wrap .img-placeholder {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #0B4F36 0%, #0D9488 100%);
+            z-index: 1;
+        }
+
+        /* ---- CARDS ---- */
+        .card-lift {
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-lift:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 24px 60px -12px rgba(11, 79, 54, 0.15);
+        }
+
+        /* ---- STATS COUNTER ---- */
+        .stat-number {
+            font-family: 'Instrument Serif', serif;
+            font-size: clamp(3rem, 6vw, 6rem);
+            line-height: 1;
+        }
+
+        /* ---- SCROLL INDICATOR ---- */
+        .scroll-line {
+            width: 1px;
+            height: 60px;
+            background: linear-gradient(to bottom, rgba(11,79,54,0.3), transparent);
+            animation: scrollPulse 2s ease-in-out infinite;
+        }
+        @keyframes scrollPulse {
+            0%, 100% { opacity: 0.4; transform: scaleY(1); }
+            50% { opacity: 1; transform: scaleY(1.2); }
+        }
+
+        /* ---- FLATPICKR ---- */
+        .flatpickr-calendar {
+            font-family: 'DM Sans', sans-serif !important;
+            border-radius: 20px !important;
+            border: 1px solid #e2e8f0 !important;
+            box-shadow: 0 20px 60px -10px rgba(0,0,0,0.15) !important;
+        }
+        .flatpickr-day.selected, .flatpickr-day.selected:hover {
+            background: #0D9488 !important;
+            border-color: #0D9488 !important;
+        }
+        .flatpickr-day:hover { background: rgba(13,148,136,0.1) !important; }
+
+        /* ---- MODAL ---- */
+        #kisokos-modal {
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        #kisokos-modal.open { opacity: 1; visibility: visible; }
+        #kisokos-modal.closed { opacity: 0; visibility: hidden; pointer-events: none; }
+        #kisokos-content {
+            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        #kisokos-modal.open #kisokos-content { transform: scale(1) translateY(0); }
+        #kisokos-modal.closed #kisokos-content { transform: scale(0.95) translateY(10px); }
+
+        /* ---- FORM ---- */
+        .form-field {
+            width: 100%;
+            background: white;
+            border: 1.5px solid #e2e8f0;
+            border-radius: 14px;
+            padding: 1rem 1.25rem;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.875rem;
+            color: #1a2332;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            outline: none;
+            -webkit-appearance: none;
+        }
+        .form-field:focus {
+            border-color: #0D9488;
+            box-shadow: 0 0 0 3px rgba(13,148,136,0.12);
+        }
+        .form-field::placeholder { color: #94a3b8; }
+
+        /* ---- PROCESS LINE ---- */
+        .process-step::before {
+            content: '';
+            position: absolute;
+            top: 24px;
+            left: calc(50% + 24px);
+            width: calc(100% - 48px);
+            height: 2px;
+            background: linear-gradient(to right, #0D9488, rgba(13,148,136,0.2));
+        }
+        .process-step:last-child::before { display: none; }
+
+        /* ---- TICKER ---- */
+        .ticker-wrap { overflow: hidden; white-space: nowrap; }
+        .ticker-track {
+            display: inline-block;
+            animation: tickerScroll 30s linear infinite;
+        }
+        @keyframes tickerScroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* ---- GSAP INITIAL STATE ---- */
+        .reveal { opacity: 0; transform: translateY(30px); }
+
+        /* ---- MOBILE BOTTOM NAV ---- */
+        @media (max-width: 767px) {
+            body { padding-bottom: 72px; }
+            .mobile-nav {
+                position: fixed; bottom: 0; left: 0; right: 0;
+                background: rgba(253,251,247,0.95);
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
+                border-top: 1px solid rgba(0,0,0,0.06);
+                z-index: 50;
+                padding: 8px 0 env(safe-area-inset-bottom, 8px);
+            }
+        }
+
+        /* ---- TRUST LOGOS ---- */
+        .trust-logo {
+            filter: grayscale(1) opacity(0.4);
+            transition: filter 0.3s;
+        }
+        .trust-logo:hover { filter: grayscale(0) opacity(1); }
+
+        /* ---- FLOATING CTA ---- */
+        .floating-phone {
+            animation: phoneFloat 3s ease-in-out infinite;
+        }
+        @keyframes phoneFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-6px); }
+        }
+
+        /* Gradient text */
+        .gradient-text {
+            background: linear-gradient(135deg, #0B4F36 0%, #0D9488 60%, #14b8a6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Underline decoration */
+        .fancy-underline {
+            position: relative;
+            display: inline-block;
+        }
+        .fancy-underline::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #0D9488, #E55B2A);
+            border-radius: 2px;
+        }
+
+        /* Pulse dot */
+        .pulse-dot {
+            width: 8px; height: 8px;
+            background: #10B981;
+            border-radius: 50%;
+            display: inline-block;
+            animation: pulseDot 2s ease-in-out infinite;
+        }
+        @keyframes pulseDot {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(16,185,129,0.4); }
+            50% { box-shadow: 0 0 0 6px rgba(16,185,129,0); }
+        }
+
+        /* Counter animation */
+        .counter { transition: none; }
     </style>
 </head>
-<body class="bg-earthbeige relative">
+<body class="bg-cream relative">
 
-    <div class="animated-bg-blob w-[400px] h-[400px] md:w-[700px] md:h-[700px] bg-turq/20 rounded-full top-[-150px] right-[-100px]"></div>
-    <div class="animated-bg-blob w-[500px] h-[500px] bg-deepgreen/10 rounded-full bottom-[10%] left-[-150px]"></div>
+    <!-- Background blobs -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
 
-    <nav id="navbar" class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
-            <a href="#" class="flex items-center gap-3 relative z-10">
-                <div class="w-10 h-10 bg-deepgreen text-white rounded-xl flex items-center justify-center text-lg shadow-sm">
-                    <i class="fa-solid fa-leaf"></i>
+    <!-- ============================
+         NAVBAR
+    ============================= -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 border-b border-black/5">
+        <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 flex justify-between items-center h-20">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-3 relative z-10 group">
+                <div class="w-10 h-10 bg-forest text-white rounded-xl flex items-center justify-center shadow-sm transition-all group-hover:scale-105 group-hover:bg-forestlight">
+                    <i class="fa-solid fa-leaf text-sm"></i>
                 </div>
-                <span class="font-bold text-xl text-deepgreen tracking-tight">VH<span class="text-slate-400 font-light">.net</span></span>
+                <div class="leading-none">
+                    <span class="font-bold text-lg text-forest tracking-tight block">VH<span class="text-muted font-normal">.net</span></span>
+                    <span class="text-[10px] text-muted font-medium uppercase tracking-widest">Hulladékkezelés</span>
+                </div>
             </a>
-            <div class="hidden md:flex items-center space-x-8 text-sm font-semibold text-slate-600 relative z-10">
-                <a href="#szolgaltatasok" class="hover:text-deepgreen transition-colors">Szolgáltatások</a>
-                <a onclick="openKisokos()" class="hover:text-deepgreen transition-colors cursor-pointer">Szelektív Kisokos</a>
-            </div>
-            <div class="hidden md:flex items-center gap-6 relative z-10">
-                <a href="#kapcsolat" class="text-sm font-bold text-deepgreen hover:text-turq transition-colors">Ajánlatkérés</a>
-                <button class="bg-accent text-white px-6 py-2.5 rounded-full text-sm font-bold hover:bg-orange-500 transition-all shadow-lg shadow-orange-500/20">
-                    <i class="fa-regular fa-user"></i> Belépés
-                </button>
-            </div>
-        </div>
-    </nav>
 
-    <section class="pt-32 pb-24 px-4 sm:px-6 relative z-10">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div class="gsap-anim">
-                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-turq/10 text-turq text-xs font-bold mb-6 uppercase tracking-wider">
-                    <i class="fa-solid fa-shield-check"></i> 100% Megfelelés garantálva
-                </div>
-                <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-deepgreen mb-6 leading-tight tracking-tight break-words">
-                    Innováció a <br><span class="text-turq">hulladék&shy;kezelésben.</span>
-                </h1>
-                <p class="text-base md:text-lg text-slate mb-8 leading-relaxed max-w-lg font-light">
-                    A legmodernebb gépparkkal és AI-támogatott logisztikával biztosítjuk cége veszélyes hulladékainak törvényes, zöld útját országszerte.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="#kapcsolat" class="inline-block bg-deepgreen text-white text-center px-8 py-4 rounded-xl font-bold hover:bg-[#083A28] transition-colors shadow-lg shadow-deepgreen/20">
-                        Azonnali Árajánlat
-                    </a>
-                </div>
-            </div>
-            <div class="relative lg:ml-10 gsap-anim">
-                <div class="relative w-full aspect-[4/3] rounded-[2.5rem] shadow-2xl overflow-hidden bg-gray-200">
-                    <img src="hero.png" alt="Logisztika" class="absolute inset-0 w-full h-full object-cover z-10" onerror="this.style.display='none'">
-                    <div class="absolute inset-0 bg-gradient-to-t from-deepgreen/60 to-transparent z-20"></div>
-                </div>
-                <div class="absolute -left-6 top-16 bg-white rounded-2xl p-4 shadow-xl border border-gray-100 flex gap-4 z-30">
-                    <div class="w-12 h-12 bg-turq/10 text-turq rounded-full flex items-center justify-center text-xl">
-                        <i class="fa-solid fa-truck-fast"></i>
-                    </div>
-                    <div>
-                        <p class="font-extrabold text-deepgreen text-lg leading-tight">24 órán</p>
-                        <p class="text-[10px] text-slate-500 font-bold uppercase tracking-wider">belüli elszállítás</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-10 px-4 -mt-12 relative z-20">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="bento-item bg-white rounded-[2rem] p-8 soft-shadow border border-gray-100 flex flex-col justify-between">
-                <div>
-                    <i class="fa-regular fa-calendar-days text-3xl text-accent mb-4"></i>
-                    <h3 class="text-xl font-bold text-deepgreen mb-2 tracking-tight">Hulladéknaptár</h3>
-                    <p class="text-sm text-slate mb-6 font-light">Válassza ki a dátumot, és megmutatjuk a szállítási rendet!</p>
-                </div>
-                <div class="flex gap-2 relative">
-                    <i class="fa-regular fa-calendar-check absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"></i>
-                    <input type="text" id="datepicker-input" placeholder="Kattintson ide..." class="w-full bg-gray-50 border border-gray-200 rounded-full px-5 py-3 pl-12 text-sm focus:outline-none focus:border-turq cursor-pointer transition">
-                </div>
-                <div id="naptar-eredmeny" class="mt-4"></div>
+            <!-- Desktop nav -->
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-muted relative z-10">
+                <a href="#szolgaltatasok" class="hover:text-forest transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-forest after:transition-all hover:after:w-full">Szolgáltatások</a>
+                <a href="#folyamat" class="hover:text-forest transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-forest after:transition-all hover:after:w-full">Hogyan működik</a>
+                <a href="#blog" class="hover:text-forest transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-forest after:transition-all hover:after:w-full">Szakmai Blog</a>
+                <button onclick="openKisokos()" class="hover:text-forest transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-forest after:transition-all hover:after:w-full">Szelektív Kisokos</button>
             </div>
 
-            <div class="bento-item bg-deepgreen rounded-[2rem] p-8 soft-shadow relative overflow-hidden flex flex-col justify-between">
-                <i class="fa-solid fa-recycle text-4xl text-white/10 absolute right-6 top-6"></i>
-                <div>
-                    <i class="fa-regular fa-circle-question text-3xl text-white mb-4"></i>
-                    <h3 class="text-xl font-bold text-white mb-2 tracking-tight">Szelektív Kisokos Pro</h3>
-                    <p class="text-sm text-white/80 mb-6 font-light">Írja be a hulladékot, és megmondjuk, hova dobja! (Pl: 'PET palack')</p>
+            <!-- CTA -->
+            <div class="hidden md:flex items-center gap-4 relative z-10">
+                <div class="flex items-center gap-2 text-sm text-muted">
+                    <span class="pulse-dot"></span>
+                    <span class="font-medium">Elérhető most</span>
                 </div>
-                <div class="flex gap-2 relative z-10 mb-2">
-                    <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-white/50"></i>
-                    <input type="text" id="kisokos-kereso" placeholder="Mit dobna ki? Írja be..." class="w-full bg-white/10 border border-white/10 rounded-full px-5 py-3 pl-12 text-sm text-white placeholder-white/50 focus:outline-none focus:border-turq transition">
-                </div>
-                <a onclick="openKisokos()" class="text-center bg-white/20 text-white w-full py-3 rounded-full text-sm font-semibold hover:bg-white/30 transition backdrop-blur-sm cursor-pointer">
-                    Teljes böngészés <i class="fa-solid fa-arrow-right ml-1"></i>
+                <a href="tel:+3612345678" class="text-sm font-bold text-forest hover:text-teal transition-colors flex items-center gap-1.5">
+                    <i class="fa-solid fa-phone text-teal text-xs"></i> +36 1 234 5678
+                </a>
+                <a href="#kapcsolat" class="bg-forest text-white px-5 py-2.5 rounded-full text-sm font-bold hover:bg-forestlight transition-all shadow-lg shadow-forest/20 flex items-center gap-2">
+                    Ajánlatkérés <i class="fa-solid fa-arrow-right text-xs"></i>
                 </a>
             </div>
 
-            <div class="bento-item bg-white rounded-[2rem] p-8 soft-shadow border border-gray-100 flex flex-col justify-between">
-                <div>
-                    <i class="fa-regular fa-file-invoice text-3xl text-turq mb-4"></i>
-                    <h3 class="text-xl font-bold text-deepgreen mb-2 tracking-tight">Ügyfélszolgálat</h3>
-                    <p class="text-sm text-slate mb-6 font-light">Intézze bejelentéseit és számláit kényelmesen, online platformunkon.</p>
-                </div>
-                <button onclick="alert('Fejlesztés alatt!')" class="border border-turq text-turq w-full py-3 rounded-full text-sm font-bold hover:bg-turq/10 transition">
-                    Belépés a fiókba
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <section id="szolgaltatasok" class="py-24 px-4 bg-white relative z-10">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16 gsap-anim">
-                <h2 class="text-3xl md:text-5xl font-extrabold text-deepgreen mb-4">Komplex Megoldások</h2>
-                <p class="text-slate max-w-2xl mx-auto text-lg font-light">Hulladékok szakszerű kezelése a legmagasabb minőségi sztenderdek szerint.</p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="img-card bg-earthbeige rounded-[2.5rem] border border-gray-100 flex flex-col card-hover gsap-anim">
-                    <div class="h-52 overflow-hidden rounded-t-[2.5rem] relative">
-                        <img src="szolg1.png" alt="Veszélyes hulladék" class="absolute inset-0 z-10" onerror="this.style.display='none'">
-                    </div>
-                    <div class="p-8 flex-grow">
-                        <div class="inline-block px-3 py-1 bg-turq/10 text-turq rounded-full text-xs font-bold mb-4 uppercase">ADR Szállítás</div>
-                        <h3 class="text-2xl font-bold text-deepgreen mb-3">Veszélyes Hulladék</h3>
-                        <p class="text-sm text-slate font-light leading-relaxed">Vegyszerek, fáradt olaj és ipari maradékok szigorú engedélyek alapján történő elszállítása és megsemmisítése.</p>
-                    </div>
-                </div>
-                <div class="img-card bg-earthbeige rounded-[2.5rem] border border-gray-100 flex flex-col card-hover gsap-anim">
-                    <div class="h-52 overflow-hidden rounded-t-[2.5rem] relative">
-                        <img src="szolg2.png" alt="Inert hulladék" class="absolute inset-0 z-10" onerror="this.style.display='none'">
-                    </div>
-                    <div class="p-8 flex-grow">
-                        <div class="inline-block px-3 py-1 bg-accent/10 text-accent rounded-full text-xs font-bold mb-4 uppercase">Nagy Kapacitás</div>
-                        <h3 class="text-2xl font-bold text-deepgreen mb-3">Építési Inert</h3>
-                        <p class="text-sm text-slate font-light leading-relaxed">Bontási törmelék, kitermelt föld és nagy mennyiségű ipari maradék elszállítása multiliftes konténerekkel.</p>
-                    </div>
-                </div>
-                <div class="img-card bg-earthbeige rounded-[2.5rem] border border-gray-100 flex flex-col card-hover gsap-anim">
-                    <div class="h-52 overflow-hidden rounded-t-[2.5rem] relative">
-                        <img src="szolg3.png" alt="Tanácsadás" class="absolute inset-0 z-10" onerror="this.style.display='none'">
-                    </div>
-                    <div class="p-8 flex-grow">
-                        <div class="inline-block px-3 py-1 bg-deepgreen/10 text-deepgreen rounded-full text-xs font-bold mb-4 uppercase">Körforgás</div>
-                        <h3 class="text-2xl font-bold text-deepgreen mb-3">ESG Tanácsadás Pro</h3>
-                        <p class="text-sm text-slate font-light leading-relaxed">Segítség az EPR/PPWR EU-s szabályozások betartásában és a digitális termékútlevélre történő zöld átállásban.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="relative py-40 px-4 flex items-center justify-center overflow-hidden bg-deepgreen">
-        <div class="absolute inset-0 z-0 flex items-center justify-center">
-            <img src="tech.png" alt="Válogató üzem" class="absolute inset-0 w-full h-full object-cover opacity-30 mix-blend-overlay z-10" onerror="this.style.display='none'">
-        </div>
-        <div class="relative z-20 text-center max-w-4xl mx-auto gsap-anim">
-            <h2 class="text-4xl md:text-6xl font-extrabold text-white mb-6">M.I. alapú Hulladékválogatás</h2>
-            <p class="text-lg md:text-xl text-white/80 mb-10 font-light px-4 leading-relaxed">
-                A 2026-os hazai trendeknek megfelelően gépparkunk AI-támogatott optikai szortírozókkal dolgozik. Minimalizáljuk a lerakóba kerülő hulladékot, és maximalizáljuk az újrahasznosítást.
-            </p>
-            <div class="flex justify-center gap-6 text-white px-4">
-                <div class="text-center">
-                    <p class="text-4xl md:text-6xl font-black text-turq mb-1">98%</p>
-                    <p class="text-xs md:text-sm uppercase tracking-wider font-bold">Válogatási pontosság</p>
-                </div>
-                <div class="w-px bg-white/20"></div>
-                <div class="text-center">
-                    <p class="text-4xl md:text-6xl font-black text-accent mb-1">Euro 6</p>
-                    <p class="text-xs md:text-sm uppercase tracking-wider font-bold">Zöld Flotta</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="blog" class="py-24 px-4 bg-earthbeige relative z-10">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16 gsap-anim">
-                <h2 class="text-3xl md:text-5xl font-extrabold text-deepgreen mb-4">Szakmai Hírek</h2>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <article class="bg-white rounded-[2rem] p-6 soft-shadow flex flex-col sm:flex-row gap-6 card-hover cursor-pointer border border-gray-100 gsap-anim">
-                    <div class="w-full sm:w-40 h-40 rounded-xl overflow-hidden relative flex-shrink-0 bg-gray-200">
-                        <img src="blog1.png" alt="Blog 1" class="absolute inset-0 w-full h-full object-cover z-10" onerror="this.style.display='none'">
-                    </div>
-                    <div class="flex flex-col justify-center">
-                        <div class="text-xs font-bold text-accent uppercase tracking-wider mb-2">Technológia</div>
-                        <h3 class="text-xl font-bold text-deepgreen mb-2">MI-alapú válogatók a hazai hulladékgazdálkodásban</h3>
-                        <p class="text-sm text-slate line-clamp-2">Hogyan segíti a mesterséges intelligencia a körforgásos gazdaságot.</p>
-                    </div>
-                </article>
-                <article class="bg-white rounded-[2rem] p-6 soft-shadow flex flex-col sm:flex-row gap-6 card-hover cursor-pointer border border-gray-100 gsap-anim">
-                    <div class="w-full sm:w-40 h-40 rounded-xl overflow-hidden relative flex-shrink-0 bg-gray-200">
-                        <img src="blog2.png" alt="Blog 2" class="absolute inset-0 w-full h-full object-cover z-10" onerror="this.style.display='none'">
-                    </div>
-                    <div class="flex flex-col justify-center">
-                        <div class="text-xs font-bold text-turq uppercase tracking-wider mb-2">Jogszabályok 2026</div>
-                        <h3 class="text-xl font-bold text-deepgreen mb-2">Digitális Termékútlevél (DPP) bevezetése</h3>
-                        <p class="text-sm text-slate line-clamp-2">Az új uniós előírások értelmében az alapanyagok nyomon követhetővé válnak.</p>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <section id="kapcsolat" class="py-24 px-4 bg-white border-t border-gray-100 relative z-10">
-        <div class="max-w-4xl mx-auto bg-earthbeige rounded-[2.5rem] p-8 md:p-16 soft-shadow border border-gray-100 gsap-anim relative overflow-hidden">
-            <div class="absolute top-0 right-0 w-32 h-32 bg-accent/10 rounded-bl-full"></div>
-            <h2 class="text-3xl md:text-4xl font-extrabold text-deepgreen mb-2 relative z-10">Kérjen árajánlatot!</h2>
-            <p class="text-base text-slate mb-10 relative z-10 font-light">Mérnökeink 24 órán belül felveszik Önnel a kapcsolatot.</p>
-            <form id="contact-form" class="space-y-6 relative z-10">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div><input type="text" required placeholder="Név / Cégnév" class="form-input w-full bg-white border border-gray-200 rounded-2xl px-5 py-4 focus:outline-none focus:border-turq transition text-sm"></div>
-                    <div><input type="email" required placeholder="E-mail cím" class="form-input w-full bg-white border border-gray-200 rounded-2xl px-5 py-4 focus:outline-none focus:border-turq transition text-sm"></div>
-                </div>
-                <div>
-                    <select required class="form-input w-full bg-white border border-gray-200 rounded-2xl px-5 py-4 focus:outline-none focus:border-turq text-slate-600 transition text-sm">
-                        <option value="" disabled selected>Válasszon szolgáltatást...</option>
-                        <option>Ipari / Veszélyes hulladék szállítás</option>
-                        <option>Építési / Inert konténer rendelés</option>
-                        <option>Egyéb / Tanácsadás</option>
-                    </select>
-                </div>
-                <div><textarea rows="4" required placeholder="Hulladék pontos típusa és becsült mennyisége..." class="form-input w-full bg-white border border-gray-200 rounded-2xl px-5 py-4 focus:outline-none focus:border-turq transition resize-none text-sm"></textarea></div>
-                <button type="submit" id="submit-btn" class="w-full bg-deepgreen text-white font-bold py-5 rounded-2xl hover:bg-[#083A28] transition-all shadow-lg shadow-deepgreen/20 text-base md:text-lg">
-                    Üzenet Küldése <i class="fa-solid fa-paper-plane ml-2"></i>
-                </button>
-            </form>
-        </div>
-    </section>
-
-    <footer class="py-12 px-6 border-t border-gray-100 text-center bg-deepgreen text-white relative z-10">
-        <p class="text-sm text-white/60 font-light">&copy; 2026 VeszélyesHulladék.net Elite Pro.</p>
-    </footer>
-
-    <div id="kisokos-modal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-[100] hidden flex items-center justify-center p-4 opacity-0 transition-opacity duration-300">
-        <div class="bg-white rounded-[2.5rem] p-6 md:p-12 max-w-xl w-full shadow-2xl relative transform transition-all scale-95 duration-300" id="kisokos-content">
-            <button onclick="closeKisokos()" class="absolute top-5 right-5 w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-slate-600 hover:bg-gray-200 transition">
-                <i class="fa-solid fa-xmark text-xl"></i>
+            <!-- Mobile menu btn -->
+            <button id="mobile-menu-btn" class="md:hidden relative z-10 w-10 h-10 flex flex-col items-center justify-center gap-1.5" onclick="toggleMobileMenu()">
+                <span class="w-6 h-0.5 bg-forest transition-all" id="mb1"></span>
+                <span class="w-4 h-0.5 bg-forest transition-all" id="mb2"></span>
+                <span class="w-6 h-0.5 bg-forest transition-all" id="mb3"></span>
             </button>
-            <h2 class="text-3xl font-extrabold text-deepgreen mb-6 flex items-center gap-3">
-                <i class="fa-solid fa-recycle text-turq"></i> Szelektív Kisokos
-            </h2>
-            <div class="relative mb-6">
-                <i class="fa-solid fa-magnifying-glass absolute left-5 top-1/2 -translate-y-1/2 text-slate-400"></i>
-                <input type="text" id="modal-kereso" placeholder="Mit dobna ki? (Pl: pet palack)" class="w-full bg-gray-50 border border-gray-200 rounded-full px-6 py-4 pl-14 focus:outline-none focus:border-turq transition text-sm">
+        </div>
+
+        <!-- Mobile dropdown -->
+        <div id="mobile-menu" class="md:hidden hidden bg-cream border-t border-black/5 px-5 py-6 space-y-4">
+            <a href="#szolgaltatasok" class="block font-medium text-ink hover:text-forest transition-colors py-2" onclick="toggleMobileMenu()">Szolgáltatások</a>
+            <a href="#folyamat" class="block font-medium text-ink hover:text-forest transition-colors py-2" onclick="toggleMobileMenu()">Hogyan működik</a>
+            <a href="#blog" class="block font-medium text-ink hover:text-forest transition-colors py-2" onclick="toggleMobileMenu()">Szakmai Blog</a>
+            <button onclick="openKisokos(); toggleMobileMenu();" class="block font-medium text-ink hover:text-forest transition-colors py-2 w-full text-left">Szelektív Kisokos</button>
+            <a href="#kapcsolat" class="block w-full bg-forest text-white text-center py-3 rounded-xl font-bold" onclick="toggleMobileMenu()">Ajánlatkérés</a>
+        </div>
+    </nav>
+
+    <!-- ============================
+         HERO
+    ============================= -->
+    <section class="relative min-h-[100svh] flex items-center pt-20 pb-16 px-4 sm:px-6 overflow-hidden">
+        <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center relative z-10">
+            <!-- Left -->
+            <div>
+                <div class="hero-badge inline-flex items-center gap-2 px-4 py-2 rounded-full text-teal text-xs font-bold mb-8 uppercase tracking-widest reveal">
+                    <span class="pulse-dot"></span>
+                    100% Jogszabályi Megfelelés · 2026
+                </div>
+                <h1 class="text-5xl sm:text-6xl md:text-7xl font-bold text-ink mb-6 leading-[1.05] tracking-tight reveal">
+                    Okosabb<br>
+                    <span class="font-serif italic gradient-text">hulladékkezelés</span><br>
+                    mindenkinek.
+                </h1>
+                <p class="text-base md:text-lg text-muted mb-10 leading-relaxed max-w-lg reveal font-light">
+                    AI-támogatott logisztikával és Euro&nbsp;6-os flottával biztosítjuk cége veszélyes hulladékainak törvényes, nyomon követhető útját – 24 órán belüli kiszállással, országszerte.
+                </p>
+
+                <!-- CTA group -->
+                <div class="flex flex-col sm:flex-row gap-4 mb-12 reveal">
+                    <a href="#kapcsolat" class="inline-flex items-center justify-center gap-2 bg-forest text-white px-8 py-4 rounded-2xl font-bold hover:bg-forestlight transition-all shadow-xl shadow-forest/25 text-sm">
+                        <i class="fa-solid fa-calculator"></i> Azonnali Árajánlat
+                    </a>
+                    <a href="tel:+3612345678" class="inline-flex items-center justify-center gap-2 border-2 border-forest/20 text-forest px-8 py-4 rounded-2xl font-bold hover:bg-forest/5 transition-all text-sm">
+                        <i class="fa-solid fa-phone"></i> +36 1 234 5678
+                    </a>
+                </div>
+
+                <!-- Trust chips -->
+                <div class="flex flex-wrap gap-3 reveal">
+                    <div class="flex items-center gap-2 bg-white px-4 py-2 rounded-full border border-gray-100 text-xs font-semibold text-muted shadow-sm">
+                        <i class="fa-solid fa-certificate text-teal text-xs"></i> OHÜ Engedélyes
+                    </div>
+                    <div class="flex items-center gap-2 bg-white px-4 py-2 rounded-full border border-gray-100 text-xs font-semibold text-muted shadow-sm">
+                        <i class="fa-solid fa-shield-halved text-teal text-xs"></i> ISO 14001 Tanúsított
+                    </div>
+                    <div class="flex items-center gap-2 bg-white px-4 py-2 rounded-full border border-gray-100 text-xs font-semibold text-muted shadow-sm">
+                        <i class="fa-solid fa-truck text-ember text-xs"></i> ADR Szállítás
+                    </div>
+                </div>
             </div>
-            <div id="kisokos-eredmeny-doboz" class="hidden min-h-[150px] p-6 rounded-2xl bg-earthbeige border border-gray-100 flex flex-col items-center justify-center text-center"></div>
+
+            <!-- Right – Image + floating cards -->
+            <div class="relative reveal">
+                <div class="relative w-full aspect-[4/3] rounded-[2.5rem] overflow-hidden shadow-2xl shadow-forest/15">
+                    <img
+                        src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=900&auto=format&fit=crop"
+                        alt="Korszerű hulladékkezelő telep – VeszélyesHulladék.net"
+                        class="w-full h-full object-cover"
+                        loading="eager"
+                        fetchpriority="high"
+                    >
+                    <div class="absolute inset-0 bg-gradient-to-t from-forest/50 via-transparent to-transparent"></div>
+                    <!-- Badge overlay -->
+                    <div class="absolute bottom-6 left-6 right-6 flex gap-3">
+                        <div class="bg-white/95 backdrop-blur-sm rounded-2xl px-4 py-3 flex items-center gap-3 flex-1 shadow-lg">
+                            <div class="w-10 h-10 bg-teal/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-robot text-teal text-sm"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-ink">AI-Válogató Aktív</p>
+                                <p class="text-[10px] text-muted">98% pontossággal</p>
+                            </div>
+                        </div>
+                        <div class="bg-forest/90 backdrop-blur-sm rounded-2xl px-4 py-3 flex items-center gap-3 flex-1 shadow-lg">
+                            <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-truck-fast text-white text-sm"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-white">24 Óra</p>
+                                <p class="text-[10px] text-white/70">Garantált kiszállás</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Floating stat pill -->
+                <div class="absolute -right-6 top-12 bg-white rounded-2xl p-4 shadow-xl border border-gray-100 hidden lg:flex gap-3 items-center">
+                    <div class="w-10 h-10 bg-ember/10 rounded-full flex items-center justify-center">
+                        <i class="fa-solid fa-building text-ember text-sm"></i>
+                    </div>
+                    <div>
+                        <p class="font-extrabold text-ink text-xl leading-tight">1 200+</p>
+                        <p class="text-[10px] text-muted font-bold uppercase tracking-wider">Vállalati Ügyfél</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-40">
+            <div class="scroll-line"></div>
+            <span class="text-[10px] font-bold uppercase tracking-widest text-muted">Görgetés</span>
+        </div>
+    </section>
+
+    <!-- ============================
+         TICKER
+    ============================= -->
+    <div class="py-4 bg-forest overflow-hidden relative z-10">
+        <div class="ticker-wrap">
+            <div class="ticker-track text-sm font-semibold text-white/60 uppercase tracking-widest">
+                <span class="inline-flex items-center gap-8 pr-8">
+                    <span>ADR Szállítás</span><span class="text-teal">✦</span>
+                    <span>ISO 14001</span><span class="text-teal">✦</span>
+                    <span>OHÜ Engedélyes</span><span class="text-teal">✦</span>
+                    <span>EPR Tanácsadás</span><span class="text-teal">✦</span>
+                    <span>AI Válogatás</span><span class="text-teal">✦</span>
+                    <span>Euro 6 Flotta</span><span class="text-teal">✦</span>
+                    <span>24h Kiszállás</span><span class="text-teal">✦</span>
+                    <span>Digitális DPP</span><span class="text-teal">✦</span>
+                    <span>PPWR Megfelelés</span><span class="text-teal">✦</span>
+                    <span>ESG Riport</span><span class="text-teal">✦</span>
+                </span>
+                <!-- duplicate for seamless loop -->
+                <span class="inline-flex items-center gap-8 pr-8">
+                    <span>ADR Szállítás</span><span class="text-teal">✦</span>
+                    <span>ISO 14001</span><span class="text-teal">✦</span>
+                    <span>OHÜ Engedélyes</span><span class="text-teal">✦</span>
+                    <span>EPR Tanácsadás</span><span class="text-teal">✦</span>
+                    <span>AI Válogatás</span><span class="text-teal">✦</span>
+                    <span>Euro 6 Flotta</span><span class="text-teal">✦</span>
+                    <span>24h Kiszállás</span><span class="text-teal">✦</span>
+                    <span>Digitális DPP</span><span class="text-teal">✦</span>
+                    <span>PPWR Megfelelés</span><span class="text-teal">✦</span>
+                    <span>ESG Riport</span><span class="text-teal">✦</span>
+                </span>
+            </div>
         </div>
     </div>
 
+    <!-- ============================
+         BENTO GRID
+    ============================= -->
+    <section class="py-16 px-4 sm:px-6 relative z-10">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-5">
+
+            <!-- Hulladéknaptár -->
+            <div class="bg-white rounded-[2rem] p-8 border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between reveal">
+                <div>
+                    <i class="fa-regular fa-calendar-days text-3xl text-ember mb-4 block"></i>
+                    <h2 class="text-xl font-bold text-ink mb-2">Hulladéknaptár</h2>
+                    <p class="text-sm text-muted mb-6 leading-relaxed">Válassza ki a dátumot, és megmutatjuk az adott napra eső szállítási rendet és hulladéktípust!</p>
+                </div>
+                <div>
+                    <div class="relative mb-3">
+                        <i class="fa-regular fa-calendar-check absolute left-4 top-1/2 -translate-y-1/2 text-muted/60 text-sm pointer-events-none"></i>
+                        <input type="text" id="datepicker-input" placeholder="Válasszon dátumot..." readonly
+                            class="w-full bg-gray-50 border border-gray-200 rounded-2xl px-5 py-3.5 pl-11 text-sm cursor-pointer focus:outline-none focus:border-teal transition">
+                    </div>
+                    <div id="naptar-eredmeny"></div>
+                </div>
+            </div>
+
+            <!-- Szelektív Kisokos Pro (dark) -->
+            <div class="bg-forest rounded-[2rem] p-8 border border-forest shadow-sm flex flex-col justify-between reveal relative overflow-hidden">
+                <div class="absolute inset-0 opacity-10"
+                    style="background-image: radial-gradient(circle at 80% 20%, rgba(255,255,255,0.2) 0%, transparent 60%);"></div>
+                <div class="relative z-10">
+                    <i class="fa-regular fa-circle-question text-3xl text-white mb-4 block"></i>
+                    <h2 class="text-xl font-bold text-white mb-2">Szelektív Kisokos Pro</h2>
+                    <p class="text-sm text-white/70 mb-6 leading-relaxed">Írja be a hulladékot, és azonnal megmondjuk, hova dobja és milyen kukába tartozik!</p>
+                </div>
+                <div class="relative z-10">
+                    <div class="relative mb-3">
+                        <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-white/40 text-sm pointer-events-none"></i>
+                        <input type="text" id="kisokos-kereso" placeholder="Pl: PET palack, akkumulátor..." autocomplete="off"
+                            class="w-full bg-white/10 border border-white/15 rounded-2xl px-5 py-3.5 pl-11 text-sm text-white placeholder-white/40 focus:outline-none focus:border-teallight transition">
+                    </div>
+                    <div id="kisokos-mini-result" class="mb-3 text-sm text-white/80 min-h-[1.5rem]"></div>
+                    <button onclick="openKisokos()" class="w-full bg-white/15 border border-white/20 text-white py-3 rounded-2xl text-sm font-semibold hover:bg-white/25 transition flex items-center justify-center gap-2">
+                        Teljes adatbázis böngészése <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Ügyfélszolgálat -->
+            <div class="bg-white rounded-[2rem] p-8 border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between reveal">
+                <div>
+                    <i class="fa-regular fa-file-invoice text-3xl text-teal mb-4 block"></i>
+                    <h2 class="text-xl font-bold text-ink mb-2">Online Ügyfélportál</h2>
+                    <p class="text-sm text-muted mb-6 leading-relaxed">Intézze bejelentéseit, töltse le számláit és kövesse nyomon szállításait kényelmesen, online.</p>
+                </div>
+                <div class="space-y-3">
+                    <div class="flex items-center gap-3 p-3 rounded-xl bg-gray-50 text-sm font-medium text-muted">
+                        <i class="fa-solid fa-file-invoice-dollar text-teal w-5 text-center"></i> Digitális számlák letöltése
+                    </div>
+                    <div class="flex items-center gap-3 p-3 rounded-xl bg-gray-50 text-sm font-medium text-muted">
+                        <i class="fa-solid fa-location-dot text-ember w-5 text-center"></i> Szállítás nyomkövetés
+                    </div>
+                    <button onclick="alert('Az ügyfélportál hamarosan elérhető!')"
+                        class="w-full border-2 border-teal/30 text-teal py-3 rounded-2xl text-sm font-bold hover:bg-teal/5 hover:border-teal/60 transition-all mt-2">
+                        Belépés a fiókba <i class="fa-solid fa-arrow-right ml-1 text-xs"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================
+         STATS
+    ============================= -->
+    <section class="py-20 px-4 sm:px-6 bg-white border-y border-gray-100 relative z-10" id="stats-section">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-4">
+                <div class="text-center reveal">
+                    <div class="stat-number text-forest mb-2">
+                        <span class="counter" data-target="1200" data-suffix="+">0</span>
+                    </div>
+                    <p class="text-sm font-bold text-muted uppercase tracking-widest">Vállalati Ügyfél</p>
+                </div>
+                <div class="text-center reveal">
+                    <div class="stat-number text-teal mb-2">
+                        <span class="counter" data-target="98" data-suffix="%">0</span>
+                    </div>
+                    <p class="text-sm font-bold text-muted uppercase tracking-widest">AI Válogatási Pontosság</p>
+                </div>
+                <div class="text-center reveal">
+                    <div class="stat-number text-ember mb-2">
+                        <span class="counter" data-target="24" data-suffix="h">0</span>
+                    </div>
+                    <p class="text-sm font-bold text-muted uppercase tracking-widest">Garantált Kiszállás</p>
+                </div>
+                <div class="text-center reveal">
+                    <div class="stat-number text-forest mb-2">
+                        <span class="counter" data-target="15" data-suffix=" év">0</span>
+                    </div>
+                    <p class="text-sm font-bold text-muted uppercase tracking-widest">Szakmai Tapasztalat</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================
+         SZOLGÁLTATÁSOK
+    ============================= -->
+    <section id="szolgaltatasok" class="py-24 px-4 sm:px-6 relative z-10">
+        <div class="max-w-7xl mx-auto">
+            <div class="max-w-2xl mb-16 reveal">
+                <div class="inline-flex items-center gap-2 text-teal text-xs font-bold uppercase tracking-widest mb-4">
+                    <span class="w-8 h-px bg-teal"></span> Komplex Megoldások
+                </div>
+                <h2 class="text-4xl md:text-5xl font-bold text-ink mb-4 leading-tight">
+                    Minden hulladékra <br><span class="font-serif italic gradient-text">professzionális válasz</span>
+                </h2>
+                <p class="text-muted text-lg font-light leading-relaxed">Hulladékok szakszerű kezelése a legmagasabb minőségi sztenderdek szerint, teljes körű adminisztrációs és jogi háttérrel.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                <!-- Kártya 1 -->
+                <article class="bg-cream border border-gray-100 rounded-[2.5rem] overflow-hidden card-lift reveal flex flex-col shadow-sm">
+                    <div class="img-wrap h-52 w-full relative">
+                        <img
+                            src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&auto=format&fit=crop"
+                            alt="Veszélyes hulladék szállítás – ADR engedélyes"
+                            class="w-full h-full object-cover"
+                            loading="lazy"
+                        >
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent z-10"></div>
+                        <div class="absolute bottom-4 left-4 z-20">
+                            <span class="bg-teal text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">ADR Szállítás</span>
+                        </div>
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <h3 class="text-2xl font-bold text-ink mb-3">Veszélyes Hulladék</h3>
+                        <p class="text-sm text-muted font-light leading-relaxed mb-6">Vegyszerek, fáradt olaj, festékek és ipari maradékok szigorú OHÜ-engedélyek alapján történő elszállítása és megsemmisítése, teljes dokumentációval.</p>
+                        <ul class="space-y-2 text-xs text-muted mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal text-[10px]"></i> Fáradt olaj és oldószerek</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal text-[10px]"></i> Vegyipari maradékok</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal text-[10px]"></i> Elektronikai (WEEE) hulladék</li>
+                        </ul>
+                        <a href="#kapcsolat" class="mt-auto inline-flex items-center gap-2 text-forest font-bold text-sm hover:text-teal transition-colors">
+                            Részletek <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Kártya 2 -->
+                <article class="bg-cream border border-gray-100 rounded-[2.5rem] overflow-hidden card-lift reveal flex flex-col shadow-sm">
+                    <div class="img-wrap h-52 w-full relative">
+                        <img
+                            src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=700&auto=format&fit=crop"
+                            alt="Építési inert hulladék elszállítás konténerrel"
+                            class="w-full h-full object-cover"
+                            loading="lazy"
+                        >
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent z-10"></div>
+                        <div class="absolute bottom-4 left-4 z-20">
+                            <span class="bg-ember text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Nagy Kapacitás</span>
+                        </div>
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <h3 class="text-2xl font-bold text-ink mb-3">Építési & Inert</h3>
+                        <p class="text-sm text-muted font-light leading-relaxed mb-6">Bontási törmelék, kitermelt föld és nagy mennyiségű ipari maradék elszállítása modern multilift-es konténerrendszerrel, rugalmas ütemezéssel.</p>
+                        <ul class="space-y-2 text-xs text-muted mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-ember text-[10px]"></i> Bontási törmelék, beton</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-ember text-[10px]"></i> Kitermelt föld és kőzet</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-ember text-[10px]"></i> Nagykonténeres rendszer</li>
+                        </ul>
+                        <a href="#kapcsolat" class="mt-auto inline-flex items-center gap-2 text-forest font-bold text-sm hover:text-teal transition-colors">
+                            Részletek <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Kártya 3 -->
+                <article class="bg-cream border border-gray-100 rounded-[2.5rem] overflow-hidden card-lift reveal flex flex-col shadow-sm">
+                    <div class="img-wrap h-52 w-full relative">
+                        <img
+                            src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=700&auto=format&fit=crop"
+                            alt="ESG tanácsadás és körforgásos gazdaság"
+                            class="w-full h-full object-cover"
+                            loading="lazy"
+                        >
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent z-10"></div>
+                        <div class="absolute bottom-4 left-4 z-20">
+                            <span class="bg-forest text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Körforgás</span>
+                        </div>
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <h3 class="text-2xl font-bold text-ink mb-3">ESG Tanácsadás</h3>
+                        <p class="text-sm text-muted font-light leading-relaxed mb-6">Segítség az EPR/PPWR EU-s szabályozások betartásában és a digitális termékútlevélre (DPP) való felkészülésben, zöld átállási stratégiával.</p>
+                        <ul class="space-y-2 text-xs text-muted mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-forest text-[10px]"></i> EPR/PPWR megfelelési audit</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-forest text-[10px]"></i> DPP felkészítés</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-forest text-[10px]"></i> ESG éves riport készítés</li>
+                        </ul>
+                        <a href="#kapcsolat" class="mt-auto inline-flex items-center gap-2 text-forest font-bold text-sm hover:text-teal transition-colors">
+                            Részletek <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================
+         FOLYAMAT / HOW IT WORKS
+    ============================= -->
+    <section id="folyamat" class="py-24 px-4 sm:px-6 bg-white border-y border-gray-100 relative z-10">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <div class="inline-flex items-center gap-2 text-teal text-xs font-bold uppercase tracking-widest mb-4">
+                    <span class="w-8 h-px bg-teal"></span> Folyamat <span class="w-8 h-px bg-teal"></span>
+                </div>
+                <h2 class="text-4xl md:text-5xl font-bold text-ink mb-4">Hogyan működünk?</h2>
+                <p class="text-muted text-lg font-light max-w-xl mx-auto">Négy egyszerű lépés – és a hulladékproblémája megoldódott.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center reveal group">
+                    <div class="w-16 h-16 bg-teal/10 text-teal rounded-2xl flex items-center justify-center mx-auto mb-5 text-2xl transition group-hover:bg-teal group-hover:text-white group-hover:scale-110 duration-300">
+                        <i class="fa-regular fa-envelope"></i>
+                    </div>
+                    <div class="text-xs font-black text-muted/40 uppercase tracking-widest mb-2">01</div>
+                    <h3 class="text-lg font-bold text-ink mb-2">Ajánlatkérés</h3>
+                    <p class="text-sm text-muted font-light leading-relaxed">Küldjön üzenetet az űrlapon vagy hívjon – díjtalan, kötelezettség nélküli árajánlatot adunk.</p>
+                </div>
+                <div class="text-center reveal group">
+                    <div class="w-16 h-16 bg-ember/10 text-ember rounded-2xl flex items-center justify-center mx-auto mb-5 text-2xl transition group-hover:bg-ember group-hover:text-white group-hover:scale-110 duration-300">
+                        <i class="fa-solid fa-magnifying-glass-chart"></i>
+                    </div>
+                    <div class="text-xs font-black text-muted/40 uppercase tracking-widest mb-2">02</div>
+                    <h3 class="text-lg font-bold text-ink mb-2">Felmérés</h3>
+                    <p class="text-sm text-muted font-light leading-relaxed">Mérnökeink 24 órán belül felveszik a kapcsolatot, szükség esetén helyszíni felmérést végeznek.</p>
+                </div>
+                <div class="text-center reveal group">
+                    <div class="w-16 h-16 bg-forest/10 text-forest rounded-2xl flex items-center justify-center mx-auto mb-5 text-2xl transition group-hover:bg-forest group-hover:text-white group-hover:scale-110 duration-300">
+                        <i class="fa-solid fa-truck-fast"></i>
+                    </div>
+                    <div class="text-xs font-black text-muted/40 uppercase tracking-widest mb-2">03</div>
+                    <h3 class="text-lg font-bold text-ink mb-2">Elszállítás</h3>
+                    <p class="text-sm text-muted font-light leading-relaxed">ADR-minősített gépjárműveink kiszállnak és szakszerűen elszállítják a hulladékot.</p>
+                </div>
+                <div class="text-center reveal group">
+                    <div class="w-16 h-16 bg-teal/10 text-teal rounded-2xl flex items-center justify-center mx-auto mb-5 text-2xl transition group-hover:bg-teal group-hover:text-white group-hover:scale-110 duration-300">
+                        <i class="fa-solid fa-file-shield"></i>
+                    </div>
+                    <div class="text-xs font-black text-muted/40 uppercase tracking-widest mb-2">04</div>
+                    <h3 class="text-lg font-bold text-ink mb-2">Dokumentáció</h3>
+                    <p class="text-sm text-muted font-light leading-relaxed">Digitálisan átveszi a KSZGYSZ-igazolást és az összes szükséges hatósági dokumentumot.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================
+         AI BANNER (dark)
+    ============================= -->
+    <section class="relative py-32 px-4 sm:px-6 overflow-hidden bg-ink">
+        <div class="absolute inset-0 z-0">
+            <img
+                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1400&auto=format&fit=crop"
+                alt="Ipari technológia – AI hulladékválogatás"
+                class="w-full h-full object-cover opacity-20"
+                loading="lazy"
+            >
+            <div class="absolute inset-0 bg-gradient-to-r from-ink via-ink/80 to-ink/40"></div>
+        </div>
+        <div class="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div class="reveal">
+                <div class="inline-flex items-center gap-2 text-teal text-xs font-bold uppercase tracking-widest mb-6">
+                    <i class="fa-solid fa-microchip"></i> Technológia
+                </div>
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+                    M.I. alapú<br><span class="font-serif italic text-teal">hulladékválogatás</span>
+                </h2>
+                <p class="text-white/60 text-lg font-light leading-relaxed mb-8">
+                    A 2026-os hazai trendeknek megfelelően gépparkunk AI-támogatott optikai szortírozókkal dolgozik. NIR-spektroszkópiával azonosítjuk az anyagtípusokat, így minimalizáljuk a lerakóba kerülő hulladékot és maximalizáljuk az újrahasznosítást.
+                </p>
+                <div class="space-y-3">
+                    <div class="flex items-center gap-3 text-white/70 text-sm">
+                        <div class="w-6 h-6 bg-teal/20 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fa-solid fa-check text-teal text-[10px]"></i>
+                        </div>
+                        NIR és hyperspektrális optikai szortírozás
+                    </div>
+                    <div class="flex items-center gap-3 text-white/70 text-sm">
+                        <div class="w-6 h-6 bg-teal/20 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fa-solid fa-check text-teal text-[10px]"></i>
+                        </div>
+                        Valós idejű anyagfrakció-azonosítás
+                    </div>
+                    <div class="flex items-center gap-3 text-white/70 text-sm">
+                        <div class="w-6 h-6 bg-teal/20 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fa-solid fa-check text-teal text-[10px]"></i>
+                        </div>
+                        Digitális szállítólevél és KSZGYSZ integráció
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-5 reveal">
+                <div class="bg-white/5 border border-white/10 rounded-3xl p-7 text-center backdrop-blur-sm">
+                    <div class="text-5xl font-serif italic text-teal font-bold mb-2">98%</div>
+                    <p class="text-white/50 text-xs font-bold uppercase tracking-widest">Válogatási Pontosság</p>
+                </div>
+                <div class="bg-white/5 border border-white/10 rounded-3xl p-7 text-center backdrop-blur-sm">
+                    <div class="text-5xl font-serif italic text-ember font-bold mb-2">Euro6</div>
+                    <p class="text-white/50 text-xs font-bold uppercase tracking-widest">Zöld Flotta</p>
+                </div>
+                <div class="bg-white/5 border border-white/10 rounded-3xl p-7 text-center backdrop-blur-sm">
+                    <div class="text-5xl font-serif italic text-white font-bold mb-2">-62%</div>
+                    <p class="text-white/50 text-xs font-bold uppercase tracking-widest">CO₂ Csökkentés</p>
+                </div>
+                <div class="bg-teal/20 border border-teal/30 rounded-3xl p-7 text-center backdrop-blur-sm">
+                    <div class="text-5xl font-serif italic text-teallight font-bold mb-2">24h</div>
+                    <p class="text-teal/70 text-xs font-bold uppercase tracking-widest">Garant. Kiszállás</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================
+         BLOG
+    ============================= -->
+    <section id="blog" class="py-24 px-4 sm:px-6 relative z-10">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-14 gap-4 reveal">
+                <div>
+                    <div class="inline-flex items-center gap-2 text-teal text-xs font-bold uppercase tracking-widest mb-4">
+                        <span class="w-8 h-px bg-teal"></span> Szakmai Tudásbázis
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-bold text-ink">Aktuális Hírek</h2>
+                </div>
+                <a href="#" class="text-sm font-bold text-forest hover:text-teal transition-colors flex items-center gap-2 flex-shrink-0">
+                    Összes cikk <i class="fa-solid fa-arrow-right text-xs"></i>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-5 gap-6">
+                <!-- Featured article -->
+                <article class="lg:col-span-3 bg-white rounded-[2.5rem] overflow-hidden card-lift border border-gray-100 shadow-sm reveal group cursor-pointer">
+                    <div class="img-wrap h-64 lg:h-80 w-full">
+                        <img
+                            src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=900&auto=format&fit=crop"
+                            alt="AI alapú hulladékválogatás Magyarországon 2026"
+                            class="w-full h-full object-cover"
+                            loading="lazy"
+                        >
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="bg-ember/10 text-ember text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Technológia</span>
+                            <span class="text-muted text-xs">2026. február 12.</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-forest transition-colors leading-tight">MI-alapú válogatók a hazai hulladékgazdálkodásban: mit hoznak 2026-ban?</h3>
+                        <p class="text-sm text-muted font-light leading-relaxed line-clamp-3">Hogyan segíti a mesterséges intelligencia a körforgásos gazdaságot? Cikkünkben összefoglaljuk a hazai piacon megjelenő NIR-szortírozó rendszerek lehetőségeit és korlátait.</p>
+                    </div>
+                </article>
+
+                <!-- Side articles -->
+                <div class="lg:col-span-2 flex flex-col gap-6">
+                    <article class="bg-white rounded-[2rem] overflow-hidden card-lift border border-gray-100 shadow-sm reveal group cursor-pointer flex gap-0 flex-col sm:flex-row lg:flex-col">
+                        <div class="img-wrap h-40 sm:w-40 sm:h-auto lg:w-full lg:h-40 flex-shrink-0">
+                            <img
+                                src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&auto=format&fit=crop"
+                                alt="Digitális Termékútlevél DPP EU szabályozás 2026"
+                                class="w-full h-full object-cover"
+                                loading="lazy"
+                            >
+                        </div>
+                        <div class="p-6">
+                            <span class="bg-teal/10 text-teal text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider block mb-3 w-fit">Jogszabályok 2026</span>
+                            <h3 class="text-base font-bold text-ink mb-2 group-hover:text-forest transition-colors leading-tight">Digitális Termékútlevél (DPP) – Mire kell felkészülni?</h3>
+                            <p class="text-xs text-muted line-clamp-2 font-light">Az új EU-s előírások értelmében az alapanyagok és csomagolóanyagok nyomon követhetővé válnak, ami alaposan felforgatja a logisztikát.</p>
+                        </div>
+                    </article>
+
+                    <article class="bg-forest rounded-[2rem] overflow-hidden card-lift shadow-sm reveal group cursor-pointer flex gap-0 flex-col sm:flex-row lg:flex-col">
+                        <div class="p-6 flex-1">
+                            <span class="bg-white/10 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider block mb-3 w-fit">EPR Reform</span>
+                            <h3 class="text-base font-bold text-white mb-2 group-hover:text-teallight transition-colors leading-tight">Az EPR rendszer hazai változásai és mit jelent ez az iparnak?</h3>
+                            <p class="text-xs text-white/60 line-clamp-3 font-light">A kiterjesztett gyártói felelősség rendszer 2026-os felülvizsgálata jelentős változásokat hoz a csomagolóanyag-gyártók számára.</p>
+                            <span class="inline-flex items-center gap-2 text-teallight font-bold text-xs mt-4 group-hover:gap-3 transition-all">
+                                Olvasás <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                            </span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================
+         KAPCSOLAT
+    ============================= -->
+    <section id="kapcsolat" class="py-24 px-4 sm:px-6 bg-white border-t border-gray-100 relative z-10">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
+
+            <!-- Info side -->
+            <div class="lg:col-span-2 reveal">
+                <div class="inline-flex items-center gap-2 text-teal text-xs font-bold uppercase tracking-widest mb-6">
+                    <span class="w-8 h-px bg-teal"></span> Kapcsolat
+                </div>
+                <h2 class="text-4xl font-bold text-ink mb-4 leading-tight">
+                    Kérjen <span class="font-serif italic gradient-text">ingyenes</span> árajánlatot!
+                </h2>
+                <p class="text-muted font-light leading-relaxed mb-10">
+                    Mérnökeink 24 órán belül felveszik Önnel a kapcsolatot és személyre szabott megoldást kínálnak.
+                </p>
+
+                <div class="space-y-5">
+                    <a href="tel:+3612345678" class="flex items-center gap-4 group">
+                        <div class="w-12 h-12 bg-teal/10 rounded-2xl flex items-center justify-center text-teal group-hover:bg-teal group-hover:text-white transition-all flex-shrink-0">
+                            <i class="fa-solid fa-phone text-sm"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs font-bold text-muted uppercase tracking-wider mb-0.5">Telefon</p>
+                            <p class="font-bold text-ink">+36 1 234 5678</p>
+                        </div>
+                    </a>
+                    <a href="mailto:info@veszelyeshulladek.net" class="flex items-center gap-4 group">
+                        <div class="w-12 h-12 bg-teal/10 rounded-2xl flex items-center justify-center text-teal group-hover:bg-teal group-hover:text-white transition-all flex-shrink-0">
+                            <i class="fa-solid fa-envelope text-sm"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs font-bold text-muted uppercase tracking-wider mb-0.5">E-mail</p>
+                            <p class="font-bold text-ink">info@veszelyeshulladek.net</p>
+                        </div>
+                    </a>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-teal/10 rounded-2xl flex items-center justify-center text-teal flex-shrink-0">
+                            <i class="fa-solid fa-clock text-sm"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs font-bold text-muted uppercase tracking-wider mb-0.5">Nyitvatartás</p>
+                            <p class="font-bold text-ink">H–P: 07:00–18:00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Form -->
+            <div class="lg:col-span-3 reveal">
+                <div class="bg-cream rounded-[2.5rem] p-8 md:p-12 border border-gray-100 shadow-sm">
+                    <form id="contact-form" class="space-y-5" novalidate>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                            <div>
+                                <label class="block text-xs font-bold text-muted uppercase tracking-wider mb-2">Név / Cégnév *</label>
+                                <input type="text" required placeholder="Pl. Acme Kft." class="form-field">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-muted uppercase tracking-wider mb-2">E-mail cím *</label>
+                                <input type="email" required placeholder="email@ceg.hu" class="form-field">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-muted uppercase tracking-wider mb-2">Telefonszám</label>
+                            <input type="tel" placeholder="+36 20 123 4567" class="form-field">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-muted uppercase tracking-wider mb-2">Szolgáltatás *</label>
+                            <select required class="form-field text-muted">
+                                <option value="" disabled selected>Válasszon szolgáltatást...</option>
+                                <option value="veszelyes">Ipari / Veszélyes hulladék szállítás</option>
+                                <option value="inert">Építési / Inert konténer rendelés</option>
+                                <option value="esg">ESG Tanácsadás / DPP Felkészítés</option>
+                                <option value="egyeb">Egyéb megkeresés</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-muted uppercase tracking-wider mb-2">Részletek *</label>
+                            <textarea rows="4" required placeholder="Hulladék típusa, becsült mennyiség, szállítási helyszín..." class="form-field resize-none"></textarea>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <input type="checkbox" id="gdpr" required class="mt-1 w-4 h-4 accent-teal flex-shrink-0">
+                            <label for="gdpr" class="text-xs text-muted leading-relaxed">
+                                Elolvastam és elfogadom az <a href="#" class="text-teal underline">adatkezelési tájékoztatót</a>. Hozzájárulok adataim kapcsolatfelvétel céljából történő kezeléséhez.
+                            </label>
+                        </div>
+                        <button type="submit" id="submit-btn"
+                            class="w-full bg-forest text-white font-bold py-5 rounded-2xl hover:bg-forestlight transition-all shadow-lg shadow-forest/20 text-base flex items-center justify-center gap-3">
+                            <span id="btn-text">Üzenet Küldése</span>
+                            <i class="fa-solid fa-paper-plane" id="btn-icon"></i>
+                            <i class="fa-solid fa-spinner fa-spin hidden" id="btn-loader"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================
+         FOOTER
+    ============================= -->
+    <footer class="bg-ink text-white relative z-10">
+        <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 pt-16 pb-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                <!-- Brand -->
+                <div class="sm:col-span-2 lg:col-span-1">
+                    <div class="flex items-center gap-3 mb-5">
+                        <div class="w-10 h-10 bg-teal rounded-xl flex items-center justify-center">
+                            <i class="fa-solid fa-leaf text-white text-sm"></i>
+                        </div>
+                        <span class="font-bold text-lg">VH<span class="text-white/40 font-light">.net</span></span>
+                    </div>
+                    <p class="text-white/50 text-sm font-light leading-relaxed mb-5">Magyarország egyik vezető veszélyes hulladékkezelő vállalata. AI-alapú technológia, zöld flotta, 100% megfelelés.</p>
+                    <div class="flex gap-3">
+                        <a href="#" class="w-9 h-9 bg-white/10 rounded-xl flex items-center justify-center text-white/60 hover:bg-teal hover:text-white transition-all text-sm" aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-9 h-9 bg-white/10 rounded-xl flex items-center justify-center text-white/60 hover:bg-teal hover:text-white transition-all text-sm" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-9 h-9 bg-white/10 rounded-xl flex items-center justify-center text-white/60 hover:bg-teal hover:text-white transition-all text-sm" aria-label="YouTube">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Szolgáltatások -->
+                <div>
+                    <h4 class="font-bold text-sm uppercase tracking-widest text-white/40 mb-5">Szolgáltatások</h4>
+                    <ul class="space-y-3 text-sm text-white/60">
+                        <li><a href="#" class="hover:text-white transition-colors">Veszélyes hulladék szállítás</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">ADR szállítás</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Építési inert hulladék</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">WEEE / Elektronikai hulladék</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">ESG tanácsadás</a></li>
+                    </ul>
+                </div>
+
+                <!-- Információk -->
+                <div>
+                    <h4 class="font-bold text-sm uppercase tracking-widest text-white/40 mb-5">Információk</h4>
+                    <ul class="space-y-3 text-sm text-white/60">
+                        <li><a href="#" class="hover:text-white transition-colors">Szelektív Kisokos</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Szakmai Blog</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Jogszabályi háttér</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">KSZGYSZ tudnivalók</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Adatkezelési tájékoztató</a></li>
+                    </ul>
+                </div>
+
+                <!-- Kapcsolat -->
+                <div>
+                    <h4 class="font-bold text-sm uppercase tracking-widest text-white/40 mb-5">Kapcsolat</h4>
+                    <ul class="space-y-3 text-sm text-white/60">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-phone w-4 text-teal"></i> +36 1 234 5678</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-envelope w-4 text-teal"></i> info@veszelyeshulladek.net</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-location-dot w-4 text-teal"></i> 1117 Budapest, Ipar u. 12.</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-clock w-4 text-teal"></i> H–P: 07:00–18:00</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-white/30">
+                <p>&copy; 2026 VeszélyesHulladék.net – Minden jog fenntartva.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-white/60 transition-colors">Adatkezelés</a>
+                    <a href="#" class="hover:text-white/60 transition-colors">ÁSZF</a>
+                    <a href="#" class="hover:text-white/60 transition-colors">Süti beállítások</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Bottom Nav -->
+    <div class="mobile-nav md:hidden flex justify-around items-center py-2">
+        <a href="#" class="flex flex-col items-center gap-1 text-muted">
+            <i class="fa-solid fa-house text-sm"></i>
+            <span class="text-[9px] font-bold uppercase tracking-wider">Főoldal</span>
+        </a>
+        <a href="#szolgaltatasok" class="flex flex-col items-center gap-1 text-muted">
+            <i class="fa-solid fa-truck-fast text-sm"></i>
+            <span class="text-[9px] font-bold uppercase tracking-wider">Szolgáltatás</span>
+        </a>
+        <button onclick="openKisokos()" class="flex flex-col items-center gap-1 text-teal">
+            <i class="fa-solid fa-recycle text-sm"></i>
+            <span class="text-[9px] font-bold uppercase tracking-wider">Kisokos</span>
+        </button>
+        <a href="#kapcsolat" class="flex flex-col items-center gap-1 text-forest">
+            <i class="fa-regular fa-envelope text-sm"></i>
+            <span class="text-[9px] font-bold uppercase tracking-wider">Ajánlat</span>
+        </a>
+    </div>
+
+    <!-- ============================
+         SZELEKTÍV KISOKOS MODAL
+    ============================= -->
+    <div id="kisokos-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[100] closed flex items-end sm:items-center justify-center p-0 sm:p-4"
+         onclick="closeKisokosBackdrop(event)">
+        <div id="kisokos-content" class="bg-white w-full sm:max-w-lg sm:rounded-[2.5rem] rounded-t-[2.5rem] p-7 sm:p-10 max-h-[90vh] overflow-y-auto shadow-2xl relative"
+             onclick="event.stopPropagation()">
+            <button onclick="closeKisokos()" class="absolute top-5 right-5 w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-muted hover:bg-gray-200 transition">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h2 class="text-2xl font-bold text-ink mb-1 flex items-center gap-3">
+                <i class="fa-solid fa-recycle text-teal"></i> Szelektív Kisokos
+            </h2>
+            <p class="text-sm text-muted mb-6">Írja be a hulladék nevét, és azonnal megmutatjuk, hova dobja!</p>
+
+            <div class="relative mb-6">
+                <i class="fa-solid fa-magnifying-glass absolute left-5 top-1/2 -translate-y-1/2 text-muted/50 text-sm pointer-events-none"></i>
+                <input type="text" id="modal-kereso" placeholder="Pl: PET palack, akkumulátor, festék..." autocomplete="off"
+                    class="w-full bg-gray-50 border border-gray-200 rounded-2xl px-5 py-4 pl-14 focus:outline-none focus:border-teal transition text-sm">
+            </div>
+
+            <div id="kisokos-eredmeny-doboz" class="hidden mb-6"></div>
+
+            <!-- Categories -->
+            <div class="grid grid-cols-2 gap-3">
+                <div onclick="modalSearch('műanyag')" class="p-4 rounded-2xl border-2 border-yellow-200 bg-yellow-50 cursor-pointer hover:border-yellow-400 transition group">
+                    <div class="w-8 h-8 bg-yellow-400 rounded-xl flex items-center justify-center mb-2 text-white text-sm group-hover:scale-110 transition">
+                        <i class="fa-solid fa-recycle"></i>
+                    </div>
+                    <p class="font-bold text-yellow-800 text-sm">Sárga kukás</p>
+                    <p class="text-[10px] text-yellow-600">Műanyag, fém</p>
+                </div>
+                <div onclick="modalSearch('papír')" class="p-4 rounded-2xl border-2 border-blue-200 bg-blue-50 cursor-pointer hover:border-blue-400 transition group">
+                    <div class="w-8 h-8 bg-blue-500 rounded-xl flex items-center justify-center mb-2 text-white text-sm group-hover:scale-110 transition">
+                        <i class="fa-regular fa-newspaper"></i>
+                    </div>
+                    <p class="font-bold text-blue-800 text-sm">Kék kukás</p>
+                    <p class="text-[10px] text-blue-600">Papír, karton</p>
+                </div>
+                <div onclick="modalSearch('üveg')" class="p-4 rounded-2xl border-2 border-green-200 bg-green-50 cursor-pointer hover:border-green-400 transition group">
+                    <div class="w-8 h-8 bg-green-600 rounded-xl flex items-center justify-center mb-2 text-white text-sm group-hover:scale-110 transition">
+                        <i class="fa-solid fa-wine-bottle"></i>
+                    </div>
+                    <p class="font-bold text-green-800 text-sm">Zöld kukás</p>
+                    <p class="text-[10px] text-green-600">Üveg</p>
+                </div>
+                <div onclick="modalSearch('veszélyes')" class="p-4 rounded-2xl border-2 border-red-200 bg-red-50 cursor-pointer hover:border-red-400 transition group">
+                    <div class="w-8 h-8 bg-red-500 rounded-xl flex items-center justify-center mb-2 text-white text-sm group-hover:scale-110 transition">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                    </div>
+                    <p class="font-bold text-red-800 text-sm">Veszélyes</p>
+                    <p class="text-[10px] text-red-600">Speciális kezelés</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================
+         JAVASCRIPT
+    ============================= -->
     <script>
-        // Biztonságos animáció futtatás
+    // ── GSAP Animációk ──────────────────────────────────────────────────
+    (function initAnimations() {
         try {
+            if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
             gsap.registerPlugin(ScrollTrigger);
-            
-            // Ha JS működik, animálunk mindent
-            gsap.from(".gsap-anim", {
-                scrollTrigger: { trigger: ".gsap-anim", start: "top 90%" },
-                y: 30, opacity: 0, duration: 0.8, stagger: 0.1, ease: "power2.out"
+
+            // Hero fade-in (sequenced)
+            gsap.utils.toArray('.reveal').forEach((el, i) => {
+                gsap.fromTo(el,
+                    { opacity: 0, y: 32 },
+                    {
+                        opacity: 1, y: 0,
+                        duration: 0.75,
+                        ease: 'power2.out',
+                        delay: i * 0.08,
+                        scrollTrigger: {
+                            trigger: el,
+                            start: 'top 90%',
+                            once: true
+                        }
+                    }
+                );
             });
-            
-            gsap.from(".bento-item", { scrollTrigger: { trigger: "#ux-centre", start: "top 80%" }, y: 40, opacity: 0, duration: 0.8, stagger: 0.2 });
-            
+
+            // Ticker logo
+            gsap.from('.ticker-track', { x: 0, duration: 0 });
+
         } catch (e) {
-            console.error("Animációs hiba:", e); // Ha GSAP megakad, a weboldal akkor is látható marad!
+            // Fallback: make all elements visible if GSAP fails
+            document.querySelectorAll('.reveal').forEach(el => {
+                el.style.opacity = '1';
+                el.style.transform = 'none';
+            });
         }
+    })();
 
-        // Naptár
-        flatpickr("#datepicker-input", {
-            locale: "hu", dateFormat: "Y. F d., l", minDate: "today",
-            onChange: function(selectedDates, dateStr) {
-                document.getElementById('naptar-eredmeny').innerHTML = `<div class="p-4 bg-green-50 border border-green-200 rounded-xl text-sm text-green-800">Választott dátum: <b>${dateStr}</b> - Szállítás: Veszélyes hulladék.</div>`;
+    // ── Navbar scroll effect ────────────────────────────────────────────
+    (function initNavbar() {
+        const nav = document.getElementById('navbar');
+        if (!nav) return;
+        const onScroll = () => {
+            if (window.scrollY > 30) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
             }
-        });
+        };
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+    })();
 
-        // Kisokos Adatbázis
-        const HULLADEK_ADATBAZIS = {
-            "pet": { "hova": "Sárga (Műanyag)", "icon": "fa-bottle-water", "color": "text-yellow-500", "szov": "Lapítsa ki!" },
-            "papir": { "hova": "Kék (Papír)", "icon": "fa-box", "color": "text-blue-500", "szov": "Csak tiszta papír!" },
-            "uveg": { "hova": "Zöld (Üveg)", "icon": "fa-wine-bottle", "color": "text-green-500", "szov": "Kupak nélkül!" },
-            "festek": { "hova": "Veszélyes", "icon": "fa-flask", "color": "text-red-500", "szov": "Tilos a kukába dobni!" }
+    // ── Mobile menu ──────────────────────────────────────────────────────
+    function toggleMobileMenu() {
+        const menu = document.getElementById('mobile-menu');
+        const mb1 = document.getElementById('mb1');
+        const mb2 = document.getElementById('mb2');
+        const mb3 = document.getElementById('mb3');
+        if (!menu) return;
+        const isOpen = !menu.classList.contains('hidden');
+        menu.classList.toggle('hidden');
+        if (!isOpen) {
+            mb1.style.transform = 'rotate(45deg) translateY(6px)';
+            mb2.style.opacity = '0';
+            mb3.style.transform = 'rotate(-45deg) translateY(-6px)';
+        } else {
+            mb1.style.transform = '';
+            mb2.style.opacity = '';
+            mb3.style.transform = '';
+        }
+    }
+
+    // ── Counter animation ────────────────────────────────────────────────
+    (function initCounters() {
+        const counters = document.querySelectorAll('.counter');
+        if (!counters.length) return;
+
+        const animateCounter = (el) => {
+            const target = parseInt(el.dataset.target, 10);
+            const suffix = el.dataset.suffix || '';
+            const duration = 1800;
+            const start = performance.now();
+
+            const tick = (now) => {
+                const elapsed = Math.min((now - start) / duration, 1);
+                const eased = 1 - Math.pow(1 - elapsed, 3);
+                const value = Math.round(eased * target);
+                el.textContent = value + suffix;
+                if (elapsed < 1) requestAnimationFrame(tick);
+            };
+            requestAnimationFrame(tick);
         };
 
-        function kisokosKereses(inputScov) {
-            const input = inputScov.toLowerCase().trim();
-            const e = document.getElementById('kisokos-eredmeny-doboz');
-            if(!input) { e.classList.add('hidden'); return; }
-            let found = Object.keys(HULLADEK_ADATBAZIS).find(k => input.includes(k));
-            if(found) {
-                const data = HULLADEK_ADATBAZIS[found];
-                e.innerHTML = `<div class="text-4xl ${data.color} mb-2"><i class="fa-solid ${data.icon}"></i></div><p class="text-xl font-bold">${data.hova}</p><p class="text-sm">${data.szov}</p>`;
-                e.classList.remove('hidden');
-            } else {
-                e.innerHTML = `<p class="text-red-500 font-bold">Nincs találat.</p>`;
-                e.classList.remove('hidden');
-            }
-        }
-        document.getElementById('kisokos-kereso').addEventListener('input', e => kisokosKereses(e.target.value));
-        document.getElementById('modal-kereso').addEventListener('input', e => kisokosKereses(e.target.value));
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounter(entry.target);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
 
-        const modal = document.getElementById('kisokos-modal'), modalContent = document.getElementById('kisokos-content');
-        function openKisokos() { modal.classList.remove('hidden'); modal.classList.remove('opacity-0'); modalContent.classList.remove('scale-95'); }
-        function closeKisokos() { modal.classList.add('opacity-0'); modalContent.classList.add('scale-95'); setTimeout(() => modal.classList.add('hidden'), 300); }
-        
-        document.getElementById('contact-form').addEventListener('submit', function(e) { e.preventDefault(); alert('Sikeres küldés!'); });
+        counters.forEach(el => observer.observe(el));
+    })();
+
+    // ── Naptár (Flatpickr) ───────────────────────────────────────────────
+    (function initDatepicker() {
+        const input = document.getElementById('datepicker-input');
+        if (!input || typeof flatpickr === 'undefined') return;
+
+        flatpickr(input, {
+            locale: 'hu',
+            dateFormat: 'Y. F j., l',
+            minDate: 'today',
+            maxDate: new Date().fp_incr(365),
+            disableMobile: true,
+            onChange: function(selectedDates, dateStr) {
+                const result = document.getElementById('naptar-eredmeny');
+                if (!result) return;
+                const day = selectedDates[0].getDay();
+                const isWeekend = day === 0 || day === 6;
+                if (isWeekend) {
+                    result.innerHTML = `
+                        <div class="p-4 bg-orange-50 border border-orange-200 rounded-2xl text-sm text-orange-800 flex items-start gap-3">
+                            <i class="fa-solid fa-circle-info mt-0.5 text-orange-500"></i>
+                            <div><b>${dateStr}</b><br>Hétvégi nap – sürgős esetben hívjon minket: <a href="tel:+3612345678" class="font-bold underline">+36 1 234 5678</a></div>
+                        </div>`;
+                } else {
+                    result.innerHTML = `
+                        <div class="p-4 bg-green-50 border border-green-200 rounded-2xl text-sm text-green-800 flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check mt-0.5 text-green-600"></i>
+                            <div><b>${dateStr}</b><br>Elszállítás lehetséges. Veszélyes hulladék: <b>08:00–15:00</b>, Inert: <b>07:00–17:00</b></div>
+                        </div>`;
+                }
+            }
+        });
+    })();
+
+    // ── Szelektív Kisokos adatbázis ─────────────────────────────────────
+    const HULLADEK_DB = {
+        // Műanyag / Sárga
+        'pet': { hova: 'Sárga kukás (Műanyag)', icon: 'fa-bottle-water', color: '#CA8A04', bg: 'bg-yellow-50', border: 'border-yellow-200', tipp: 'Lapítsa össze és kupak nélkül dobja be!', kategoria: 'Műanyag' },
+        'műanyag': { hova: 'Sárga kukás (Műanyag)', icon: 'fa-recycle', color: '#CA8A04', bg: 'bg-yellow-50', border: 'border-yellow-200', tipp: 'Tisztítsa ki, majd lapítsa össze!', kategoria: 'Műanyag' },
+        'flakon': { hova: 'Sárga kukás (Műanyag)', icon: 'fa-bottle-droplet', color: '#CA8A04', bg: 'bg-yellow-50', border: 'border-yellow-200', tipp: 'Tisztán és kupaklezárva.', kategoria: 'Műanyag' },
+        'tetrapak': { hova: 'Sárga kukás (Műanyag)', icon: 'fa-box', color: '#CA8A04', bg: 'bg-yellow-50', border: 'border-yellow-200', tipp: 'Öblítse ki, lapítsa össze!', kategoria: 'Műanyag' },
+        'fémdoboz': { hova: 'Sárga kukás (Fém)', icon: 'fa-box', color: '#CA8A04', bg: 'bg-yellow-50', border: 'border-yellow-200', tipp: 'Öblítse ki!', kategoria: 'Fém' },
+        'konzerv': { hova: 'Sárga kukás (Fém)', icon: 'fa-box', color: '#CA8A04', bg: 'bg-yellow-50', border: 'border-yellow-200', tipp: 'Tisztítsa ki alaposan.', kategoria: 'Fém' },
+        // Papír / Kék
+        'papír': { hova: 'Kék kukás (Papír)', icon: 'fa-file', color: '#2563EB', bg: 'bg-blue-50', border: 'border-blue-200', tipp: 'Csak száraz, tiszta papír! Zsíros papír kukába megy.', kategoria: 'Papír' },
+        'karton': { hova: 'Kék kukás (Papír)', icon: 'fa-box-open', color: '#2563EB', bg: 'bg-blue-50', border: 'border-blue-200', tipp: 'Hajtsa össze a dobozokat!', kategoria: 'Papír' },
+        'újság': { hova: 'Kék kukás (Papír)', icon: 'fa-newspaper', color: '#2563EB', bg: 'bg-blue-50', border: 'border-blue-200', tipp: 'Gépi szalaggal összekötve is leadható.', kategoria: 'Papír' },
+        'füzet': { hova: 'Kék kukás (Papír)', icon: 'fa-book', color: '#2563EB', bg: 'bg-blue-50', border: 'border: border-blue-200', tipp: 'Spirálkötés eltávolítható.', kategoria: 'Papír' },
+        // Üveg / Zöld
+        'üveg': { hova: 'Zöld kukás (Üveg)', icon: 'fa-wine-bottle', color: '#16A34A', bg: 'bg-green-50', border: 'border-green-200', tipp: 'Kupak nélkül, öblítve. Tükör és kerámia NEM idevaló!', kategoria: 'Üveg' },
+        'palack': { hova: 'Zöld kukás (Üveg)', icon: 'fa-wine-bottle', color: '#16A34A', bg: 'bg-green-50', border: 'border-green-200', tipp: 'Kupak nélkül dobja be!', kategoria: 'Üveg' },
+        // Veszélyes
+        'festék': { hova: 'Veszélyes hulladékgyűjtő', icon: 'fa-flask', color: '#DC2626', bg: 'bg-red-50', border: 'border-red-200', tipp: 'TILOS a kukába dobni! Vigye hulladékgyűjtő udvarba.', kategoria: 'Veszélyes' },
+        'akkumulátor': { hova: 'Veszélyes hulladékgyűjtő', icon: 'fa-battery-full', color: '#DC2626', bg: 'bg-red-50', border: 'border-red-200', tipp: 'Autóakkumulátor: szervizbe, lakásakksi: üzletbe.', kategoria: 'Veszélyes' },
+        'elem': { hova: 'Elem-gyűjtő (bolt/iskola)', icon: 'fa-battery-half', color: '#EA580C', bg: 'bg-orange-50', border: 'border-orange-200', tipp: 'Szupermarketek, iskolák elemgyűjtőibe.', kategoria: 'Veszélyes' },
+        'gyógyszer': { hova: 'Patikába visszavinni!', icon: 'fa-pills', color: '#DC2626', bg: 'bg-red-50', border: 'border-red-200', tipp: 'Lejárt gyógyszert kizárólag gyógyszertárba!', kategoria: 'Veszélyes' },
+        'olaj': { hova: 'Veszélyes hulladékgyűjtő', icon: 'fa-oil-can', color: '#DC2626', bg: 'bg-red-50', border: 'border-red-200', tipp: 'Fáradt olaj: szervizbe vagy hulladékgyűjtőbe. TILOS leönteni!', kategoria: 'Veszélyes' },
+        'elektronika': { hova: 'WEEE-gyűjtőpont (Telecom/áruház)', icon: 'fa-laptop', color: '#7C3AED', bg: 'bg-purple-50', border: 'border-purple-200', tipp: 'Elektronika vásárlásakor a kereskedő köteles átvenni!', kategoria: 'Elektronika' },
+        'telefon': { hova: 'WEEE-gyűjtőpont', icon: 'fa-mobile', color: '#7C3AED', bg: 'bg-purple-50', border: 'border-purple-200', tipp: 'Telefonboltban vagy áruházban leadható.', kategoria: 'Elektronika' },
+        // Szerves / Komposzt
+        'bio': { hova: 'Barna kukás (Bio)', icon: 'fa-seedling', color: '#92400E', bg: 'bg-amber-50', border: 'border-amber-200', tipp: 'Maradék étel, kávézacc, tojáshéj idevaló.', kategoria: 'Bio' },
+        'zöldhulladék': { hova: 'Barna kukás / Komposzt', icon: 'fa-leaf', color: '#92400E', bg: 'bg-amber-50', border: 'border-amber-200', tipp: 'Fűnyírék, levél, gallyak.', kategoria: 'Bio' },
+    };
+
+    function findHulladek(input) {
+        if (!input) return null;
+        const q = input.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+        const keys = Object.keys(HULLADEK_DB);
+        return keys.find(k => {
+            const norm = k.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+            return q.includes(norm);
+        }) || null;
+    }
+
+    function renderResult(found, containerId) {
+        const el = document.getElementById(containerId);
+        if (!el) return;
+        if (!found) {
+            el.innerHTML = `<div class="p-5 rounded-2xl bg-gray-50 border border-gray-200 text-center text-sm text-muted">
+                <i class="fa-solid fa-circle-question text-2xl text-muted/40 mb-2 block"></i>
+                Nem találtuk az adatbázisban. Hívjon minket: <a href="tel:+3612345678" class="text-forest font-bold underline">+36 1 234 5678</a>
+            </div>`;
+            el.classList.remove('hidden');
+            return;
+        }
+        const d = HULLADEK_DB[found];
+        el.innerHTML = `
+            <div class="p-5 rounded-2xl ${d.bg} border ${d.border}">
+                <div class="flex items-center gap-3 mb-3">
+                    <div class="w-10 h-10 rounded-xl flex items-center justify-center" style="background:${d.color}20">
+                        <i class="fa-solid ${d.icon} text-sm" style="color:${d.color}"></i>
+                    </div>
+                    <div>
+                        <p class="font-bold text-sm" style="color:${d.color}">${d.hova}</p>
+                        <p class="text-[10px] text-muted uppercase tracking-wider">${d.kategoria}</p>
+                    </div>
+                </div>
+                <p class="text-sm text-muted flex items-start gap-2">
+                    <i class="fa-solid fa-circle-info mt-0.5 flex-shrink-0" style="color:${d.color}"></i>
+                    ${d.tipp}
+                </p>
+            </div>`;
+        el.classList.remove('hidden');
+    }
+
+    document.getElementById('kisokos-kereso').addEventListener('input', function() {
+        const found = findHulladek(this.value);
+        const mini = document.getElementById('kisokos-mini-result');
+        if (!mini) return;
+        if (found) {
+            mini.textContent = '→ ' + HULLADEK_DB[found].hova;
+        } else if (this.value.length > 1) {
+            mini.textContent = 'Nincs találat – próbálja meg a teljes böngészőben!';
+        } else {
+            mini.textContent = '';
+        }
+    });
+
+    document.getElementById('modal-kereso').addEventListener('input', function() {
+        const found = findHulladek(this.value);
+        renderResult(found, 'kisokos-eredmeny-doboz');
+    });
+
+    function modalSearch(term) {
+        const input = document.getElementById('modal-kereso');
+        if (input) { input.value = term; input.dispatchEvent(new Event('input')); }
+    }
+
+    // ── Kisokos Modal ─────────────────────────────────────────────────────
+    const kisokosModal = document.getElementById('kisokos-modal');
+
+    function openKisokos() {
+        if (!kisokosModal) return;
+        kisokosModal.classList.remove('closed');
+        kisokosModal.classList.add('open');
+        document.body.style.overflow = 'hidden';
+        setTimeout(() => {
+            const input = document.getElementById('modal-kereso');
+            if (input) input.focus();
+        }, 300);
+    }
+
+    function closeKisokos() {
+        if (!kisokosModal) return;
+        kisokosModal.classList.remove('open');
+        kisokosModal.classList.add('closed');
+        document.body.style.overflow = '';
+    }
+
+    function closeKisokosBackdrop(e) {
+        if (e.target === kisokosModal) closeKisokos();
+    }
+
+    // Close on Escape
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeKisokos(); });
+
+    // ── Contact Form ──────────────────────────────────────────────────────
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const btn = document.getElementById('submit-btn');
+        const text = document.getElementById('btn-text');
+        const icon = document.getElementById('btn-icon');
+        const loader = document.getElementById('btn-loader');
+
+        btn.disabled = true;
+        btn.classList.add('opacity-75', 'cursor-not-allowed');
+        icon.classList.add('hidden');
+        loader.classList.remove('hidden');
+        text.textContent = 'Küldés folyamatban...';
+
+        // Simulate API call
+        setTimeout(() => {
+            btn.classList.remove('opacity-75', 'cursor-not-allowed', 'bg-forest');
+            btn.classList.add('bg-teal');
+            icon.classList.remove('hidden');
+            icon.className = 'fa-solid fa-circle-check';
+            loader.classList.add('hidden');
+            text.textContent = 'Sikeresen elküldve!';
+            this.reset();
+
+            setTimeout(() => {
+                btn.classList.remove('bg-teal');
+                btn.classList.add('bg-forest');
+                btn.disabled = false;
+                btn.classList.remove('opacity-75', 'cursor-not-allowed');
+                icon.className = 'fa-solid fa-paper-plane';
+                text.textContent = 'Üzenet Küldése';
+            }, 3000);
+        }, 1800);
+    });
+
+    // ── Smooth scroll for anchors ─────────────────────────────────────────
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', e => {
+            const target = document.querySelector(a.getAttribute('href'));
+            if (target) {
+                e.preventDefault();
+                const offset = 88;
+                const top = target.getBoundingClientRect().top + window.scrollY - offset;
+                window.scrollTo({ top, behavior: 'smooth' });
+            }
+        });
+    });
     </script>
 </body>
 </html>
