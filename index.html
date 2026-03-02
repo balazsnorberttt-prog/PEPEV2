@@ -1,1482 +1,1028 @@
 <!DOCTYPE html>
-<html lang="hu" class="scroll-smooth">
+<html lang="hu">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VeszélyesHulladék.net | Professzionális Hulladékkezelés & ADR Szállítás</title>
+<meta name="description" content="Magyarország vezető veszélyes hulladékkezelő vállalata. ADR szállítás, ipari hulladék elszállítás, ESG tanácsadás és AI-alapú válogatás. 24 órás kiszállás, 100% jogszabályi megfelelés.">
+<meta name="keywords" content="veszélyes hulladék, hulladékkezelés, ADR szállítás, ipari hulladék, szelektív hulladékgyűjtés, ESG tanácsadás, körforgásos gazdaság, EPR, PPWR, DPP">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.veszelyeshulladek.net/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="VeszélyesHulladék.net | Professzionális Hulladékkezelés">
+<meta property="og:description" content="ADR szállítás, ipari hulladék elszállítás és AI-alapú válogatás. 24h kiszállás, 100% megfelelés.">
+<meta property="og:locale" content="hu_HU">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"VeszélyesHulladék.net","description":"Professzionális veszélyes hulladékkezelés, ADR szállítás és ESG tanácsadás","url":"https://www.veszelyeshulladek.net","telephone":"+36-1-234-5678","address":{"@type":"PostalAddress","addressCountry":"HU","addressLocality":"Budapest"},"openingHours":"Mo-Fr 07:00-18:00"}</script>
 
-    <!-- SEO Meta Tags -->
-    <title>VeszélyesHulladék.net | Professzionális Hulladékkezelés & Veszélyes Hulladék Elszállítás</title>
-    <meta name="description" content="Magyarország vezető veszélyes hulladékkezelő vállalata. ADR szállítás, ipari hulladék elszállítás, ESG tanácsadás és AI-alapú válogatás. 24 órás kiszállás, 100% jogszabályi megfelelés.">
-    <meta name="keywords" content="veszélyes hulladék, hulladékkezelés, ADR szállítás, ipari hulladék, szelektív hulladékgyűjtés, ESG tanácsadás, hulladék elszállítás Budapest, körforgásos gazdaság">
-    <meta name="author" content="VeszélyesHulladék.net">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://www.veszelyeshulladek.net/">
+<!-- Preconnect only for font + icons -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com">
 
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.veszelyeshulladek.net/">
-    <meta property="og:title" content="VeszélyesHulladék.net | Professzionális Hulladékkezelés">
-    <meta property="og:description" content="ADR szállítás, ipari hulladék elszállítás és AI-alapú válogatás. 24 órás kiszállás, 100% jogszabályi megfelelés.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=1200">
-    <meta property="og:locale" content="hu_HU">
+<!-- Fonts with display=swap: text instantly visible, font swaps in -->
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,600;0,9..40,800;1,9..40,400&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="VeszélyesHulladék.net | Hulladékkezelés">
-    <meta name="twitter:description" content="Professzionális veszélyes hulladékkezelés AI-alapú technológiával.">
+<!-- Font Awesome: non-render-blocking -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "VeszélyesHulladék.net",
-      "description": "Professzionális veszélyes hulladékkezelés, ADR szállítás és ESG tanácsadás",
-      "url": "https://www.veszelyeshulladek.net",
-      "telephone": "+36-1-234-5678",
-      "address": {"@type": "PostalAddress", "addressCountry": "HU", "addressLocality": "Budapest"},
-      "openingHours": "Mo-Fr 07:00-18:00",
-      "priceRange": "$$"
-    }
-    </script>
+<style>
+/* ═══════════ RESET & BASE ═══════════ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+:root{
+  --forest:#0B4F36;--forestl:#166347;--cream:#FDFBF7;
+  --ink:#1a2332;--muted:#64748b;--ember:#E55B2A;
+  --teal:#0D9488;--teall:#14b8a6;--white:#fff;
+}
+body{
+  background:var(--cream);color:var(--ink);
+  font-family:'DM Sans',system-ui,-apple-system,sans-serif;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+@media(max-width:767px){body{padding-bottom:68px}}
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    <script src="https://npmcdn.com/flatpickr/dist/l10n/hu.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+/* ═══════════ SCROLL REVEAL ═══════════ */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .55s ease,transform .55s ease}
+.reveal.on{opacity:1;transform:none}
+.reveal:nth-child(2){transition-delay:.07s}
+.reveal:nth-child(3){transition-delay:.14s}
+.reveal:nth-child(4){transition-delay:.21s}
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        forest: '#0B4F36',
-                        forestlight: '#166347',
-                        cream: '#FDFBF7',
-                        ink: '#1a2332',
-                        muted: '#64748b',
-                        ember: '#E55B2A',
-                        teal: '#0D9488',
-                        teallight: '#14b8a6',
-                        sage: '#84a98c'
-                    },
-                    fontFamily: {
-                        sans: ['DM Sans', 'sans-serif'],
-                        serif: ['Instrument Serif', 'Georgia', 'serif']
-                    }
-                }
-            }
-        }
-    </script>
+/* ═══════════ NAVBAR ═══════════ */
+#nav{
+  position:fixed;top:0;width:100%;z-index:50;
+  background:rgba(253,251,247,.92);
+  backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(0,0,0,.05);
+  transition:box-shadow .3s;
+}
+#nav.sc{box-shadow:0 4px 30px -8px rgba(11,79,54,.12)}
+.nav-inner{
+  max-width:1280px;margin:0 auto;padding:0 1.25rem;
+  display:flex;justify-content:space-between;align-items:center;height:72px;
+}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo-icon{width:40px;height:40px;background:var(--forest);border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:.875rem}
+.logo-text{font-weight:800;font-size:1.05rem;color:var(--forest);line-height:1.1}
+.logo-sub{font-size:.58rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.nav-links{display:none;align-items:center;gap:24px}
+.nav-links a,.nav-links button{font-size:.875rem;font-weight:500;color:var(--muted);text-decoration:none;background:none;border:none;cursor:pointer;font-family:inherit;transition:color .2s}
+.nav-links a:hover,.nav-links button:hover{color:var(--forest)}
+.nav-cta{display:none;align-items:center;gap:14px}
+.btn-pill{background:var(--forest);color:#fff;padding:10px 22px;border-radius:999px;font-size:.8rem;font-weight:700;text-decoration:none;transition:background .2s;box-shadow:0 6px 18px -6px rgba(11,79,54,.35)}
+.btn-pill:hover{background:var(--forestl)}
+.hamburger{display:flex;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+.hb{width:24px;height:2px;background:var(--forest);border-radius:2px;transition:all .3s;display:block}
+.hb2{width:16px}
+#mob-menu{display:none;padding:1rem 1.25rem 1.5rem;border-top:1px solid rgba(0,0,0,.05)}
+#mob-menu a,#mob-menu button{display:block;padding:11px 0;font-weight:600;color:var(--ink);text-decoration:none;border-bottom:1px solid #f1f5f9;background:none;border-left:none;border-right:none;border-top:none;cursor:pointer;font-family:inherit;width:100%;text-align:left;font-size:.95rem}
+#mob-menu .mob-cta{display:block;margin-top:12px;background:var(--forest);color:#fff;text-align:center;padding:14px;border-radius:14px;font-weight:700;text-decoration:none;border:none}
+@media(min-width:768px){
+  .hamburger{display:none}
+  .nav-links,.nav-cta{display:flex}
+}
 
-    <style>
-        *, *::before, *::after { box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
+/* ═══════════ HERO ═══════════ */
+.hero{min-height:100svh;display:flex;align-items:center;padding:88px 1.25rem 4rem;position:relative;z-index:1}
+.hero-grid{max-width:1280px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr;gap:2.5rem;align-items:center}
+@media(min-width:1024px){.hero-grid{grid-template-columns:1fr 1fr;gap:4rem}}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:7px 16px;border-radius:999px;
+  background:rgba(13,148,136,.09);border:1px solid rgba(13,148,136,.18);
+  color:var(--teal);font-size:.68rem;font-weight:700;
+  text-transform:uppercase;letter-spacing:.1em;margin-bottom:1.5rem;
+}
+h1{font-size:clamp(2.4rem,6vw,4.5rem);font-weight:800;color:var(--ink);line-height:1.05;letter-spacing:-.02em;margin-bottom:1.25rem}
+.serif-italic{font-family:'Instrument Serif',Georgia,serif;font-style:italic}
+.grad{background:linear-gradient(135deg,var(--forest),var(--teal) 60%,var(--teall));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-p{font-size:1rem;color:var(--muted);line-height:1.75;max-width:500px;margin-bottom:2rem;font-weight:300}
+.hero-btns{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:2rem}
+.btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--forest);color:#fff;padding:15px 30px;border-radius:16px;font-weight:700;text-decoration:none;font-size:.9rem;box-shadow:0 10px 28px -8px rgba(11,79,54,.38);transition:background .2s}
+.btn-primary:hover{background:var(--forestl)}
+.btn-outline{display:inline-flex;align-items:center;gap:8px;border:2px solid rgba(11,79,54,.18);color:var(--forest);padding:15px 26px;border-radius:16px;font-weight:700;text-decoration:none;font-size:.9rem;transition:background .2s}
+.btn-outline:hover{background:rgba(11,79,54,.04)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{display:flex;align-items:center;gap:5px;background:#fff;padding:6px 13px;border-radius:999px;border:1px solid #e2e8f0;font-size:.7rem;font-weight:700;color:var(--muted);box-shadow:0 2px 8px -2px rgba(0,0,0,.05)}
 
-        body {
-            background-color: #FDFBF7;
-            color: #1a2332;
-            font-family: 'DM Sans', sans-serif;
-            -webkit-font-smoothing: antialiased;
-            overflow-x: hidden;
-        }
+/* ═══════════ CSS ART HERO VISUAL ═══════════ */
+.hero-vis{
+  width:100%;aspect-ratio:4/3;border-radius:2.5rem;
+  position:relative;overflow:hidden;
+  background:linear-gradient(135deg,var(--forest) 0%,var(--teal) 50%,var(--forestl) 100%);
+  box-shadow:0 28px 70px -16px rgba(11,79,54,.38);
+}
+.hero-vis-grid{
+  position:absolute;inset:0;
+  background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);
+  background-size:44px 44px;
+}
+.hero-vis-glow{
+  position:absolute;inset:0;
+  background:radial-gradient(circle at 25% 55%,rgba(255,255,255,.07),transparent 50%),
+    radial-gradient(circle at 78% 20%,rgba(20,184,166,.25),transparent 40%);
+}
+.hero-vis-icon{
+  position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+}
+.hero-vis-icon i{font-size:5.5rem;color:rgba(255,255,255,.12);animation:iFloat 4s ease-in-out infinite}
+@keyframes iFloat{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-14px) rotate(4deg)}}
+.hero-vis-badges{
+  position:absolute;bottom:1.25rem;left:1rem;right:1rem;
+  display:flex;gap:10px;z-index:5;
+}
+.vis-badge{
+  background:rgba(255,255,255,.95);backdrop-filter:blur(8px);
+  border-radius:14px;padding:10px 12px;
+  display:flex;align-items:center;gap:9px;flex:1;
+  box-shadow:0 6px 18px -4px rgba(0,0,0,.14);
+}
+.vis-badge.dark{background:rgba(11,79,54,.9)}
+.vb-icon{width:32px;height:32px;border-radius:999px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.vb-title{font-size:.72rem;font-weight:700;color:var(--ink)}
+.vb-sub{font-size:.62rem;color:var(--muted)}
+.vis-badge.dark .vb-title{color:#fff}
+.vis-badge.dark .vb-sub{color:rgba(255,255,255,.55)}
+/* Floating pill (desktop) */
+.float-pill{
+  display:none;position:absolute;right:-28px;top:40px;
+  background:#fff;border-radius:16px;padding:12px 16px;
+  box-shadow:0 14px 36px -8px rgba(0,0,0,.12);border:1px solid #f1f5f9;
+  align-items:center;gap:10px;
+}
+@media(min-width:1024px){.float-pill{display:flex}}
+.pill-icon{width:38px;height:38px;background:rgba(229,91,42,.1);border-radius:999px;display:flex;align-items:center;justify-content:center}
 
-        /* ---- NOISE TEXTURE ---- */
-        body::before {
-            content: '';
-            position: fixed;
-            inset: 0;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
-            pointer-events: none;
-            z-index: 9999;
-            opacity: 0.4;
-        }
+/* ═══════════ SCROLL LINE ═══════════ */
+.scroll-hint{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:5px;opacity:.35}
+.sl{width:1px;height:48px;background:linear-gradient(to bottom,rgba(11,79,54,.5),transparent);animation:sp 2s ease-in-out infinite}
+@keyframes sp{0%,100%{opacity:.3}50%{opacity:1}}
+.sl-txt{font-size:.58rem;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:var(--muted)}
 
-        /* ---- BLOBS ---- */
-        .blob {
-            position: fixed;
-            border-radius: 50%;
-            filter: blur(120px);
-            pointer-events: none;
-            z-index: 0;
-            animation: blobDrift 20s ease-in-out infinite alternate;
-        }
-        .blob-1 { width: 600px; height: 600px; background: radial-gradient(circle, rgba(13,148,136,0.15), transparent); top: -200px; right: -150px; animation-delay: 0s; }
-        .blob-2 { width: 500px; height: 500px; background: radial-gradient(circle, rgba(11,79,54,0.1), transparent); bottom: 10%; left: -150px; animation-delay: -8s; }
-        .blob-3 { width: 400px; height: 400px; background: radial-gradient(circle, rgba(229,91,42,0.08), transparent); top: 40%; right: 20%; animation-delay: -4s; }
+/* ═══════════ TICKER ═══════════ */
+.ticker-bar{background:var(--forest);padding:13px 0;overflow:hidden}
+.ticker-track{display:inline-block;white-space:nowrap;animation:tick 28s linear infinite;will-change:transform}
+@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.tick-item{font-size:.72rem;font-weight:700;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.12em;margin-right:1.5rem}
+.tick-sep{color:var(--teall);margin-right:1.5rem}
 
-        @keyframes blobDrift {
-            0% { transform: translate(0, 0) scale(1); }
-            50% { transform: translate(30px, -20px) scale(1.05); }
-            100% { transform: translate(-15px, 30px) scale(0.97); }
-        }
+/* ═══════════ PULSE DOT ═══════════ */
+.pdot{display:inline-block;width:7px;height:7px;background:#10B981;border-radius:50%;animation:pd 2s ease-in-out infinite}
+@keyframes pd{0%,100%{box-shadow:0 0 0 0 rgba(16,185,129,.4)}50%{box-shadow:0 0 0 6px rgba(16,185,129,0)}}
 
-        /* ---- NAVBAR ---- */
-        #navbar {
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            background: rgba(253,251,247,0.85);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-        }
-        #navbar.scrolled {
-            box-shadow: 0 2px 40px -8px rgba(11,79,54,0.12);
-            background: rgba(253,251,247,0.95);
-        }
+/* ═══════════ SECTIONS ═══════════ */
+.section{padding:4rem 1.25rem;position:relative;z-index:1}
+.section-white{background:#fff;border-top:1px solid #f1f5f9;border-bottom:1px solid #f1f5f9}
+.max{max-width:1280px;margin:0 auto}
+.section-tag{display:inline-flex;align-items:center;gap:8px;color:var(--teal);font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;margin-bottom:.875rem}
+.section-tag span{width:2rem;height:1px;background:var(--teal);display:inline-block}
+h2{font-size:clamp(1.9rem,4vw,3.2rem);font-weight:800;color:var(--ink);line-height:1.1;margin-bottom:.75rem}
+.sec-lead{color:var(--muted);font-size:1rem;font-weight:300;line-height:1.7;max-width:500px}
 
-        /* ---- HERO ---- */
-        .hero-badge {
-            background: linear-gradient(135deg, rgba(13,148,136,0.12), rgba(13,148,136,0.06));
-            border: 1px solid rgba(13,148,136,0.2);
-            backdrop-filter: blur(8px);
-        }
+/* ═══════════ BENTO CARDS ═══════════ */
+.bento-grid{display:grid;grid-template-columns:1fr;gap:1.25rem}
+@media(min-width:768px){.bento-grid{grid-template-columns:repeat(3,1fr)}}
+.bento{background:#fff;border-radius:2rem;padding:2rem;border:1px solid #f1f5f9;box-shadow:0 3px 16px -4px rgba(0,0,0,.05);display:flex;flex-direction:column;gap:.875rem}
+.bento-dark{background:var(--forest);border-color:var(--forest);position:relative;overflow:hidden}
+.bento-dark::before{content:'';position:absolute;top:0;right:0;width:100px;height:100px;background:radial-gradient(circle,rgba(255,255,255,.07),transparent);border-radius:0 2rem 0 100%;pointer-events:none}
+.bento-icon{font-size:2rem;display:block}
+.bento h3{font-size:1.15rem;font-weight:700;color:var(--ink)}
+.bento-dark h3{color:#fff}
+.bento p{font-size:.83rem;color:var(--muted);line-height:1.65;font-weight:300}
+.bento-dark p{color:rgba(255,255,255,.6)}
+.bento-input{
+  width:100%;background:#f8fafc;border:1.5px solid #e2e8f0;border-radius:999px;
+  padding:11px 16px;font-family:'DM Sans',sans-serif;font-size:.85rem;color:var(--ink);
+  outline:none;transition:border-color .2s;cursor:pointer;
+}
+.bento-input:focus{border-color:var(--teal)}
+.bento-input-dark{
+  width:100%;background:rgba(255,255,255,.1);border:1.5px solid rgba(255,255,255,.12);border-radius:999px;
+  padding:11px 16px;font-family:'DM Sans',sans-serif;font-size:.85rem;color:#fff;
+  outline:none;transition:border-color .2s;
+}
+.bento-input-dark::placeholder{color:rgba(255,255,255,.38)}
+.bento-input-dark:focus{border-color:rgba(20,184,166,.6)}
+.bento-btn{
+  width:100%;background:rgba(255,255,255,.14);border:1.5px solid rgba(255,255,255,.18);
+  color:#fff;padding:11px;border-radius:999px;font-size:.85rem;font-weight:600;
+  cursor:pointer;font-family:inherit;transition:background .2s;
+}
+.bento-btn:hover{background:rgba(255,255,255,.24)}
+.bento-row{display:flex;align-items:center;gap:9px;background:#f8fafc;padding:9px 13px;border-radius:11px;font-size:.78rem;font-weight:500;color:var(--muted)}
+.bento-out-btn{
+  border:2px solid rgba(13,148,136,.22);background:transparent;color:var(--teal);
+  padding:11px;border-radius:999px;font-size:.85rem;font-weight:700;
+  cursor:pointer;font-family:inherit;transition:background .2s,border-color .2s;margin-top:4px;
+}
+.bento-out-btn:hover{background:rgba(13,148,136,.06);border-color:rgba(13,148,136,.45)}
 
-        /* ---- IMAGE CARDS ---- */
-        .img-wrap {
-            overflow: hidden;
-            position: relative;
-            background: linear-gradient(135deg, #cbd5e1, #94a3b8);
-        }
-        .img-wrap img {
-            transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
-            width: 100%; height: 100%; object-fit: cover;
-            display: block;
-        }
-        .img-wrap:hover img { transform: scale(1.06); }
-        .img-wrap .img-placeholder {
-            position: absolute;
-            inset: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, #0B4F36 0%, #0D9488 100%);
-            z-index: 1;
-        }
+/* ═══════════ STATS ═══════════ */
+.stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+@media(min-width:768px){.stats-grid{grid-template-columns:repeat(4,1fr)}}
+.stat{text-align:center}
+.stat-num{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-size:clamp(2.8rem,6vw,5rem);line-height:1;margin-bottom:6px}
+.stat-lbl{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--muted)}
 
-        /* ---- CARDS ---- */
-        .card-lift {
-            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .card-lift:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 24px 60px -12px rgba(11, 79, 54, 0.15);
-        }
+/* ═══════════ SERVICE CARDS ═══════════ */
+.srv-grid{display:grid;grid-template-columns:1fr;gap:1.5rem}
+@media(min-width:768px){.srv-grid{grid-template-columns:repeat(3,1fr)}}
+.srv-card{
+  background:var(--cream);border:1px solid #f1f5f9;border-radius:2.5rem;
+  overflow:hidden;display:flex;flex-direction:column;
+  box-shadow:0 3px 16px -4px rgba(0,0,0,.05);
+  transition:transform .35s cubic-bezier(.4,0,.2,1),box-shadow .35s cubic-bezier(.4,0,.2,1);
+}
+.srv-card:hover{transform:translateY(-6px);box-shadow:0 22px 56px -12px rgba(11,79,54,.14)}
+/* CSS Art panels */
+.art{height:200px;position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px}
+.art::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 80% 20%,rgba(255,255,255,.1),transparent 55%)}
+.art i{font-size:3.5rem;color:rgba(255,255,255,.22);position:relative;z-index:1;transition:transform .4s,color .4s}
+.art span{font-size:.58rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.3);position:relative;z-index:1}
+.srv-card:hover .art i{transform:scale(1.15);color:rgba(255,255,255,.4)}
+.art-badge{position:absolute;bottom:12px;left:12px;z-index:3;font-size:.62rem;font-weight:700;padding:4px 11px;border-radius:999px;text-transform:uppercase;letter-spacing:.07em}
+.art-h{background:linear-gradient(135deg,#0D9488,#0B4F36)}
+.art-c{background:linear-gradient(135deg,#E55B2A,#9a3412)}
+.art-e{background:linear-gradient(135deg,#166347,#0B4F36)}
+.srv-body{padding:1.75rem;flex:1;display:flex;flex-direction:column}
+.srv-body h3{font-size:1.4rem;font-weight:700;color:var(--ink);margin-bottom:.625rem}
+.srv-body .desc{font-size:.83rem;color:var(--muted);line-height:1.7;margin-bottom:1rem;font-weight:300}
+.checklist{list-style:none;display:flex;flex-direction:column;gap:5px;margin-bottom:1.25rem}
+.checklist li{display:flex;align-items:center;gap:7px;font-size:.76rem;color:var(--muted)}
+.srv-link{margin-top:auto;display:inline-flex;align-items:center;gap:5px;color:var(--forest);font-weight:700;font-size:.83rem;text-decoration:none}
 
-        /* ---- STATS COUNTER ---- */
-        .stat-number {
-            font-family: 'Instrument Serif', serif;
-            font-size: clamp(3rem, 6vw, 6rem);
-            line-height: 1;
-        }
+/* ═══════════ PROCESS ═══════════ */
+.proc-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+@media(min-width:768px){.proc-grid{grid-template-columns:repeat(4,1fr)}}
+.proc-step{text-align:center}
+.proc-icon{
+  width:58px;height:58px;border-radius:16px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.4rem;margin:0 auto 1rem;
+  transition:transform .3s,background .3s,color .3s;
+}
+.proc-step:hover .proc-icon{transform:scale(1.1) rotate(-3deg)}
+.proc-num{font-size:.62rem;font-weight:800;color:rgba(100,116,139,.3);text-transform:uppercase;letter-spacing:.15em;margin-bottom:6px}
+.proc-step h3{font-size:.95rem;font-weight:700;color:var(--ink);margin-bottom:5px}
+.proc-step p{font-size:.8rem;color:var(--muted);line-height:1.6;font-weight:300}
 
-        /* ---- SCROLL INDICATOR ---- */
-        .scroll-line {
-            width: 1px;
-            height: 60px;
-            background: linear-gradient(to bottom, rgba(11,79,54,0.3), transparent);
-            animation: scrollPulse 2s ease-in-out infinite;
-        }
-        @keyframes scrollPulse {
-            0%, 100% { opacity: 0.4; transform: scaleY(1); }
-            50% { opacity: 1; transform: scaleY(1.2); }
-        }
+/* ═══════════ AI DARK SECTION ═══════════ */
+.ai-section{
+  padding:5rem 1.25rem;background:var(--ink);position:relative;overflow:hidden;z-index:1;
+}
+.ai-bg{position:absolute;inset:0;
+  background:radial-gradient(ellipse at 70% 50%,rgba(13,148,136,.14),transparent 55%),
+    radial-gradient(ellipse at 20% 80%,rgba(11,79,54,.28),transparent 50%);
+}
+.ai-grid-bg{
+  position:absolute;inset:0;
+  background-image:linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);
+  background-size:56px 56px;
+}
+.ai-grid{display:grid;grid-template-columns:1fr;gap:3rem;position:relative;z-index:1}
+@media(min-width:1024px){.ai-grid{grid-template-columns:1fr 1fr}}
+.ai-stats{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ai-stat{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.07);border-radius:1.5rem;padding:1.5rem;text-align:center}
+.ai-stat.hl{background:rgba(13,148,136,.14);border-color:rgba(13,148,136,.22)}
+.ai-num{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-size:clamp(2.2rem,4vw,3.5rem);line-height:1;margin-bottom:6px}
+.ai-lbl{font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:rgba(255,255,255,.35)}
+.ai-stat.hl .ai-lbl{color:rgba(20,184,166,.55)}
+.ai-check{display:flex;align-items:center;gap:10px;color:rgba(255,255,255,.55);font-size:.85rem;margin-bottom:9px}
+.ai-check-dot{width:20px;height:20px;background:rgba(13,148,136,.18);border-radius:999px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 
-        /* ---- FLATPICKR ---- */
-        .flatpickr-calendar {
-            font-family: 'DM Sans', sans-serif !important;
-            border-radius: 20px !important;
-            border: 1px solid #e2e8f0 !important;
-            box-shadow: 0 20px 60px -10px rgba(0,0,0,0.15) !important;
-        }
-        .flatpickr-day.selected, .flatpickr-day.selected:hover {
-            background: #0D9488 !important;
-            border-color: #0D9488 !important;
-        }
-        .flatpickr-day:hover { background: rgba(13,148,136,0.1) !important; }
+/* ═══════════ BLOG ═══════════ */
+.blog-grid{display:grid;grid-template-columns:1fr;gap:1.5rem}
+@media(min-width:768px){
+  .blog-grid{grid-template-columns:3fr 2fr}
+  .blog-feat{grid-row:span 2}
+}
+.blog-card{
+  background:#fff;border-radius:2rem;overflow:hidden;
+  border:1px solid #f1f5f9;box-shadow:0 3px 16px -4px rgba(0,0,0,.05);
+  cursor:pointer;
+  transition:transform .35s cubic-bezier(.4,0,.2,1),box-shadow .35s;
+}
+.blog-card:hover{transform:translateY(-5px);box-shadow:0 20px 50px -10px rgba(11,79,54,.13)}
+.blog-art{position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px}
+.blog-art::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 75% 25%,rgba(255,255,255,.1),transparent)}
+.blog-art i{font-size:3rem;color:rgba(255,255,255,.18);position:relative;z-index:1}
+.blog-art span{font-size:.55rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.28);z-index:1}
+.blog-card:hover .blog-art i{transform:scale(1.12);transition:transform .4s}
+.blog-body{padding:1.5rem}
+.blog-tag{display:inline-block;border-radius:999px;font-size:.62rem;font-weight:700;padding:3px 9px;text-transform:uppercase;letter-spacing:.07em;margin-bottom:.75rem}
+.blog-card h3{font-size:1.1rem;font-weight:700;color:var(--ink);margin-bottom:.5rem;line-height:1.35}
+.blog-card p{font-size:.8rem;color:var(--muted);line-height:1.65;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.blog-feat .blog-card h3{font-size:1.35rem}
+.blog-dark{background:var(--forest);border-color:var(--forest)}
+.blog-dark h3{color:#fff}
+.blog-dark p{color:rgba(255,255,255,.5)}
 
-        /* ---- MODAL ---- */
-        #kisokos-modal {
-            transition: opacity 0.3s ease, visibility 0.3s ease;
-        }
-        #kisokos-modal.open { opacity: 1; visibility: visible; }
-        #kisokos-modal.closed { opacity: 0; visibility: hidden; pointer-events: none; }
-        #kisokos-content {
-            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-        }
-        #kisokos-modal.open #kisokos-content { transform: scale(1) translateY(0); }
-        #kisokos-modal.closed #kisokos-content { transform: scale(0.95) translateY(10px); }
+/* ═══════════ CONTACT ═══════════ */
+.contact-grid{display:grid;grid-template-columns:1fr;gap:3rem}
+@media(min-width:1024px){.contact-grid{grid-template-columns:2fr 3fr}}
+.contact-item{display:flex;align-items:center;gap:13px;margin-bottom:14px;text-decoration:none}
+.c-icon{width:42px;height:42px;background:rgba(13,148,136,.1);border-radius:13px;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .2s}
+.contact-item:hover .c-icon{background:var(--teal)}
+.contact-item:hover .c-icon i{color:#fff}
+.c-lbl{font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:2px}
+.c-val{font-weight:700;color:var(--ink);font-size:.95rem}
+.form-wrap{background:var(--cream);border-radius:2.5rem;padding:2rem;border:1px solid #f1f5f9;box-shadow:0 3px 16px -4px rgba(0,0,0,.05)}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+@media(max-width:480px){.form-grid{grid-template-columns:1fr}}
+.form-lbl{display:block;font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:5px}
+.ff{
+  width:100%;background:#fff;border:1.5px solid #e2e8f0;border-radius:12px;
+  padding:.875rem 1rem;font-family:'DM Sans',sans-serif;font-size:.875rem;
+  color:var(--ink);outline:none;transition:border-color .2s,box-shadow .2s;-webkit-appearance:none;
+}
+.ff:focus{border-color:var(--teal);box-shadow:0 0 0 3px rgba(13,148,136,.1)}
+.ff::placeholder{color:#94a3b8}
+.form-mb{margin-bottom:12px}
+.form-check{display:flex;align-items:flex-start;gap:9px;margin-bottom:1.125rem}
+.form-check input{margin-top:3px;width:15px;height:15px;accent-color:var(--teal);flex-shrink:0;cursor:pointer}
+.form-check label{font-size:.77rem;color:var(--muted);line-height:1.5;cursor:pointer}
+.form-submit{
+  width:100%;background:var(--forest);color:#fff;
+  font-family:'DM Sans',sans-serif;font-weight:700;font-size:.95rem;
+  padding:1.1rem;border:none;border-radius:14px;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;gap:9px;
+  box-shadow:0 7px 22px -6px rgba(11,79,54,.32);
+  transition:background .2s;
+}
+.form-submit:hover{background:var(--forestl)}
+.form-submit:disabled{opacity:.7;cursor:not-allowed}
 
-        /* ---- FORM ---- */
-        .form-field {
-            width: 100%;
-            background: white;
-            border: 1.5px solid #e2e8f0;
-            border-radius: 14px;
-            padding: 1rem 1.25rem;
-            font-family: 'DM Sans', sans-serif;
-            font-size: 0.875rem;
-            color: #1a2332;
-            transition: border-color 0.2s, box-shadow 0.2s;
-            outline: none;
-            -webkit-appearance: none;
-        }
-        .form-field:focus {
-            border-color: #0D9488;
-            box-shadow: 0 0 0 3px rgba(13,148,136,0.12);
-        }
-        .form-field::placeholder { color: #94a3b8; }
+/* ═══════════ FOOTER ═══════════ */
+footer{background:var(--ink);color:#fff;position:relative;z-index:1}
+.footer-inner{max-width:1280px;margin:0 auto;padding:3.5rem 1.25rem 1.75rem}
+.footer-grid{display:grid;grid-template-columns:1fr;gap:2rem;margin-bottom:2.5rem}
+@media(min-width:768px){.footer-grid{grid-template-columns:2fr 1fr 1fr}}
+.f-logo{display:flex;align-items:center;gap:10px;margin-bottom:.875rem}
+.f-logo-icon{width:34px;height:34px;background:var(--teal);border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:.75rem;color:#fff}
+.f-head{font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:rgba(255,255,255,.28);margin-bottom:.875rem}
+.f-link{display:block;color:rgba(255,255,255,.45);font-size:.83rem;text-decoration:none;padding:3px 0;transition:color .2s}
+.f-link:hover{color:#fff}
+.f-info{display:flex;align-items:center;gap:7px;color:rgba(255,255,255,.45);font-size:.83rem;padding:3px 0}
+.f-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:1.25rem;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px}
+.f-copy{font-size:.76rem;color:rgba(255,255,255,.22)}
+.f-legal{display:flex;gap:14px}
+.f-legal a{font-size:.73rem;color:rgba(255,255,255,.22);text-decoration:none;transition:color .2s}
+.f-legal a:hover{color:rgba(255,255,255,.55)}
+.social-row{display:flex;gap:7px;margin-top:.875rem}
+.soc{width:32px;height:32px;background:rgba(255,255,255,.08);border-radius:9px;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.45);text-decoration:none;font-size:.78rem;transition:background .2s,color .2s}
+.soc:hover{background:var(--teal);color:#fff}
 
-        /* ---- PROCESS LINE ---- */
-        .process-step::before {
-            content: '';
-            position: absolute;
-            top: 24px;
-            left: calc(50% + 24px);
-            width: calc(100% - 48px);
-            height: 2px;
-            background: linear-gradient(to right, #0D9488, rgba(13,148,136,0.2));
-        }
-        .process-step:last-child::before { display: none; }
+/* ═══════════ MOBILE NAV ═══════════ */
+.mob-nav{position:fixed;bottom:0;left:0;right:0;background:rgba(253,251,247,.96);backdrop-filter:blur(18px);border-top:1px solid rgba(0,0,0,.06);z-index:50;display:flex;justify-content:space-around;align-items:center;padding:8px 0 max(8px,env(safe-area-inset-bottom))}
+@media(min-width:768px){.mob-nav{display:none}}
+.mob-nav a,.mob-nav button{display:flex;flex-direction:column;align-items:center;gap:3px;text-decoration:none;background:none;border:none;cursor:pointer;font-family:inherit;color:var(--muted)}
+.mob-nav i{font-size:.95rem}
+.mob-nav span{font-size:.55rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
 
-        /* ---- TICKER ---- */
-        .ticker-wrap { overflow: hidden; white-space: nowrap; }
-        .ticker-track {
-            display: inline-block;
-            animation: tickerScroll 30s linear infinite;
-        }
-        @keyframes tickerScroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
+/* ═══════════ MODAL ═══════════ */
+#modal{
+  position:fixed;inset:0;background:rgba(0,0,0,.55);
+  backdrop-filter:blur(6px);z-index:100;
+  display:flex;align-items:flex-end;justify-content:center;
+  transition:opacity .25s,visibility .25s;
+}
+@media(min-width:640px){#modal{align-items:center;padding:1rem}}
+#modal.closed{opacity:0;visibility:hidden;pointer-events:none}
+#modal.open{opacity:1;visibility:visible}
+#modal-box{
+  background:#fff;width:100%;max-height:90vh;overflow-y:auto;
+  border-radius:2.5rem 2.5rem 0 0;padding:1.75rem;
+  transition:transform .3s cubic-bezier(.34,1.56,.64,1);position:relative;
+}
+@media(min-width:640px){#modal-box{max-width:480px;border-radius:2.5rem;padding:2.25rem}}
+#modal.closed #modal-box{transform:translateY(18px)}
+#modal.open #modal-box{transform:none}
+.modal-close{position:absolute;top:14px;right:14px;width:34px;height:34px;background:#f1f5f9;border:none;border-radius:999px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:.95rem;color:var(--muted);transition:background .2s}
+.modal-close:hover{background:#e2e8f0}
+.modal-search{
+  width:100%;background:#f8fafc;border:1.5px solid #e2e8f0;border-radius:999px;
+  padding:13px 16px 13px 44px;font-family:'DM Sans',sans-serif;font-size:.875rem;
+  color:var(--ink);outline:none;transition:border-color .2s;
+}
+.modal-search:focus{border-color:var(--teal)}
+.kat-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.kat-btn{padding:13px;border-radius:14px;border:2px solid;cursor:pointer;text-align:left;font-family:inherit;transition:border-color .2s,box-shadow .2s;background:transparent}
+.kat-btn:hover{box-shadow:0 4px 14px -4px rgba(0,0,0,.1)}
+.kat-icon{width:28px;height:28px;border-radius:9px;display:flex;align-items:center;justify-content:center;margin-bottom:7px;font-size:.75rem;color:#fff}
+.kat-title{font-weight:700;font-size:.8rem}
+.kat-sub{font-size:.65rem}
 
-        /* ---- GSAP INITIAL STATE ---- */
-        .reveal { opacity: 0; transform: translateY(30px); }
-
-        /* ---- MOBILE BOTTOM NAV ---- */
-        @media (max-width: 767px) {
-            body { padding-bottom: 72px; }
-            .mobile-nav {
-                position: fixed; bottom: 0; left: 0; right: 0;
-                background: rgba(253,251,247,0.95);
-                backdrop-filter: blur(20px);
-                -webkit-backdrop-filter: blur(20px);
-                border-top: 1px solid rgba(0,0,0,0.06);
-                z-index: 50;
-                padding: 8px 0 env(safe-area-inset-bottom, 8px);
-            }
-        }
-
-        /* ---- TRUST LOGOS ---- */
-        .trust-logo {
-            filter: grayscale(1) opacity(0.4);
-            transition: filter 0.3s;
-        }
-        .trust-logo:hover { filter: grayscale(0) opacity(1); }
-
-        /* ---- FLOATING CTA ---- */
-        .floating-phone {
-            animation: phoneFloat 3s ease-in-out infinite;
-        }
-        @keyframes phoneFloat {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-6px); }
-        }
-
-        /* Gradient text */
-        .gradient-text {
-            background: linear-gradient(135deg, #0B4F36 0%, #0D9488 60%, #14b8a6 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        /* Underline decoration */
-        .fancy-underline {
-            position: relative;
-            display: inline-block;
-        }
-        .fancy-underline::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background: linear-gradient(90deg, #0D9488, #E55B2A);
-            border-radius: 2px;
-        }
-
-        /* Pulse dot */
-        .pulse-dot {
-            width: 8px; height: 8px;
-            background: #10B981;
-            border-radius: 50%;
-            display: inline-block;
-            animation: pulseDot 2s ease-in-out infinite;
-        }
-        @keyframes pulseDot {
-            0%, 100% { box-shadow: 0 0 0 0 rgba(16,185,129,0.4); }
-            50% { box-shadow: 0 0 0 6px rgba(16,185,129,0); }
-        }
-
-        /* Counter animation */
-        .counter { transition: none; }
-    </style>
+/* ═══════════ BACKGROUND BLOBS ═══════════ */
+.blob{position:fixed;border-radius:50%;filter:blur(100px);pointer-events:none;z-index:0;will-change:transform}
+.b1{width:min(550px,80vw);height:min(550px,80vw);background:radial-gradient(circle,rgba(13,148,136,.11),transparent);top:-15%;right:-10%;animation:ba 18s ease-in-out infinite alternate}
+.b2{width:min(460px,70vw);height:min(460px,70vw);background:radial-gradient(circle,rgba(11,79,54,.07),transparent);bottom:10%;left:-10%;animation:bb 22s ease-in-out infinite alternate}
+@keyframes ba{from{transform:translate(0,0)}to{transform:translate(28px,-18px)}}
+@keyframes bb{from{transform:translate(0,0)}to{transform:translate(-18px,24px)}}
+</style>
 </head>
-<body class="bg-cream relative">
+<body>
 
-    <!-- Background blobs -->
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
-    <div class="blob blob-3"></div>
+<div class="blob b1"></div>
+<div class="blob b2"></div>
 
-    <!-- ============================
-         NAVBAR
-    ============================= -->
-    <nav id="navbar" class="fixed top-0 w-full z-50 border-b border-black/5">
-        <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 flex justify-between items-center h-20">
-            <!-- Logo -->
-            <a href="#" class="flex items-center gap-3 relative z-10 group">
-                <div class="w-10 h-10 bg-forest text-white rounded-xl flex items-center justify-center shadow-sm transition-all group-hover:scale-105 group-hover:bg-forestlight">
-                    <i class="fa-solid fa-leaf text-sm"></i>
-                </div>
-                <div class="leading-none">
-                    <span class="font-bold text-lg text-forest tracking-tight block">VH<span class="text-muted font-normal">.net</span></span>
-                    <span class="text-[10px] text-muted font-medium uppercase tracking-widest">Hulladékkezelés</span>
-                </div>
-            </a>
-
-            <!-- Desktop nav -->
-            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-muted relative z-10">
-                <a href="#szolgaltatasok" class="hover:text-forest transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-forest after:transition-all hover:after:w-full">Szolgáltatások</a>
-                <a href="#folyamat" class="hover:text-forest transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-forest after:transition-all hover:after:w-full">Hogyan működik</a>
-                <a href="#blog" class="hover:text-forest transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-forest after:transition-all hover:after:w-full">Szakmai Blog</a>
-                <button onclick="openKisokos()" class="hover:text-forest transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-forest after:transition-all hover:after:w-full">Szelektív Kisokos</button>
-            </div>
-
-            <!-- CTA -->
-            <div class="hidden md:flex items-center gap-4 relative z-10">
-                <div class="flex items-center gap-2 text-sm text-muted">
-                    <span class="pulse-dot"></span>
-                    <span class="font-medium">Elérhető most</span>
-                </div>
-                <a href="tel:+3612345678" class="text-sm font-bold text-forest hover:text-teal transition-colors flex items-center gap-1.5">
-                    <i class="fa-solid fa-phone text-teal text-xs"></i> +36 1 234 5678
-                </a>
-                <a href="#kapcsolat" class="bg-forest text-white px-5 py-2.5 rounded-full text-sm font-bold hover:bg-forestlight transition-all shadow-lg shadow-forest/20 flex items-center gap-2">
-                    Ajánlatkérés <i class="fa-solid fa-arrow-right text-xs"></i>
-                </a>
-            </div>
-
-            <!-- Mobile menu btn -->
-            <button id="mobile-menu-btn" class="md:hidden relative z-10 w-10 h-10 flex flex-col items-center justify-center gap-1.5" onclick="toggleMobileMenu()">
-                <span class="w-6 h-0.5 bg-forest transition-all" id="mb1"></span>
-                <span class="w-4 h-0.5 bg-forest transition-all" id="mb2"></span>
-                <span class="w-6 h-0.5 bg-forest transition-all" id="mb3"></span>
-            </button>
-        </div>
-
-        <!-- Mobile dropdown -->
-        <div id="mobile-menu" class="md:hidden hidden bg-cream border-t border-black/5 px-5 py-6 space-y-4">
-            <a href="#szolgaltatasok" class="block font-medium text-ink hover:text-forest transition-colors py-2" onclick="toggleMobileMenu()">Szolgáltatások</a>
-            <a href="#folyamat" class="block font-medium text-ink hover:text-forest transition-colors py-2" onclick="toggleMobileMenu()">Hogyan működik</a>
-            <a href="#blog" class="block font-medium text-ink hover:text-forest transition-colors py-2" onclick="toggleMobileMenu()">Szakmai Blog</a>
-            <button onclick="openKisokos(); toggleMobileMenu();" class="block font-medium text-ink hover:text-forest transition-colors py-2 w-full text-left">Szelektív Kisokos</button>
-            <a href="#kapcsolat" class="block w-full bg-forest text-white text-center py-3 rounded-xl font-bold" onclick="toggleMobileMenu()">Ajánlatkérés</a>
-        </div>
-    </nav>
-
-    <!-- ============================
-         HERO
-    ============================= -->
-    <section class="relative min-h-[100svh] flex items-center pt-20 pb-16 px-4 sm:px-6 overflow-hidden">
-        <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center relative z-10">
-            <!-- Left -->
-            <div>
-                <div class="hero-badge inline-flex items-center gap-2 px-4 py-2 rounded-full text-teal text-xs font-bold mb-8 uppercase tracking-widest reveal">
-                    <span class="pulse-dot"></span>
-                    100% Jogszabályi Megfelelés · 2026
-                </div>
-                <h1 class="text-5xl sm:text-6xl md:text-7xl font-bold text-ink mb-6 leading-[1.05] tracking-tight reveal">
-                    Okosabb<br>
-                    <span class="font-serif italic gradient-text">hulladékkezelés</span><br>
-                    mindenkinek.
-                </h1>
-                <p class="text-base md:text-lg text-muted mb-10 leading-relaxed max-w-lg reveal font-light">
-                    AI-támogatott logisztikával és Euro&nbsp;6-os flottával biztosítjuk cége veszélyes hulladékainak törvényes, nyomon követhető útját – 24 órán belüli kiszállással, országszerte.
-                </p>
-
-                <!-- CTA group -->
-                <div class="flex flex-col sm:flex-row gap-4 mb-12 reveal">
-                    <a href="#kapcsolat" class="inline-flex items-center justify-center gap-2 bg-forest text-white px-8 py-4 rounded-2xl font-bold hover:bg-forestlight transition-all shadow-xl shadow-forest/25 text-sm">
-                        <i class="fa-solid fa-calculator"></i> Azonnali Árajánlat
-                    </a>
-                    <a href="tel:+3612345678" class="inline-flex items-center justify-center gap-2 border-2 border-forest/20 text-forest px-8 py-4 rounded-2xl font-bold hover:bg-forest/5 transition-all text-sm">
-                        <i class="fa-solid fa-phone"></i> +36 1 234 5678
-                    </a>
-                </div>
-
-                <!-- Trust chips -->
-                <div class="flex flex-wrap gap-3 reveal">
-                    <div class="flex items-center gap-2 bg-white px-4 py-2 rounded-full border border-gray-100 text-xs font-semibold text-muted shadow-sm">
-                        <i class="fa-solid fa-certificate text-teal text-xs"></i> OHÜ Engedélyes
-                    </div>
-                    <div class="flex items-center gap-2 bg-white px-4 py-2 rounded-full border border-gray-100 text-xs font-semibold text-muted shadow-sm">
-                        <i class="fa-solid fa-shield-halved text-teal text-xs"></i> ISO 14001 Tanúsított
-                    </div>
-                    <div class="flex items-center gap-2 bg-white px-4 py-2 rounded-full border border-gray-100 text-xs font-semibold text-muted shadow-sm">
-                        <i class="fa-solid fa-truck text-ember text-xs"></i> ADR Szállítás
-                    </div>
-                </div>
-            </div>
-
-            <!-- Right – Image + floating cards -->
-            <div class="relative reveal">
-                <div class="relative w-full aspect-[4/3] rounded-[2.5rem] overflow-hidden shadow-2xl shadow-forest/15">
-                    <img
-                        src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=900&auto=format&fit=crop"
-                        alt="Korszerű hulladékkezelő telep – VeszélyesHulladék.net"
-                        class="w-full h-full object-cover"
-                        loading="eager"
-                        fetchpriority="high"
-                    >
-                    <div class="absolute inset-0 bg-gradient-to-t from-forest/50 via-transparent to-transparent"></div>
-                    <!-- Badge overlay -->
-                    <div class="absolute bottom-6 left-6 right-6 flex gap-3">
-                        <div class="bg-white/95 backdrop-blur-sm rounded-2xl px-4 py-3 flex items-center gap-3 flex-1 shadow-lg">
-                            <div class="w-10 h-10 bg-teal/10 rounded-full flex items-center justify-center flex-shrink-0">
-                                <i class="fa-solid fa-robot text-teal text-sm"></i>
-                            </div>
-                            <div>
-                                <p class="text-xs font-bold text-ink">AI-Válogató Aktív</p>
-                                <p class="text-[10px] text-muted">98% pontossággal</p>
-                            </div>
-                        </div>
-                        <div class="bg-forest/90 backdrop-blur-sm rounded-2xl px-4 py-3 flex items-center gap-3 flex-1 shadow-lg">
-                            <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0">
-                                <i class="fa-solid fa-truck-fast text-white text-sm"></i>
-                            </div>
-                            <div>
-                                <p class="text-xs font-bold text-white">24 Óra</p>
-                                <p class="text-[10px] text-white/70">Garantált kiszállás</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Floating stat pill -->
-                <div class="absolute -right-6 top-12 bg-white rounded-2xl p-4 shadow-xl border border-gray-100 hidden lg:flex gap-3 items-center">
-                    <div class="w-10 h-10 bg-ember/10 rounded-full flex items-center justify-center">
-                        <i class="fa-solid fa-building text-ember text-sm"></i>
-                    </div>
-                    <div>
-                        <p class="font-extrabold text-ink text-xl leading-tight">1 200+</p>
-                        <p class="text-[10px] text-muted font-bold uppercase tracking-wider">Vállalati Ügyfél</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Scroll indicator -->
-        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-40">
-            <div class="scroll-line"></div>
-            <span class="text-[10px] font-bold uppercase tracking-widest text-muted">Görgetés</span>
-        </div>
-    </section>
-
-    <!-- ============================
-         TICKER
-    ============================= -->
-    <div class="py-4 bg-forest overflow-hidden relative z-10">
-        <div class="ticker-wrap">
-            <div class="ticker-track text-sm font-semibold text-white/60 uppercase tracking-widest">
-                <span class="inline-flex items-center gap-8 pr-8">
-                    <span>ADR Szállítás</span><span class="text-teal">✦</span>
-                    <span>ISO 14001</span><span class="text-teal">✦</span>
-                    <span>OHÜ Engedélyes</span><span class="text-teal">✦</span>
-                    <span>EPR Tanácsadás</span><span class="text-teal">✦</span>
-                    <span>AI Válogatás</span><span class="text-teal">✦</span>
-                    <span>Euro 6 Flotta</span><span class="text-teal">✦</span>
-                    <span>24h Kiszállás</span><span class="text-teal">✦</span>
-                    <span>Digitális DPP</span><span class="text-teal">✦</span>
-                    <span>PPWR Megfelelés</span><span class="text-teal">✦</span>
-                    <span>ESG Riport</span><span class="text-teal">✦</span>
-                </span>
-                <!-- duplicate for seamless loop -->
-                <span class="inline-flex items-center gap-8 pr-8">
-                    <span>ADR Szállítás</span><span class="text-teal">✦</span>
-                    <span>ISO 14001</span><span class="text-teal">✦</span>
-                    <span>OHÜ Engedélyes</span><span class="text-teal">✦</span>
-                    <span>EPR Tanácsadás</span><span class="text-teal">✦</span>
-                    <span>AI Válogatás</span><span class="text-teal">✦</span>
-                    <span>Euro 6 Flotta</span><span class="text-teal">✦</span>
-                    <span>24h Kiszállás</span><span class="text-teal">✦</span>
-                    <span>Digitális DPP</span><span class="text-teal">✦</span>
-                    <span>PPWR Megfelelés</span><span class="text-teal">✦</span>
-                    <span>ESG Riport</span><span class="text-teal">✦</span>
-                </span>
-            </div>
-        </div>
+<!-- ══ NAVBAR ══ -->
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo">
+      <div class="logo-icon"><i class="fa-solid fa-leaf"></i></div>
+      <div>
+        <div class="logo-text">VH<span style="color:#94a3b8;font-weight:300">.net</span></div>
+        <div class="logo-sub">Hulladékkezelés</div>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="#szolgaltatasok">Szolgáltatások</a>
+      <a href="#folyamat">Hogyan működik</a>
+      <a href="#blog">Blog</a>
+      <button onclick="openModal()">Kisokos</button>
     </div>
-
-    <!-- ============================
-         BENTO GRID
-    ============================= -->
-    <section class="py-16 px-4 sm:px-6 relative z-10">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-5">
-
-            <!-- Hulladéknaptár -->
-            <div class="bg-white rounded-[2rem] p-8 border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between reveal">
-                <div>
-                    <i class="fa-regular fa-calendar-days text-3xl text-ember mb-4 block"></i>
-                    <h2 class="text-xl font-bold text-ink mb-2">Hulladéknaptár</h2>
-                    <p class="text-sm text-muted mb-6 leading-relaxed">Válassza ki a dátumot, és megmutatjuk az adott napra eső szállítási rendet és hulladéktípust!</p>
-                </div>
-                <div>
-                    <div class="relative mb-3">
-                        <i class="fa-regular fa-calendar-check absolute left-4 top-1/2 -translate-y-1/2 text-muted/60 text-sm pointer-events-none"></i>
-                        <input type="text" id="datepicker-input" placeholder="Válasszon dátumot..." readonly
-                            class="w-full bg-gray-50 border border-gray-200 rounded-2xl px-5 py-3.5 pl-11 text-sm cursor-pointer focus:outline-none focus:border-teal transition">
-                    </div>
-                    <div id="naptar-eredmeny"></div>
-                </div>
-            </div>
-
-            <!-- Szelektív Kisokos Pro (dark) -->
-            <div class="bg-forest rounded-[2rem] p-8 border border-forest shadow-sm flex flex-col justify-between reveal relative overflow-hidden">
-                <div class="absolute inset-0 opacity-10"
-                    style="background-image: radial-gradient(circle at 80% 20%, rgba(255,255,255,0.2) 0%, transparent 60%);"></div>
-                <div class="relative z-10">
-                    <i class="fa-regular fa-circle-question text-3xl text-white mb-4 block"></i>
-                    <h2 class="text-xl font-bold text-white mb-2">Szelektív Kisokos Pro</h2>
-                    <p class="text-sm text-white/70 mb-6 leading-relaxed">Írja be a hulladékot, és azonnal megmondjuk, hova dobja és milyen kukába tartozik!</p>
-                </div>
-                <div class="relative z-10">
-                    <div class="relative mb-3">
-                        <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-white/40 text-sm pointer-events-none"></i>
-                        <input type="text" id="kisokos-kereso" placeholder="Pl: PET palack, akkumulátor..." autocomplete="off"
-                            class="w-full bg-white/10 border border-white/15 rounded-2xl px-5 py-3.5 pl-11 text-sm text-white placeholder-white/40 focus:outline-none focus:border-teallight transition">
-                    </div>
-                    <div id="kisokos-mini-result" class="mb-3 text-sm text-white/80 min-h-[1.5rem]"></div>
-                    <button onclick="openKisokos()" class="w-full bg-white/15 border border-white/20 text-white py-3 rounded-2xl text-sm font-semibold hover:bg-white/25 transition flex items-center justify-center gap-2">
-                        Teljes adatbázis böngészése <i class="fa-solid fa-arrow-right text-xs"></i>
-                    </button>
-                </div>
-            </div>
-
-            <!-- Ügyfélszolgálat -->
-            <div class="bg-white rounded-[2rem] p-8 border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between reveal">
-                <div>
-                    <i class="fa-regular fa-file-invoice text-3xl text-teal mb-4 block"></i>
-                    <h2 class="text-xl font-bold text-ink mb-2">Online Ügyfélportál</h2>
-                    <p class="text-sm text-muted mb-6 leading-relaxed">Intézze bejelentéseit, töltse le számláit és kövesse nyomon szállításait kényelmesen, online.</p>
-                </div>
-                <div class="space-y-3">
-                    <div class="flex items-center gap-3 p-3 rounded-xl bg-gray-50 text-sm font-medium text-muted">
-                        <i class="fa-solid fa-file-invoice-dollar text-teal w-5 text-center"></i> Digitális számlák letöltése
-                    </div>
-                    <div class="flex items-center gap-3 p-3 rounded-xl bg-gray-50 text-sm font-medium text-muted">
-                        <i class="fa-solid fa-location-dot text-ember w-5 text-center"></i> Szállítás nyomkövetés
-                    </div>
-                    <button onclick="alert('Az ügyfélportál hamarosan elérhető!')"
-                        class="w-full border-2 border-teal/30 text-teal py-3 rounded-2xl text-sm font-bold hover:bg-teal/5 hover:border-teal/60 transition-all mt-2">
-                        Belépés a fiókba <i class="fa-solid fa-arrow-right ml-1 text-xs"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================
-         STATS
-    ============================= -->
-    <section class="py-20 px-4 sm:px-6 bg-white border-y border-gray-100 relative z-10" id="stats-section">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-4">
-                <div class="text-center reveal">
-                    <div class="stat-number text-forest mb-2">
-                        <span class="counter" data-target="1200" data-suffix="+">0</span>
-                    </div>
-                    <p class="text-sm font-bold text-muted uppercase tracking-widest">Vállalati Ügyfél</p>
-                </div>
-                <div class="text-center reveal">
-                    <div class="stat-number text-teal mb-2">
-                        <span class="counter" data-target="98" data-suffix="%">0</span>
-                    </div>
-                    <p class="text-sm font-bold text-muted uppercase tracking-widest">AI Válogatási Pontosság</p>
-                </div>
-                <div class="text-center reveal">
-                    <div class="stat-number text-ember mb-2">
-                        <span class="counter" data-target="24" data-suffix="h">0</span>
-                    </div>
-                    <p class="text-sm font-bold text-muted uppercase tracking-widest">Garantált Kiszállás</p>
-                </div>
-                <div class="text-center reveal">
-                    <div class="stat-number text-forest mb-2">
-                        <span class="counter" data-target="15" data-suffix=" év">0</span>
-                    </div>
-                    <p class="text-sm font-bold text-muted uppercase tracking-widest">Szakmai Tapasztalat</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================
-         SZOLGÁLTATÁSOK
-    ============================= -->
-    <section id="szolgaltatasok" class="py-24 px-4 sm:px-6 relative z-10">
-        <div class="max-w-7xl mx-auto">
-            <div class="max-w-2xl mb-16 reveal">
-                <div class="inline-flex items-center gap-2 text-teal text-xs font-bold uppercase tracking-widest mb-4">
-                    <span class="w-8 h-px bg-teal"></span> Komplex Megoldások
-                </div>
-                <h2 class="text-4xl md:text-5xl font-bold text-ink mb-4 leading-tight">
-                    Minden hulladékra <br><span class="font-serif italic gradient-text">professzionális válasz</span>
-                </h2>
-                <p class="text-muted text-lg font-light leading-relaxed">Hulladékok szakszerű kezelése a legmagasabb minőségi sztenderdek szerint, teljes körű adminisztrációs és jogi háttérrel.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-
-                <!-- Kártya 1 -->
-                <article class="bg-cream border border-gray-100 rounded-[2.5rem] overflow-hidden card-lift reveal flex flex-col shadow-sm">
-                    <div class="img-wrap h-52 w-full relative">
-                        <img
-                            src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&auto=format&fit=crop"
-                            alt="Veszélyes hulladék szállítás – ADR engedélyes"
-                            class="w-full h-full object-cover"
-                            loading="lazy"
-                        >
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent z-10"></div>
-                        <div class="absolute bottom-4 left-4 z-20">
-                            <span class="bg-teal text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">ADR Szállítás</span>
-                        </div>
-                    </div>
-                    <div class="p-8 flex-1 flex flex-col">
-                        <h3 class="text-2xl font-bold text-ink mb-3">Veszélyes Hulladék</h3>
-                        <p class="text-sm text-muted font-light leading-relaxed mb-6">Vegyszerek, fáradt olaj, festékek és ipari maradékok szigorú OHÜ-engedélyek alapján történő elszállítása és megsemmisítése, teljes dokumentációval.</p>
-                        <ul class="space-y-2 text-xs text-muted mb-6">
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal text-[10px]"></i> Fáradt olaj és oldószerek</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal text-[10px]"></i> Vegyipari maradékok</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal text-[10px]"></i> Elektronikai (WEEE) hulladék</li>
-                        </ul>
-                        <a href="#kapcsolat" class="mt-auto inline-flex items-center gap-2 text-forest font-bold text-sm hover:text-teal transition-colors">
-                            Részletek <i class="fa-solid fa-arrow-right text-xs"></i>
-                        </a>
-                    </div>
-                </article>
-
-                <!-- Kártya 2 -->
-                <article class="bg-cream border border-gray-100 rounded-[2.5rem] overflow-hidden card-lift reveal flex flex-col shadow-sm">
-                    <div class="img-wrap h-52 w-full relative">
-                        <img
-                            src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=700&auto=format&fit=crop"
-                            alt="Építési inert hulladék elszállítás konténerrel"
-                            class="w-full h-full object-cover"
-                            loading="lazy"
-                        >
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent z-10"></div>
-                        <div class="absolute bottom-4 left-4 z-20">
-                            <span class="bg-ember text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Nagy Kapacitás</span>
-                        </div>
-                    </div>
-                    <div class="p-8 flex-1 flex flex-col">
-                        <h3 class="text-2xl font-bold text-ink mb-3">Építési & Inert</h3>
-                        <p class="text-sm text-muted font-light leading-relaxed mb-6">Bontási törmelék, kitermelt föld és nagy mennyiségű ipari maradék elszállítása modern multilift-es konténerrendszerrel, rugalmas ütemezéssel.</p>
-                        <ul class="space-y-2 text-xs text-muted mb-6">
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-ember text-[10px]"></i> Bontási törmelék, beton</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-ember text-[10px]"></i> Kitermelt föld és kőzet</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-ember text-[10px]"></i> Nagykonténeres rendszer</li>
-                        </ul>
-                        <a href="#kapcsolat" class="mt-auto inline-flex items-center gap-2 text-forest font-bold text-sm hover:text-teal transition-colors">
-                            Részletek <i class="fa-solid fa-arrow-right text-xs"></i>
-                        </a>
-                    </div>
-                </article>
-
-                <!-- Kártya 3 -->
-                <article class="bg-cream border border-gray-100 rounded-[2.5rem] overflow-hidden card-lift reveal flex flex-col shadow-sm">
-                    <div class="img-wrap h-52 w-full relative">
-                        <img
-                            src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=700&auto=format&fit=crop"
-                            alt="ESG tanácsadás és körforgásos gazdaság"
-                            class="w-full h-full object-cover"
-                            loading="lazy"
-                        >
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent z-10"></div>
-                        <div class="absolute bottom-4 left-4 z-20">
-                            <span class="bg-forest text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Körforgás</span>
-                        </div>
-                    </div>
-                    <div class="p-8 flex-1 flex flex-col">
-                        <h3 class="text-2xl font-bold text-ink mb-3">ESG Tanácsadás</h3>
-                        <p class="text-sm text-muted font-light leading-relaxed mb-6">Segítség az EPR/PPWR EU-s szabályozások betartásában és a digitális termékútlevélre (DPP) való felkészülésben, zöld átállási stratégiával.</p>
-                        <ul class="space-y-2 text-xs text-muted mb-6">
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-forest text-[10px]"></i> EPR/PPWR megfelelési audit</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-forest text-[10px]"></i> DPP felkészítés</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-forest text-[10px]"></i> ESG éves riport készítés</li>
-                        </ul>
-                        <a href="#kapcsolat" class="mt-auto inline-flex items-center gap-2 text-forest font-bold text-sm hover:text-teal transition-colors">
-                            Részletek <i class="fa-solid fa-arrow-right text-xs"></i>
-                        </a>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================
-         FOLYAMAT / HOW IT WORKS
-    ============================= -->
-    <section id="folyamat" class="py-24 px-4 sm:px-6 bg-white border-y border-gray-100 relative z-10">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16 reveal">
-                <div class="inline-flex items-center gap-2 text-teal text-xs font-bold uppercase tracking-widest mb-4">
-                    <span class="w-8 h-px bg-teal"></span> Folyamat <span class="w-8 h-px bg-teal"></span>
-                </div>
-                <h2 class="text-4xl md:text-5xl font-bold text-ink mb-4">Hogyan működünk?</h2>
-                <p class="text-muted text-lg font-light max-w-xl mx-auto">Négy egyszerű lépés – és a hulladékproblémája megoldódott.</p>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="text-center reveal group">
-                    <div class="w-16 h-16 bg-teal/10 text-teal rounded-2xl flex items-center justify-center mx-auto mb-5 text-2xl transition group-hover:bg-teal group-hover:text-white group-hover:scale-110 duration-300">
-                        <i class="fa-regular fa-envelope"></i>
-                    </div>
-                    <div class="text-xs font-black text-muted/40 uppercase tracking-widest mb-2">01</div>
-                    <h3 class="text-lg font-bold text-ink mb-2">Ajánlatkérés</h3>
-                    <p class="text-sm text-muted font-light leading-relaxed">Küldjön üzenetet az űrlapon vagy hívjon – díjtalan, kötelezettség nélküli árajánlatot adunk.</p>
-                </div>
-                <div class="text-center reveal group">
-                    <div class="w-16 h-16 bg-ember/10 text-ember rounded-2xl flex items-center justify-center mx-auto mb-5 text-2xl transition group-hover:bg-ember group-hover:text-white group-hover:scale-110 duration-300">
-                        <i class="fa-solid fa-magnifying-glass-chart"></i>
-                    </div>
-                    <div class="text-xs font-black text-muted/40 uppercase tracking-widest mb-2">02</div>
-                    <h3 class="text-lg font-bold text-ink mb-2">Felmérés</h3>
-                    <p class="text-sm text-muted font-light leading-relaxed">Mérnökeink 24 órán belül felveszik a kapcsolatot, szükség esetén helyszíni felmérést végeznek.</p>
-                </div>
-                <div class="text-center reveal group">
-                    <div class="w-16 h-16 bg-forest/10 text-forest rounded-2xl flex items-center justify-center mx-auto mb-5 text-2xl transition group-hover:bg-forest group-hover:text-white group-hover:scale-110 duration-300">
-                        <i class="fa-solid fa-truck-fast"></i>
-                    </div>
-                    <div class="text-xs font-black text-muted/40 uppercase tracking-widest mb-2">03</div>
-                    <h3 class="text-lg font-bold text-ink mb-2">Elszállítás</h3>
-                    <p class="text-sm text-muted font-light leading-relaxed">ADR-minősített gépjárműveink kiszállnak és szakszerűen elszállítják a hulladékot.</p>
-                </div>
-                <div class="text-center reveal group">
-                    <div class="w-16 h-16 bg-teal/10 text-teal rounded-2xl flex items-center justify-center mx-auto mb-5 text-2xl transition group-hover:bg-teal group-hover:text-white group-hover:scale-110 duration-300">
-                        <i class="fa-solid fa-file-shield"></i>
-                    </div>
-                    <div class="text-xs font-black text-muted/40 uppercase tracking-widest mb-2">04</div>
-                    <h3 class="text-lg font-bold text-ink mb-2">Dokumentáció</h3>
-                    <p class="text-sm text-muted font-light leading-relaxed">Digitálisan átveszi a KSZGYSZ-igazolást és az összes szükséges hatósági dokumentumot.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================
-         AI BANNER (dark)
-    ============================= -->
-    <section class="relative py-32 px-4 sm:px-6 overflow-hidden bg-ink">
-        <div class="absolute inset-0 z-0">
-            <img
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1400&auto=format&fit=crop"
-                alt="Ipari technológia – AI hulladékválogatás"
-                class="w-full h-full object-cover opacity-20"
-                loading="lazy"
-            >
-            <div class="absolute inset-0 bg-gradient-to-r from-ink via-ink/80 to-ink/40"></div>
-        </div>
-        <div class="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div class="reveal">
-                <div class="inline-flex items-center gap-2 text-teal text-xs font-bold uppercase tracking-widest mb-6">
-                    <i class="fa-solid fa-microchip"></i> Technológia
-                </div>
-                <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-                    M.I. alapú<br><span class="font-serif italic text-teal">hulladékválogatás</span>
-                </h2>
-                <p class="text-white/60 text-lg font-light leading-relaxed mb-8">
-                    A 2026-os hazai trendeknek megfelelően gépparkunk AI-támogatott optikai szortírozókkal dolgozik. NIR-spektroszkópiával azonosítjuk az anyagtípusokat, így minimalizáljuk a lerakóba kerülő hulladékot és maximalizáljuk az újrahasznosítást.
-                </p>
-                <div class="space-y-3">
-                    <div class="flex items-center gap-3 text-white/70 text-sm">
-                        <div class="w-6 h-6 bg-teal/20 rounded-full flex items-center justify-center flex-shrink-0">
-                            <i class="fa-solid fa-check text-teal text-[10px]"></i>
-                        </div>
-                        NIR és hyperspektrális optikai szortírozás
-                    </div>
-                    <div class="flex items-center gap-3 text-white/70 text-sm">
-                        <div class="w-6 h-6 bg-teal/20 rounded-full flex items-center justify-center flex-shrink-0">
-                            <i class="fa-solid fa-check text-teal text-[10px]"></i>
-                        </div>
-                        Valós idejű anyagfrakció-azonosítás
-                    </div>
-                    <div class="flex items-center gap-3 text-white/70 text-sm">
-                        <div class="w-6 h-6 bg-teal/20 rounded-full flex items-center justify-center flex-shrink-0">
-                            <i class="fa-solid fa-check text-teal text-[10px]"></i>
-                        </div>
-                        Digitális szállítólevél és KSZGYSZ integráció
-                    </div>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-2 gap-5 reveal">
-                <div class="bg-white/5 border border-white/10 rounded-3xl p-7 text-center backdrop-blur-sm">
-                    <div class="text-5xl font-serif italic text-teal font-bold mb-2">98%</div>
-                    <p class="text-white/50 text-xs font-bold uppercase tracking-widest">Válogatási Pontosság</p>
-                </div>
-                <div class="bg-white/5 border border-white/10 rounded-3xl p-7 text-center backdrop-blur-sm">
-                    <div class="text-5xl font-serif italic text-ember font-bold mb-2">Euro6</div>
-                    <p class="text-white/50 text-xs font-bold uppercase tracking-widest">Zöld Flotta</p>
-                </div>
-                <div class="bg-white/5 border border-white/10 rounded-3xl p-7 text-center backdrop-blur-sm">
-                    <div class="text-5xl font-serif italic text-white font-bold mb-2">-62%</div>
-                    <p class="text-white/50 text-xs font-bold uppercase tracking-widest">CO₂ Csökkentés</p>
-                </div>
-                <div class="bg-teal/20 border border-teal/30 rounded-3xl p-7 text-center backdrop-blur-sm">
-                    <div class="text-5xl font-serif italic text-teallight font-bold mb-2">24h</div>
-                    <p class="text-teal/70 text-xs font-bold uppercase tracking-widest">Garant. Kiszállás</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================
-         BLOG
-    ============================= -->
-    <section id="blog" class="py-24 px-4 sm:px-6 relative z-10">
-        <div class="max-w-7xl mx-auto">
-            <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-14 gap-4 reveal">
-                <div>
-                    <div class="inline-flex items-center gap-2 text-teal text-xs font-bold uppercase tracking-widest mb-4">
-                        <span class="w-8 h-px bg-teal"></span> Szakmai Tudásbázis
-                    </div>
-                    <h2 class="text-4xl md:text-5xl font-bold text-ink">Aktuális Hírek</h2>
-                </div>
-                <a href="#" class="text-sm font-bold text-forest hover:text-teal transition-colors flex items-center gap-2 flex-shrink-0">
-                    Összes cikk <i class="fa-solid fa-arrow-right text-xs"></i>
-                </a>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-5 gap-6">
-                <!-- Featured article -->
-                <article class="lg:col-span-3 bg-white rounded-[2.5rem] overflow-hidden card-lift border border-gray-100 shadow-sm reveal group cursor-pointer">
-                    <div class="img-wrap h-64 lg:h-80 w-full">
-                        <img
-                            src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=900&auto=format&fit=crop"
-                            alt="AI alapú hulladékválogatás Magyarországon 2026"
-                            class="w-full h-full object-cover"
-                            loading="lazy"
-                        >
-                    </div>
-                    <div class="p-8">
-                        <div class="flex items-center gap-3 mb-4">
-                            <span class="bg-ember/10 text-ember text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Technológia</span>
-                            <span class="text-muted text-xs">2026. február 12.</span>
-                        </div>
-                        <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-forest transition-colors leading-tight">MI-alapú válogatók a hazai hulladékgazdálkodásban: mit hoznak 2026-ban?</h3>
-                        <p class="text-sm text-muted font-light leading-relaxed line-clamp-3">Hogyan segíti a mesterséges intelligencia a körforgásos gazdaságot? Cikkünkben összefoglaljuk a hazai piacon megjelenő NIR-szortírozó rendszerek lehetőségeit és korlátait.</p>
-                    </div>
-                </article>
-
-                <!-- Side articles -->
-                <div class="lg:col-span-2 flex flex-col gap-6">
-                    <article class="bg-white rounded-[2rem] overflow-hidden card-lift border border-gray-100 shadow-sm reveal group cursor-pointer flex gap-0 flex-col sm:flex-row lg:flex-col">
-                        <div class="img-wrap h-40 sm:w-40 sm:h-auto lg:w-full lg:h-40 flex-shrink-0">
-                            <img
-                                src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&auto=format&fit=crop"
-                                alt="Digitális Termékútlevél DPP EU szabályozás 2026"
-                                class="w-full h-full object-cover"
-                                loading="lazy"
-                            >
-                        </div>
-                        <div class="p-6">
-                            <span class="bg-teal/10 text-teal text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider block mb-3 w-fit">Jogszabályok 2026</span>
-                            <h3 class="text-base font-bold text-ink mb-2 group-hover:text-forest transition-colors leading-tight">Digitális Termékútlevél (DPP) – Mire kell felkészülni?</h3>
-                            <p class="text-xs text-muted line-clamp-2 font-light">Az új EU-s előírások értelmében az alapanyagok és csomagolóanyagok nyomon követhetővé válnak, ami alaposan felforgatja a logisztikát.</p>
-                        </div>
-                    </article>
-
-                    <article class="bg-forest rounded-[2rem] overflow-hidden card-lift shadow-sm reveal group cursor-pointer flex gap-0 flex-col sm:flex-row lg:flex-col">
-                        <div class="p-6 flex-1">
-                            <span class="bg-white/10 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider block mb-3 w-fit">EPR Reform</span>
-                            <h3 class="text-base font-bold text-white mb-2 group-hover:text-teallight transition-colors leading-tight">Az EPR rendszer hazai változásai és mit jelent ez az iparnak?</h3>
-                            <p class="text-xs text-white/60 line-clamp-3 font-light">A kiterjesztett gyártói felelősség rendszer 2026-os felülvizsgálata jelentős változásokat hoz a csomagolóanyag-gyártók számára.</p>
-                            <span class="inline-flex items-center gap-2 text-teallight font-bold text-xs mt-4 group-hover:gap-3 transition-all">
-                                Olvasás <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                            </span>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================
-         KAPCSOLAT
-    ============================= -->
-    <section id="kapcsolat" class="py-24 px-4 sm:px-6 bg-white border-t border-gray-100 relative z-10">
-        <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
-
-            <!-- Info side -->
-            <div class="lg:col-span-2 reveal">
-                <div class="inline-flex items-center gap-2 text-teal text-xs font-bold uppercase tracking-widest mb-6">
-                    <span class="w-8 h-px bg-teal"></span> Kapcsolat
-                </div>
-                <h2 class="text-4xl font-bold text-ink mb-4 leading-tight">
-                    Kérjen <span class="font-serif italic gradient-text">ingyenes</span> árajánlatot!
-                </h2>
-                <p class="text-muted font-light leading-relaxed mb-10">
-                    Mérnökeink 24 órán belül felveszik Önnel a kapcsolatot és személyre szabott megoldást kínálnak.
-                </p>
-
-                <div class="space-y-5">
-                    <a href="tel:+3612345678" class="flex items-center gap-4 group">
-                        <div class="w-12 h-12 bg-teal/10 rounded-2xl flex items-center justify-center text-teal group-hover:bg-teal group-hover:text-white transition-all flex-shrink-0">
-                            <i class="fa-solid fa-phone text-sm"></i>
-                        </div>
-                        <div>
-                            <p class="text-xs font-bold text-muted uppercase tracking-wider mb-0.5">Telefon</p>
-                            <p class="font-bold text-ink">+36 1 234 5678</p>
-                        </div>
-                    </a>
-                    <a href="mailto:info@veszelyeshulladek.net" class="flex items-center gap-4 group">
-                        <div class="w-12 h-12 bg-teal/10 rounded-2xl flex items-center justify-center text-teal group-hover:bg-teal group-hover:text-white transition-all flex-shrink-0">
-                            <i class="fa-solid fa-envelope text-sm"></i>
-                        </div>
-                        <div>
-                            <p class="text-xs font-bold text-muted uppercase tracking-wider mb-0.5">E-mail</p>
-                            <p class="font-bold text-ink">info@veszelyeshulladek.net</p>
-                        </div>
-                    </a>
-                    <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 bg-teal/10 rounded-2xl flex items-center justify-center text-teal flex-shrink-0">
-                            <i class="fa-solid fa-clock text-sm"></i>
-                        </div>
-                        <div>
-                            <p class="text-xs font-bold text-muted uppercase tracking-wider mb-0.5">Nyitvatartás</p>
-                            <p class="font-bold text-ink">H–P: 07:00–18:00</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Form -->
-            <div class="lg:col-span-3 reveal">
-                <div class="bg-cream rounded-[2.5rem] p-8 md:p-12 border border-gray-100 shadow-sm">
-                    <form id="contact-form" class="space-y-5" novalidate>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                            <div>
-                                <label class="block text-xs font-bold text-muted uppercase tracking-wider mb-2">Név / Cégnév *</label>
-                                <input type="text" required placeholder="Pl. Acme Kft." class="form-field">
-                            </div>
-                            <div>
-                                <label class="block text-xs font-bold text-muted uppercase tracking-wider mb-2">E-mail cím *</label>
-                                <input type="email" required placeholder="email@ceg.hu" class="form-field">
-                            </div>
-                        </div>
-                        <div>
-                            <label class="block text-xs font-bold text-muted uppercase tracking-wider mb-2">Telefonszám</label>
-                            <input type="tel" placeholder="+36 20 123 4567" class="form-field">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-bold text-muted uppercase tracking-wider mb-2">Szolgáltatás *</label>
-                            <select required class="form-field text-muted">
-                                <option value="" disabled selected>Válasszon szolgáltatást...</option>
-                                <option value="veszelyes">Ipari / Veszélyes hulladék szállítás</option>
-                                <option value="inert">Építési / Inert konténer rendelés</option>
-                                <option value="esg">ESG Tanácsadás / DPP Felkészítés</option>
-                                <option value="egyeb">Egyéb megkeresés</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label class="block text-xs font-bold text-muted uppercase tracking-wider mb-2">Részletek *</label>
-                            <textarea rows="4" required placeholder="Hulladék típusa, becsült mennyiség, szállítási helyszín..." class="form-field resize-none"></textarea>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <input type="checkbox" id="gdpr" required class="mt-1 w-4 h-4 accent-teal flex-shrink-0">
-                            <label for="gdpr" class="text-xs text-muted leading-relaxed">
-                                Elolvastam és elfogadom az <a href="#" class="text-teal underline">adatkezelési tájékoztatót</a>. Hozzájárulok adataim kapcsolatfelvétel céljából történő kezeléséhez.
-                            </label>
-                        </div>
-                        <button type="submit" id="submit-btn"
-                            class="w-full bg-forest text-white font-bold py-5 rounded-2xl hover:bg-forestlight transition-all shadow-lg shadow-forest/20 text-base flex items-center justify-center gap-3">
-                            <span id="btn-text">Üzenet Küldése</span>
-                            <i class="fa-solid fa-paper-plane" id="btn-icon"></i>
-                            <i class="fa-solid fa-spinner fa-spin hidden" id="btn-loader"></i>
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================
-         FOOTER
-    ============================= -->
-    <footer class="bg-ink text-white relative z-10">
-        <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 pt-16 pb-8">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
-                <!-- Brand -->
-                <div class="sm:col-span-2 lg:col-span-1">
-                    <div class="flex items-center gap-3 mb-5">
-                        <div class="w-10 h-10 bg-teal rounded-xl flex items-center justify-center">
-                            <i class="fa-solid fa-leaf text-white text-sm"></i>
-                        </div>
-                        <span class="font-bold text-lg">VH<span class="text-white/40 font-light">.net</span></span>
-                    </div>
-                    <p class="text-white/50 text-sm font-light leading-relaxed mb-5">Magyarország egyik vezető veszélyes hulladékkezelő vállalata. AI-alapú technológia, zöld flotta, 100% megfelelés.</p>
-                    <div class="flex gap-3">
-                        <a href="#" class="w-9 h-9 bg-white/10 rounded-xl flex items-center justify-center text-white/60 hover:bg-teal hover:text-white transition-all text-sm" aria-label="LinkedIn">
-                            <i class="fa-brands fa-linkedin-in"></i>
-                        </a>
-                        <a href="#" class="w-9 h-9 bg-white/10 rounded-xl flex items-center justify-center text-white/60 hover:bg-teal hover:text-white transition-all text-sm" aria-label="Facebook">
-                            <i class="fa-brands fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="w-9 h-9 bg-white/10 rounded-xl flex items-center justify-center text-white/60 hover:bg-teal hover:text-white transition-all text-sm" aria-label="YouTube">
-                            <i class="fa-brands fa-youtube"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Szolgáltatások -->
-                <div>
-                    <h4 class="font-bold text-sm uppercase tracking-widest text-white/40 mb-5">Szolgáltatások</h4>
-                    <ul class="space-y-3 text-sm text-white/60">
-                        <li><a href="#" class="hover:text-white transition-colors">Veszélyes hulladék szállítás</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">ADR szállítás</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Építési inert hulladék</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">WEEE / Elektronikai hulladék</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">ESG tanácsadás</a></li>
-                    </ul>
-                </div>
-
-                <!-- Információk -->
-                <div>
-                    <h4 class="font-bold text-sm uppercase tracking-widest text-white/40 mb-5">Információk</h4>
-                    <ul class="space-y-3 text-sm text-white/60">
-                        <li><a href="#" class="hover:text-white transition-colors">Szelektív Kisokos</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Szakmai Blog</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Jogszabályi háttér</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">KSZGYSZ tudnivalók</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Adatkezelési tájékoztató</a></li>
-                    </ul>
-                </div>
-
-                <!-- Kapcsolat -->
-                <div>
-                    <h4 class="font-bold text-sm uppercase tracking-widest text-white/40 mb-5">Kapcsolat</h4>
-                    <ul class="space-y-3 text-sm text-white/60">
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-phone w-4 text-teal"></i> +36 1 234 5678</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-envelope w-4 text-teal"></i> info@veszelyeshulladek.net</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-location-dot w-4 text-teal"></i> 1117 Budapest, Ipar u. 12.</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-clock w-4 text-teal"></i> H–P: 07:00–18:00</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="border-t border-white/10 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-white/30">
-                <p>&copy; 2026 VeszélyesHulladék.net – Minden jog fenntartva.</p>
-                <div class="flex gap-6">
-                    <a href="#" class="hover:text-white/60 transition-colors">Adatkezelés</a>
-                    <a href="#" class="hover:text-white/60 transition-colors">ÁSZF</a>
-                    <a href="#" class="hover:text-white/60 transition-colors">Süti beállítások</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Mobile Bottom Nav -->
-    <div class="mobile-nav md:hidden flex justify-around items-center py-2">
-        <a href="#" class="flex flex-col items-center gap-1 text-muted">
-            <i class="fa-solid fa-house text-sm"></i>
-            <span class="text-[9px] font-bold uppercase tracking-wider">Főoldal</span>
-        </a>
-        <a href="#szolgaltatasok" class="flex flex-col items-center gap-1 text-muted">
-            <i class="fa-solid fa-truck-fast text-sm"></i>
-            <span class="text-[9px] font-bold uppercase tracking-wider">Szolgáltatás</span>
-        </a>
-        <button onclick="openKisokos()" class="flex flex-col items-center gap-1 text-teal">
-            <i class="fa-solid fa-recycle text-sm"></i>
-            <span class="text-[9px] font-bold uppercase tracking-wider">Kisokos</span>
-        </button>
-        <a href="#kapcsolat" class="flex flex-col items-center gap-1 text-forest">
-            <i class="fa-regular fa-envelope text-sm"></i>
-            <span class="text-[9px] font-bold uppercase tracking-wider">Ajánlat</span>
-        </a>
+    <div class="nav-cta">
+      <div style="display:flex;align-items:center;gap:6px;font-size:.78rem;color:var(--muted)">
+        <span class="pdot"></span><span style="font-weight:500">Elérhető most</span>
+      </div>
+      <a href="tel:+3612345678" style="font-size:.78rem;font-weight:700;color:var(--forest);text-decoration:none">
+        <i class="fa-solid fa-phone" style="color:var(--teal);font-size:.68rem;margin-right:3px"></i>+36 1 234 5678
+      </a>
+      <a href="#kapcsolat" class="btn-pill">Ajánlatkérés →</a>
     </div>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Menü">
+      <span class="hb" id="h1"></span><span class="hb hb2" id="h2"></span><span class="hb" id="h3"></span>
+    </button>
+  </div>
+  <div id="mob-menu">
+    <a href="#szolgaltatasok" onclick="toggleMenu()">Szolgáltatások</a>
+    <a href="#folyamat" onclick="toggleMenu()">Hogyan működik</a>
+    <a href="#blog" onclick="toggleMenu()">Blog</a>
+    <button onclick="openModal();toggleMenu()">Szelektív Kisokos</button>
+    <a href="#kapcsolat" class="mob-cta" onclick="toggleMenu()">Ingyenes Ajánlatkérés</a>
+  </div>
+</nav>
 
-    <!-- ============================
-         SZELEKTÍV KISOKOS MODAL
-    ============================= -->
-    <div id="kisokos-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[100] closed flex items-end sm:items-center justify-center p-0 sm:p-4"
-         onclick="closeKisokosBackdrop(event)">
-        <div id="kisokos-content" class="bg-white w-full sm:max-w-lg sm:rounded-[2.5rem] rounded-t-[2.5rem] p-7 sm:p-10 max-h-[90vh] overflow-y-auto shadow-2xl relative"
-             onclick="event.stopPropagation()">
-            <button onclick="closeKisokos()" class="absolute top-5 right-5 w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-muted hover:bg-gray-200 transition">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
-            <h2 class="text-2xl font-bold text-ink mb-1 flex items-center gap-3">
-                <i class="fa-solid fa-recycle text-teal"></i> Szelektív Kisokos
-            </h2>
-            <p class="text-sm text-muted mb-6">Írja be a hulladék nevét, és azonnal megmutatjuk, hova dobja!</p>
-
-            <div class="relative mb-6">
-                <i class="fa-solid fa-magnifying-glass absolute left-5 top-1/2 -translate-y-1/2 text-muted/50 text-sm pointer-events-none"></i>
-                <input type="text" id="modal-kereso" placeholder="Pl: PET palack, akkumulátor, festék..." autocomplete="off"
-                    class="w-full bg-gray-50 border border-gray-200 rounded-2xl px-5 py-4 pl-14 focus:outline-none focus:border-teal transition text-sm">
-            </div>
-
-            <div id="kisokos-eredmeny-doboz" class="hidden mb-6"></div>
-
-            <!-- Categories -->
-            <div class="grid grid-cols-2 gap-3">
-                <div onclick="modalSearch('műanyag')" class="p-4 rounded-2xl border-2 border-yellow-200 bg-yellow-50 cursor-pointer hover:border-yellow-400 transition group">
-                    <div class="w-8 h-8 bg-yellow-400 rounded-xl flex items-center justify-center mb-2 text-white text-sm group-hover:scale-110 transition">
-                        <i class="fa-solid fa-recycle"></i>
-                    </div>
-                    <p class="font-bold text-yellow-800 text-sm">Sárga kukás</p>
-                    <p class="text-[10px] text-yellow-600">Műanyag, fém</p>
-                </div>
-                <div onclick="modalSearch('papír')" class="p-4 rounded-2xl border-2 border-blue-200 bg-blue-50 cursor-pointer hover:border-blue-400 transition group">
-                    <div class="w-8 h-8 bg-blue-500 rounded-xl flex items-center justify-center mb-2 text-white text-sm group-hover:scale-110 transition">
-                        <i class="fa-regular fa-newspaper"></i>
-                    </div>
-                    <p class="font-bold text-blue-800 text-sm">Kék kukás</p>
-                    <p class="text-[10px] text-blue-600">Papír, karton</p>
-                </div>
-                <div onclick="modalSearch('üveg')" class="p-4 rounded-2xl border-2 border-green-200 bg-green-50 cursor-pointer hover:border-green-400 transition group">
-                    <div class="w-8 h-8 bg-green-600 rounded-xl flex items-center justify-center mb-2 text-white text-sm group-hover:scale-110 transition">
-                        <i class="fa-solid fa-wine-bottle"></i>
-                    </div>
-                    <p class="font-bold text-green-800 text-sm">Zöld kukás</p>
-                    <p class="text-[10px] text-green-600">Üveg</p>
-                </div>
-                <div onclick="modalSearch('veszélyes')" class="p-4 rounded-2xl border-2 border-red-200 bg-red-50 cursor-pointer hover:border-red-400 transition group">
-                    <div class="w-8 h-8 bg-red-500 rounded-xl flex items-center justify-center mb-2 text-white text-sm group-hover:scale-110 transition">
-                        <i class="fa-solid fa-triangle-exclamation"></i>
-                    </div>
-                    <p class="font-bold text-red-800 text-sm">Veszélyes</p>
-                    <p class="text-[10px] text-red-600">Speciális kezelés</p>
-                </div>
-            </div>
-        </div>
+<!-- ══ HERO ══ -->
+<section class="hero">
+  <div class="hero-grid">
+    <div class="reveal">
+      <div class="hero-badge"><span class="pdot"></span> 100% Jogszabályi Megfelelés · 2026</div>
+      <h1>Okosabb<br><span class="serif-italic grad">hulladékkezelés</span><br>mindenkinek.</h1>
+      <p class="hero-p">AI-támogatott logisztikával és Euro&nbsp;6-os flottával biztosítjuk cége veszélyes hulladékainak törvényes, nyomon követhető útját – 24 órán belüli kiszállással, országszerte.</p>
+      <div class="hero-btns">
+        <a href="#kapcsolat" class="btn-primary"><i class="fa-solid fa-calculator"></i> Azonnali Árajánlat</a>
+        <a href="tel:+3612345678" class="btn-outline"><i class="fa-solid fa-phone"></i> +36 1 234 5678</a>
+      </div>
+      <div class="chips">
+        <div class="chip"><i class="fa-solid fa-certificate" style="color:var(--teal);font-size:.62rem"></i> OHÜ Engedélyes</div>
+        <div class="chip"><i class="fa-solid fa-shield-halved" style="color:var(--teal);font-size:.62rem"></i> ISO 14001</div>
+        <div class="chip"><i class="fa-solid fa-truck" style="color:var(--ember);font-size:.62rem"></i> ADR Szállítás</div>
+      </div>
     </div>
+    <div class="reveal" style="position:relative">
+      <div class="hero-vis">
+        <div class="hero-vis-grid"></div>
+        <div class="hero-vis-glow"></div>
+        <div class="hero-vis-icon"><i class="fa-solid fa-recycle"></i></div>
+        <div class="hero-vis-badges">
+          <div class="vis-badge">
+            <div class="vb-icon" style="background:rgba(13,148,136,.1)"><i class="fa-solid fa-robot" style="color:var(--teal);font-size:.82rem"></i></div>
+            <div><div class="vb-title">AI-Válogató Aktív</div><div class="vb-sub">98% pontossággal</div></div>
+          </div>
+          <div class="vis-badge dark">
+            <div class="vb-icon" style="background:rgba(255,255,255,.1)"><i class="fa-solid fa-truck-fast" style="color:#fff;font-size:.82rem"></i></div>
+            <div><div class="vb-title">24 Óra</div><div class="vb-sub">Garantált kiszállás</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="float-pill">
+        <div class="pill-icon"><i class="fa-solid fa-building" style="color:var(--ember);font-size:.85rem"></i></div>
+        <div>
+          <div style="font-weight:800;font-size:1.25rem;color:var(--ink);line-height:1.1">1 200+</div>
+          <div style="font-size:.58rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)">Vállalati Ügyfél</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-hint"><div class="sl"></div><span class="sl-txt">Görgetés</span></div>
+</section>
 
-    <!-- ============================
-         JAVASCRIPT
-    ============================= -->
-    <script>
-    // ── GSAP Animációk ──────────────────────────────────────────────────
-    (function initAnimations() {
-        try {
-            if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
-            gsap.registerPlugin(ScrollTrigger);
+<!-- ══ TICKER ══ -->
+<div class="ticker-bar">
+  <div class="ticker-track">
+    <span class="tick-item">ADR Szállítás</span><span class="tick-sep">✦</span>
+    <span class="tick-item">ISO 14001</span><span class="tick-sep">✦</span>
+    <span class="tick-item">OHÜ Engedélyes</span><span class="tick-sep">✦</span>
+    <span class="tick-item">EPR Tanácsadás</span><span class="tick-sep">✦</span>
+    <span class="tick-item">AI Válogatás</span><span class="tick-sep">✦</span>
+    <span class="tick-item">Euro 6 Flotta</span><span class="tick-sep">✦</span>
+    <span class="tick-item">24h Kiszállás</span><span class="tick-sep">✦</span>
+    <span class="tick-item">Digitális DPP</span><span class="tick-sep">✦</span>
+    <span class="tick-item">PPWR Megfelelés</span><span class="tick-sep">✦</span>
+    <span class="tick-item">ESG Riport</span><span class="tick-sep">✦</span>
+    <!-- duplicate for seamless loop -->
+    <span class="tick-item">ADR Szállítás</span><span class="tick-sep">✦</span>
+    <span class="tick-item">ISO 14001</span><span class="tick-sep">✦</span>
+    <span class="tick-item">OHÜ Engedélyes</span><span class="tick-sep">✦</span>
+    <span class="tick-item">EPR Tanácsadás</span><span class="tick-sep">✦</span>
+    <span class="tick-item">AI Válogatás</span><span class="tick-sep">✦</span>
+    <span class="tick-item">Euro 6 Flotta</span><span class="tick-sep">✦</span>
+    <span class="tick-item">24h Kiszállás</span><span class="tick-sep">✦</span>
+    <span class="tick-item">Digitális DPP</span><span class="tick-sep">✦</span>
+    <span class="tick-item">PPWR Megfelelés</span><span class="tick-sep">✦</span>
+    <span class="tick-item">ESG Riport</span><span class="tick-sep">✦</span>
+  </div>
+</div>
 
-            // Hero fade-in (sequenced)
-            gsap.utils.toArray('.reveal').forEach((el, i) => {
-                gsap.fromTo(el,
-                    { opacity: 0, y: 32 },
-                    {
-                        opacity: 1, y: 0,
-                        duration: 0.75,
-                        ease: 'power2.out',
-                        delay: i * 0.08,
-                        scrollTrigger: {
-                            trigger: el,
-                            start: 'top 90%',
-                            once: true
-                        }
-                    }
-                );
-            });
+<!-- ══ BENTO ══ -->
+<section class="section">
+  <div class="max bento-grid">
+    <div class="bento reveal">
+      <i class="fa-regular fa-calendar-days bento-icon" style="color:var(--ember)"></i>
+      <h3>Hulladéknaptár</h3>
+      <p>Válassza ki a dátumot – megmutatjuk az aznapi szállítási rendet!</p>
+      <div>
+        <input type="date" id="dpick" class="bento-input" min="">
+        <div id="dp-result" style="margin-top:.75rem"></div>
+      </div>
+    </div>
+    <div class="bento bento-dark reveal">
+      <i class="fa-regular fa-circle-question bento-icon" style="color:#fff"></i>
+      <h3>Szelektív Kisokos Pro</h3>
+      <p>Írja be a hulladékot – azonnal megmondjuk, hova dobja!</p>
+      <div>
+        <input type="text" id="ks-input" class="bento-input-dark" placeholder="Pl: PET palack, akkumulátor..." autocomplete="off">
+        <div id="ks-mini" style="min-height:1.1rem;font-size:.78rem;color:rgba(255,255,255,.65);margin:.5rem 0"></div>
+        <button class="bento-btn" onclick="openModal()">Teljes adatbázis böngészése →</button>
+      </div>
+    </div>
+    <div class="bento reveal">
+      <i class="fa-regular fa-file-invoice bento-icon" style="color:var(--teal)"></i>
+      <h3>Online Ügyfélportál</h3>
+      <p>Számlák, bejelentések és szállításkövetés – online.</p>
+      <div>
+        <div class="bento-row"><i class="fa-solid fa-file-invoice-dollar" style="color:var(--teal);width:14px;text-align:center"></i> Digitális számlák letöltése</div>
+        <div class="bento-row" style="margin-top:7px"><i class="fa-solid fa-location-dot" style="color:var(--ember);width:14px;text-align:center"></i> Szállítás nyomkövetés</div>
+        <button class="bento-out-btn" onclick="alert('Az ügyfélportál hamarosan elérhető!')">Belépés a fiókba →</button>
+      </div>
+    </div>
+  </div>
+</section>
 
-            // Ticker logo
-            gsap.from('.ticker-track', { x: 0, duration: 0 });
+<!-- ══ STATS ══ -->
+<section class="section section-white">
+  <div class="max stats-grid">
+    <div class="stat reveal"><div class="stat-num" style="color:var(--forest)"><span class="counter" data-t="1200" data-s="+">0</span></div><div class="stat-lbl">Vállalati Ügyfél</div></div>
+    <div class="stat reveal"><div class="stat-num" style="color:var(--teal)"><span class="counter" data-t="98" data-s="%">0</span></div><div class="stat-lbl">AI Pontosság</div></div>
+    <div class="stat reveal"><div class="stat-num" style="color:var(--ember)"><span class="counter" data-t="24" data-s="h">0</span></div><div class="stat-lbl">Garant. Kiszállás</div></div>
+    <div class="stat reveal"><div class="stat-num" style="color:var(--forest)"><span class="counter" data-t="15" data-s=" év">0</span></div><div class="stat-lbl">Tapasztalat</div></div>
+  </div>
+</section>
 
-        } catch (e) {
-            // Fallback: make all elements visible if GSAP fails
-            document.querySelectorAll('.reveal').forEach(el => {
-                el.style.opacity = '1';
-                el.style.transform = 'none';
-            });
-        }
-    })();
+<!-- ══ SZOLGÁLTATÁSOK ══ -->
+<section id="szolgaltatasok" class="section">
+  <div class="max">
+    <div class="reveal" style="margin-bottom:3rem">
+      <div class="section-tag"><span></span> Komplex Megoldások</div>
+      <h2>Minden hulladékra<br><span class="serif-italic grad">professzionális válasz</span></h2>
+      <p class="sec-lead">Hulladékok szakszerű kezelése a legmagasabb minőségi sztenderdek szerint, teljes körű adminisztrációs és jogi háttérrel.</p>
+    </div>
+    <div class="srv-grid">
+      <article class="srv-card reveal">
+        <div class="art art-h">
+          <i class="fa-solid fa-flask"></i>
+          <span>Veszélyes Hulladék</span>
+          <div class="art-badge" style="background:var(--teal);color:#fff">ADR Szállítás</div>
+        </div>
+        <div class="srv-body">
+          <h3>Veszélyes Hulladék</h3>
+          <p class="desc">Vegyszerek, fáradt olaj, festékek és ipari maradékok OHÜ-engedélyek alapján, teljes dokumentációval.</p>
+          <ul class="checklist">
+            <li><i class="fa-solid fa-check" style="color:var(--teal);font-size:.58rem"></i> Fáradt olaj és oldószerek</li>
+            <li><i class="fa-solid fa-check" style="color:var(--teal);font-size:.58rem"></i> Vegyipari maradékok</li>
+            <li><i class="fa-solid fa-check" style="color:var(--teal);font-size:.58rem"></i> Elektronikai (WEEE) hulladék</li>
+          </ul>
+          <a href="#kapcsolat" class="srv-link">Részletek <i class="fa-solid fa-arrow-right" style="font-size:.65rem"></i></a>
+        </div>
+      </article>
+      <article class="srv-card reveal">
+        <div class="art art-c">
+          <i class="fa-solid fa-truck-monster"></i>
+          <span>Építési Hulladék</span>
+          <div class="art-badge" style="background:var(--ember);color:#fff">Nagy Kapacitás</div>
+        </div>
+        <div class="srv-body">
+          <h3>Építési & Inert</h3>
+          <p class="desc">Bontási törmelék, kitermelt föld és ipari maradék multilift-es konténerrendszerrel, rugalmas ütemezéssel.</p>
+          <ul class="checklist">
+            <li><i class="fa-solid fa-check" style="color:var(--ember);font-size:.58rem"></i> Bontási törmelék, beton</li>
+            <li><i class="fa-solid fa-check" style="color:var(--ember);font-size:.58rem"></i> Kitermelt föld és kőzet</li>
+            <li><i class="fa-solid fa-check" style="color:var(--ember);font-size:.58rem"></i> Nagykonténeres rendszer</li>
+          </ul>
+          <a href="#kapcsolat" class="srv-link">Részletek <i class="fa-solid fa-arrow-right" style="font-size:.65rem"></i></a>
+        </div>
+      </article>
+      <article class="srv-card reveal">
+        <div class="art art-e">
+          <i class="fa-solid fa-seedling"></i>
+          <span>ESG & Körforgás</span>
+          <div class="art-badge" style="background:var(--forest);color:#fff">Körforgás</div>
+        </div>
+        <div class="srv-body">
+          <h3>ESG Tanácsadás</h3>
+          <p class="desc">EPR/PPWR megfelelés, DPP felkészítés és ESG éves riport – az EU zöld átállás teljes körű támogatása.</p>
+          <ul class="checklist">
+            <li><i class="fa-solid fa-check" style="color:var(--forest);font-size:.58rem"></i> EPR/PPWR megfelelési audit</li>
+            <li><i class="fa-solid fa-check" style="color:var(--forest);font-size:.58rem"></i> Digitális termékútlevél (DPP)</li>
+            <li><i class="fa-solid fa-check" style="color:var(--forest);font-size:.58rem"></i> ESG éves riport készítés</li>
+          </ul>
+          <a href="#kapcsolat" class="srv-link">Részletek <i class="fa-solid fa-arrow-right" style="font-size:.65rem"></i></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
 
-    // ── Navbar scroll effect ────────────────────────────────────────────
-    (function initNavbar() {
-        const nav = document.getElementById('navbar');
-        if (!nav) return;
-        const onScroll = () => {
-            if (window.scrollY > 30) {
-                nav.classList.add('scrolled');
-            } else {
-                nav.classList.remove('scrolled');
-            }
-        };
-        window.addEventListener('scroll', onScroll, { passive: true });
-        onScroll();
-    })();
+<!-- ══ FOLYAMAT ══ -->
+<section id="folyamat" class="section section-white">
+  <div class="max">
+    <div class="reveal" style="text-align:center;margin-bottom:3rem">
+      <div class="section-tag" style="justify-content:center"><span></span> Folyamat <span></span></div>
+      <h2>Hogyan működünk?</h2>
+      <p class="sec-lead" style="margin:0 auto">Négy egyszerű lépés – és a hulladékproblémája megoldódott.</p>
+    </div>
+    <div class="proc-grid">
+      <div class="proc-step reveal">
+        <div class="proc-icon" style="background:rgba(13,148,136,.1);color:var(--teal)"><i class="fa-regular fa-envelope"></i></div>
+        <div class="proc-num">01</div>
+        <h3>Ajánlatkérés</h3>
+        <p>Díjtalan, kötelezettség nélküli árajánlat üzenetben vagy telefonon.</p>
+      </div>
+      <div class="proc-step reveal">
+        <div class="proc-icon" style="background:rgba(229,91,42,.1);color:var(--ember)"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+        <div class="proc-num">02</div>
+        <h3>Felmérés</h3>
+        <p>Mérnökeink 24 órán belül felveszik a kapcsolatot.</p>
+      </div>
+      <div class="proc-step reveal">
+        <div class="proc-icon" style="background:rgba(11,79,54,.1);color:var(--forest)"><i class="fa-solid fa-truck-fast"></i></div>
+        <div class="proc-num">03</div>
+        <h3>Elszállítás</h3>
+        <p>ADR-minősített gépjárműveink szakszerűen elszállítják a hulladékot.</p>
+      </div>
+      <div class="proc-step reveal">
+        <div class="proc-icon" style="background:rgba(13,148,136,.1);color:var(--teal)"><i class="fa-solid fa-file-shield"></i></div>
+        <div class="proc-num">04</div>
+        <h3>Dokumentáció</h3>
+        <p>Digitálisan kapja meg a KSZGYSZ-igazolást és hatósági dokumentumokat.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    // ── Mobile menu ──────────────────────────────────────────────────────
-    function toggleMobileMenu() {
-        const menu = document.getElementById('mobile-menu');
-        const mb1 = document.getElementById('mb1');
-        const mb2 = document.getElementById('mb2');
-        const mb3 = document.getElementById('mb3');
-        if (!menu) return;
-        const isOpen = !menu.classList.contains('hidden');
-        menu.classList.toggle('hidden');
-        if (!isOpen) {
-            mb1.style.transform = 'rotate(45deg) translateY(6px)';
-            mb2.style.opacity = '0';
-            mb3.style.transform = 'rotate(-45deg) translateY(-6px)';
-        } else {
-            mb1.style.transform = '';
-            mb2.style.opacity = '';
-            mb3.style.transform = '';
-        }
-    }
+<!-- ══ AI SECTION ══ -->
+<section class="ai-section">
+  <div class="ai-bg"></div><div class="ai-grid-bg"></div>
+  <div class="max ai-grid">
+    <div class="reveal">
+      <div class="section-tag"><span></span> <span style="color:var(--teall)">Technológia</span></div>
+      <h2 style="color:#fff">M.I. alapú<br><span class="serif-italic" style="color:var(--teall)">hulladékválogatás</span></h2>
+      <p style="color:rgba(255,255,255,.5);font-size:1rem;font-weight:300;line-height:1.75;margin-bottom:1.75rem;max-width:460px">NIR-spektroszkópiával és AI-támogatott optikai szortírozókkal azonosítjuk az anyagtípusokat. Minimalizáljuk a lerakóba kerülő hulladékot, maximalizáljuk az újrahasznosítást.</p>
+      <div class="ai-check"><div class="ai-check-dot"><i class="fa-solid fa-check" style="color:var(--teal);font-size:.5rem"></i></div>NIR és hyperspektrális optikai szortírozás</div>
+      <div class="ai-check"><div class="ai-check-dot"><i class="fa-solid fa-check" style="color:var(--teal);font-size:.5rem"></i></div>Valós idejű anyagfrakció-azonosítás</div>
+      <div class="ai-check"><div class="ai-check-dot"><i class="fa-solid fa-check" style="color:var(--teal);font-size:.5rem"></i></div>Digitális szállítólevél és KSZGYSZ integráció</div>
+    </div>
+    <div class="reveal ai-stats">
+      <div class="ai-stat"><div class="ai-num" style="color:var(--teall)">98%</div><div class="ai-lbl">Válogatási Pontosság</div></div>
+      <div class="ai-stat"><div class="ai-num" style="color:var(--ember)">Euro6</div><div class="ai-lbl">Zöld Flotta</div></div>
+      <div class="ai-stat"><div class="ai-num" style="color:#fff">-62%</div><div class="ai-lbl">CO₂ Csökkentés</div></div>
+      <div class="ai-stat hl"><div class="ai-num" style="color:var(--teall)">24h</div><div class="ai-lbl">Garant. Kiszállás</div></div>
+    </div>
+  </div>
+</section>
 
-    // ── Counter animation ────────────────────────────────────────────────
-    (function initCounters() {
-        const counters = document.querySelectorAll('.counter');
-        if (!counters.length) return;
+<!-- ══ BLOG ══ -->
+<section id="blog" class="section">
+  <div class="max">
+    <div class="reveal" style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem;margin-bottom:2.5rem">
+      <div>
+        <div class="section-tag"><span></span> Szakmai Tudásbázis</div>
+        <h2>Aktuális Hírek</h2>
+      </div>
+      <a href="#" style="font-size:.85rem;font-weight:700;color:var(--forest);text-decoration:none">Összes cikk →</a>
+    </div>
+    <div class="blog-grid">
+      <div class="blog-feat reveal">
+        <div class="blog-card" style="height:100%">
+          <div class="blog-art" style="height:240px;background:linear-gradient(135deg,#1e3a5f,#1a2332)">
+            <i class="fa-solid fa-robot"></i><span>AI & Technológia</span>
+          </div>
+          <div class="blog-body">
+            <div class="blog-tag" style="background:rgba(229,91,42,.1);color:var(--ember)">Technológia</div>
+            <h3>MI-alapú válogatók a hazai hulladékgazdálkodásban: mit hoznak 2026-ban?</h3>
+            <p>Hogyan segíti a mesterséges intelligencia a körforgásos gazdaságot? Összefoglaljuk a hazai piacon megjelenő NIR-szortírozó rendszerek lehetőségeit és korlátait 2026-ban.</p>
+          </div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="blog-card" style="margin-bottom:1.25rem">
+          <div class="blog-art" style="height:130px;background:linear-gradient(135deg,#0B4F36,#0D9488)">
+            <i class="fa-solid fa-file-invoice" style="font-size:2.2rem"></i>
+          </div>
+          <div class="blog-body">
+            <div class="blog-tag" style="background:rgba(13,148,136,.1);color:var(--teal)">Jogszabályok 2026</div>
+            <h3 style="font-size:.98rem">Digitális Termékútlevél (DPP) – Mire kell felkészülni?</h3>
+            <p>Az új EU-s előírások alapján az alapanyagok nyomon követhetővé válnak.</p>
+          </div>
+        </div>
+        <div class="blog-card blog-dark">
+          <div class="blog-body" style="padding:1.5rem">
+            <div class="blog-tag" style="background:rgba(255,255,255,.1);color:#fff">EPR Reform</div>
+            <h3 style="font-size:.98rem">Az EPR rendszer hazai változásai és mit jelent ez az iparnak?</h3>
+            <p style="-webkit-line-clamp:2">A kiterjesztett gyártói felelősség 2026-os felülvizsgálata nagy változásokat hoz.</p>
+            <div style="display:inline-flex;align-items:center;gap:5px;color:var(--teall);font-weight:700;font-size:.8rem;margin-top:.875rem">Olvasás <i class="fa-solid fa-arrow-right" style="font-size:.6rem"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-        const animateCounter = (el) => {
-            const target = parseInt(el.dataset.target, 10);
-            const suffix = el.dataset.suffix || '';
-            const duration = 1800;
-            const start = performance.now();
+<!-- ══ KAPCSOLAT ══ -->
+<section id="kapcsolat" class="section section-white">
+  <div class="max contact-grid">
+    <div class="reveal">
+      <div class="section-tag"><span></span> Kapcsolat</div>
+      <h2>Kérjen <span class="serif-italic grad">ingyenes</span> árajánlatot!</h2>
+      <p style="color:var(--muted);font-weight:300;line-height:1.7;margin-bottom:2.25rem">Mérnökeink 24 órán belül felveszik Önnel a kapcsolatot és személyre szabott megoldást kínálnak.</p>
+      <a href="tel:+3612345678" class="contact-item">
+        <div class="c-icon"><i class="fa-solid fa-phone" style="color:var(--teal);font-size:.85rem;transition:color .2s"></i></div>
+        <div><div class="c-lbl">Telefon</div><div class="c-val">+36 1 234 5678</div></div>
+      </a>
+      <a href="mailto:info@veszelyeshulladek.net" class="contact-item">
+        <div class="c-icon"><i class="fa-solid fa-envelope" style="color:var(--teal);font-size:.85rem;transition:color .2s"></i></div>
+        <div><div class="c-lbl">E-mail</div><div class="c-val" style="font-size:.88rem">info@veszelyeshulladek.net</div></div>
+      </a>
+      <div class="contact-item" style="cursor:default">
+        <div class="c-icon"><i class="fa-solid fa-clock" style="color:var(--teal);font-size:.85rem"></i></div>
+        <div><div class="c-lbl">Nyitvatartás</div><div class="c-val">H–P: 07:00–18:00</div></div>
+      </div>
+    </div>
+    <div class="reveal">
+      <div class="form-wrap">
+        <form id="cform" novalidate>
+          <div class="form-grid">
+            <div><label class="form-lbl">Név / Cégnév *</label><input type="text" required placeholder="Pl. Acme Kft." class="ff"></div>
+            <div><label class="form-lbl">E-mail *</label><input type="email" required placeholder="email@ceg.hu" class="ff"></div>
+          </div>
+          <div class="form-mb"><label class="form-lbl">Telefonszám</label><input type="tel" placeholder="+36 20 123 4567" class="ff"></div>
+          <div class="form-mb">
+            <label class="form-lbl">Szolgáltatás *</label>
+            <select required class="ff" style="color:var(--muted)">
+              <option value="" disabled selected>Válasszon...</option>
+              <option>Ipari / Veszélyes hulladék szállítás</option>
+              <option>Építési / Inert konténer rendelés</option>
+              <option>ESG Tanácsadás / DPP Felkészítés</option>
+              <option>Egyéb megkeresés</option>
+            </select>
+          </div>
+          <div class="form-mb"><label class="form-lbl">Részletek *</label><textarea rows="4" required placeholder="Hulladék típusa, mennyiség, helyszín..." class="ff" style="resize:none"></textarea></div>
+          <div class="form-check">
+            <input type="checkbox" id="gdpr" required>
+            <label for="gdpr">Elfogadom az <a href="#" style="color:var(--teal)">adatkezelési tájékoztatót</a>.</label>
+          </div>
+          <button type="submit" class="form-submit" id="sbtn">
+            <span id="stxt">Üzenet Küldése</span>
+            <i class="fa-solid fa-paper-plane" id="sico" style="font-size:.82rem"></i>
+            <i class="fa-solid fa-spinner fa-spin" id="sload" style="display:none;font-size:.82rem"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
 
-            const tick = (now) => {
-                const elapsed = Math.min((now - start) / duration, 1);
-                const eased = 1 - Math.pow(1 - elapsed, 3);
-                const value = Math.round(eased * target);
-                el.textContent = value + suffix;
-                if (elapsed < 1) requestAnimationFrame(tick);
-            };
-            requestAnimationFrame(tick);
-        };
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="f-logo">
+          <div class="f-logo-icon"><i class="fa-solid fa-leaf"></i></div>
+          <span style="font-weight:800;font-size:1rem;color:#fff">VH<span style="color:rgba(255,255,255,.28);font-weight:300">.net</span></span>
+        </div>
+        <p style="color:rgba(255,255,255,.38);font-size:.82rem;font-weight:300;line-height:1.7;margin-bottom:.625rem">Magyarország egyik vezető veszélyes hulladékkezelő vállalata. AI-alapú technológia, zöld flotta, 100% megfelelés.</p>
+        <div class="social-row">
+          <a href="#" class="soc" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" class="soc" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        </div>
+      </div>
+      <div>
+        <div class="f-head">Szolgáltatások</div>
+        <a href="#" class="f-link">Veszélyes hulladék szállítás</a>
+        <a href="#" class="f-link">ADR szállítás</a>
+        <a href="#" class="f-link">Építési inert hulladék</a>
+        <a href="#" class="f-link">ESG tanácsadás</a>
+      </div>
+      <div>
+        <div class="f-head">Kapcsolat</div>
+        <div class="f-info"><i class="fa-solid fa-phone" style="color:var(--teal);width:13px;font-size:.72rem"></i> +36 1 234 5678</div>
+        <div class="f-info"><i class="fa-solid fa-envelope" style="color:var(--teal);width:13px;font-size:.72rem"></i> info@veszelyeshulladek.net</div>
+        <div class="f-info"><i class="fa-solid fa-location-dot" style="color:var(--teal);width:13px;font-size:.72rem"></i> 1117 Budapest, Ipar u. 12.</div>
+        <div class="f-info"><i class="fa-solid fa-clock" style="color:var(--teal);width:13px;font-size:.72rem"></i> H–P: 07:00–18:00</div>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <span class="f-copy">&copy; 2026 VeszélyesHulladék.net – Minden jog fenntartva.</span>
+      <div class="f-legal"><a href="#">Adatkezelés</a><a href="#">ÁSZF</a></div>
+    </div>
+  </div>
+</footer>
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    animateCounter(entry.target);
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.5 });
+<!-- ══ MOBILE NAV ══ -->
+<div class="mob-nav">
+  <a href="#"><i class="fa-solid fa-house"></i><span>Főoldal</span></a>
+  <a href="#szolgaltatasok"><i class="fa-solid fa-truck-fast"></i><span>Szolgáltatás</span></a>
+  <button onclick="openModal()" style="color:var(--teal)"><i class="fa-solid fa-recycle"></i><span>Kisokos</span></button>
+  <a href="#kapcsolat" style="color:var(--forest)"><i class="fa-regular fa-envelope"></i><span>Ajánlat</span></a>
+</div>
 
-        counters.forEach(el => observer.observe(el));
-    })();
+<!-- ══ KISOKOS MODAL ══ -->
+<div id="modal" class="closed" onclick="if(event.target===this)closeModal()">
+  <div id="modal-box">
+    <button class="modal-close" onclick="closeModal()"><i class="fa-solid fa-xmark"></i></button>
+    <h2 style="font-size:1.45rem;font-weight:700;color:var(--ink);margin-bottom:5px;display:flex;align-items:center;gap:9px">
+      <i class="fa-solid fa-recycle" style="color:var(--teal)"></i> Szelektív Kisokos
+    </h2>
+    <p style="font-size:.83rem;color:var(--muted);margin-bottom:1.125rem">Írja be a hulladék nevét – azonnal megmutatjuk, hova dobja!</p>
+    <div style="position:relative;margin-bottom:.875rem">
+      <i class="fa-solid fa-magnifying-glass" style="position:absolute;left:15px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:.82rem;pointer-events:none"></i>
+      <input type="text" id="msearch" class="modal-search" placeholder="Pl: PET palack, akkumulátor, festék..." autocomplete="off">
+    </div>
+    <div id="mresult" style="display:none;margin-bottom:1rem"></div>
+    <div class="kat-grid">
+      <button class="kat-btn" style="border-color:#fef08a;background:#fefce8" onclick="doSearch('műanyag')">
+        <div class="kat-icon" style="background:#eab308"><i class="fa-solid fa-recycle"></i></div>
+        <div class="kat-title" style="color:#713f12">Sárga kukás</div>
+        <div class="kat-sub" style="color:#92400e">Műanyag, fém</div>
+      </button>
+      <button class="kat-btn" style="border-color:#bfdbfe;background:#eff6ff" onclick="doSearch('papír')">
+        <div class="kat-icon" style="background:#3b82f6"><i class="fa-regular fa-newspaper"></i></div>
+        <div class="kat-title" style="color:#1e3a8a">Kék kukás</div>
+        <div class="kat-sub" style="color:#1d4ed8">Papír, karton</div>
+      </button>
+      <button class="kat-btn" style="border-color:#bbf7d0;background:#f0fdf4" onclick="doSearch('üveg')">
+        <div class="kat-icon" style="background:#16a34a"><i class="fa-solid fa-wine-bottle"></i></div>
+        <div class="kat-title" style="color:#14532d">Zöld kukás</div>
+        <div class="kat-sub" style="color:#15803d">Üveg</div>
+      </button>
+      <button class="kat-btn" style="border-color:#fecaca;background:#fef2f2" onclick="doSearch('veszélyes')">
+        <div class="kat-icon" style="background:#dc2626"><i class="fa-solid fa-triangle-exclamation"></i></div>
+        <div class="kat-title" style="color:#7f1d1d">Veszélyes</div>
+        <div class="kat-sub" style="color:#991b1b">Speciális kezelés</div>
+      </button>
+    </div>
+  </div>
+</div>
 
-    // ── Naptár (Flatpickr) ───────────────────────────────────────────────
-    (function initDatepicker() {
-        const input = document.getElementById('datepicker-input');
-        if (!input || typeof flatpickr === 'undefined') return;
+<script>
+// Navbar scroll
+var nav=document.getElementById('nav');
+window.addEventListener('scroll',function(){nav.classList.toggle('sc',scrollY>30)},{passive:true});
 
-        flatpickr(input, {
-            locale: 'hu',
-            dateFormat: 'Y. F j., l',
-            minDate: 'today',
-            maxDate: new Date().fp_incr(365),
-            disableMobile: true,
-            onChange: function(selectedDates, dateStr) {
-                const result = document.getElementById('naptar-eredmeny');
-                if (!result) return;
-                const day = selectedDates[0].getDay();
-                const isWeekend = day === 0 || day === 6;
-                if (isWeekend) {
-                    result.innerHTML = `
-                        <div class="p-4 bg-orange-50 border border-orange-200 rounded-2xl text-sm text-orange-800 flex items-start gap-3">
-                            <i class="fa-solid fa-circle-info mt-0.5 text-orange-500"></i>
-                            <div><b>${dateStr}</b><br>Hétvégi nap – sürgős esetben hívjon minket: <a href="tel:+3612345678" class="font-bold underline">+36 1 234 5678</a></div>
-                        </div>`;
-                } else {
-                    result.innerHTML = `
-                        <div class="p-4 bg-green-50 border border-green-200 rounded-2xl text-sm text-green-800 flex items-start gap-3">
-                            <i class="fa-solid fa-circle-check mt-0.5 text-green-600"></i>
-                            <div><b>${dateStr}</b><br>Elszállítás lehetséges. Veszélyes hulladék: <b>08:00–15:00</b>, Inert: <b>07:00–17:00</b></div>
-                        </div>`;
-                }
-            }
-        });
-    })();
+// Mobile menu
+function toggleMenu(){
+  var m=document.getElementById('mob-menu'),o=m.style.display==='block';
+  m.style.display=o?'none':'block';
+  document.getElementById('h1').style.transform=o?'':'rotate(45deg) translate(5px,5px)';
+  document.getElementById('h2').style.opacity=o?'1':'0';
+  document.getElementById('h3').style.transform=o?'':'rotate(-45deg) translate(5px,-5px)';
+}
 
-    // ── Szelektív Kisokos adatbázis ─────────────────────────────────────
-    const HULLADEK_DB = {
-        // Műanyag / Sárga
-        'pet': { hova: 'Sárga kukás (Műanyag)', icon: 'fa-bottle-water', color: '#CA8A04', bg: 'bg-yellow-50', border: 'border-yellow-200', tipp: 'Lapítsa össze és kupak nélkül dobja be!', kategoria: 'Műanyag' },
-        'műanyag': { hova: 'Sárga kukás (Műanyag)', icon: 'fa-recycle', color: '#CA8A04', bg: 'bg-yellow-50', border: 'border-yellow-200', tipp: 'Tisztítsa ki, majd lapítsa össze!', kategoria: 'Műanyag' },
-        'flakon': { hova: 'Sárga kukás (Műanyag)', icon: 'fa-bottle-droplet', color: '#CA8A04', bg: 'bg-yellow-50', border: 'border-yellow-200', tipp: 'Tisztán és kupaklezárva.', kategoria: 'Műanyag' },
-        'tetrapak': { hova: 'Sárga kukás (Műanyag)', icon: 'fa-box', color: '#CA8A04', bg: 'bg-yellow-50', border: 'border-yellow-200', tipp: 'Öblítse ki, lapítsa össze!', kategoria: 'Műanyag' },
-        'fémdoboz': { hova: 'Sárga kukás (Fém)', icon: 'fa-box', color: '#CA8A04', bg: 'bg-yellow-50', border: 'border-yellow-200', tipp: 'Öblítse ki!', kategoria: 'Fém' },
-        'konzerv': { hova: 'Sárga kukás (Fém)', icon: 'fa-box', color: '#CA8A04', bg: 'bg-yellow-50', border: 'border-yellow-200', tipp: 'Tisztítsa ki alaposan.', kategoria: 'Fém' },
-        // Papír / Kék
-        'papír': { hova: 'Kék kukás (Papír)', icon: 'fa-file', color: '#2563EB', bg: 'bg-blue-50', border: 'border-blue-200', tipp: 'Csak száraz, tiszta papír! Zsíros papír kukába megy.', kategoria: 'Papír' },
-        'karton': { hova: 'Kék kukás (Papír)', icon: 'fa-box-open', color: '#2563EB', bg: 'bg-blue-50', border: 'border-blue-200', tipp: 'Hajtsa össze a dobozokat!', kategoria: 'Papír' },
-        'újság': { hova: 'Kék kukás (Papír)', icon: 'fa-newspaper', color: '#2563EB', bg: 'bg-blue-50', border: 'border-blue-200', tipp: 'Gépi szalaggal összekötve is leadható.', kategoria: 'Papír' },
-        'füzet': { hova: 'Kék kukás (Papír)', icon: 'fa-book', color: '#2563EB', bg: 'bg-blue-50', border: 'border: border-blue-200', tipp: 'Spirálkötés eltávolítható.', kategoria: 'Papír' },
-        // Üveg / Zöld
-        'üveg': { hova: 'Zöld kukás (Üveg)', icon: 'fa-wine-bottle', color: '#16A34A', bg: 'bg-green-50', border: 'border-green-200', tipp: 'Kupak nélkül, öblítve. Tükör és kerámia NEM idevaló!', kategoria: 'Üveg' },
-        'palack': { hova: 'Zöld kukás (Üveg)', icon: 'fa-wine-bottle', color: '#16A34A', bg: 'bg-green-50', border: 'border-green-200', tipp: 'Kupak nélkül dobja be!', kategoria: 'Üveg' },
-        // Veszélyes
-        'festék': { hova: 'Veszélyes hulladékgyűjtő', icon: 'fa-flask', color: '#DC2626', bg: 'bg-red-50', border: 'border-red-200', tipp: 'TILOS a kukába dobni! Vigye hulladékgyűjtő udvarba.', kategoria: 'Veszélyes' },
-        'akkumulátor': { hova: 'Veszélyes hulladékgyűjtő', icon: 'fa-battery-full', color: '#DC2626', bg: 'bg-red-50', border: 'border-red-200', tipp: 'Autóakkumulátor: szervizbe, lakásakksi: üzletbe.', kategoria: 'Veszélyes' },
-        'elem': { hova: 'Elem-gyűjtő (bolt/iskola)', icon: 'fa-battery-half', color: '#EA580C', bg: 'bg-orange-50', border: 'border-orange-200', tipp: 'Szupermarketek, iskolák elemgyűjtőibe.', kategoria: 'Veszélyes' },
-        'gyógyszer': { hova: 'Patikába visszavinni!', icon: 'fa-pills', color: '#DC2626', bg: 'bg-red-50', border: 'border-red-200', tipp: 'Lejárt gyógyszert kizárólag gyógyszertárba!', kategoria: 'Veszélyes' },
-        'olaj': { hova: 'Veszélyes hulladékgyűjtő', icon: 'fa-oil-can', color: '#DC2626', bg: 'bg-red-50', border: 'border-red-200', tipp: 'Fáradt olaj: szervizbe vagy hulladékgyűjtőbe. TILOS leönteni!', kategoria: 'Veszélyes' },
-        'elektronika': { hova: 'WEEE-gyűjtőpont (Telecom/áruház)', icon: 'fa-laptop', color: '#7C3AED', bg: 'bg-purple-50', border: 'border-purple-200', tipp: 'Elektronika vásárlásakor a kereskedő köteles átvenni!', kategoria: 'Elektronika' },
-        'telefon': { hova: 'WEEE-gyűjtőpont', icon: 'fa-mobile', color: '#7C3AED', bg: 'bg-purple-50', border: 'border-purple-200', tipp: 'Telefonboltban vagy áruházban leadható.', kategoria: 'Elektronika' },
-        // Szerves / Komposzt
-        'bio': { hova: 'Barna kukás (Bio)', icon: 'fa-seedling', color: '#92400E', bg: 'bg-amber-50', border: 'border-amber-200', tipp: 'Maradék étel, kávézacc, tojáshéj idevaló.', kategoria: 'Bio' },
-        'zöldhulladék': { hova: 'Barna kukás / Komposzt', icon: 'fa-leaf', color: '#92400E', bg: 'bg-amber-50', border: 'border-amber-200', tipp: 'Fűnyírék, levél, gallyak.', kategoria: 'Bio' },
-    };
+// Scroll reveal
+(function(){
+  var obs=new IntersectionObserver(function(e){
+    e.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target)}});
+  },{threshold:.08,rootMargin:'0px 0px -30px 0px'});
+  document.querySelectorAll('.reveal').forEach(function(el){obs.observe(el)});
+})();
 
-    function findHulladek(input) {
-        if (!input) return null;
-        const q = input.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-        const keys = Object.keys(HULLADEK_DB);
-        return keys.find(k => {
-            const norm = k.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-            return q.includes(norm);
-        }) || null;
-    }
-
-    function renderResult(found, containerId) {
-        const el = document.getElementById(containerId);
-        if (!el) return;
-        if (!found) {
-            el.innerHTML = `<div class="p-5 rounded-2xl bg-gray-50 border border-gray-200 text-center text-sm text-muted">
-                <i class="fa-solid fa-circle-question text-2xl text-muted/40 mb-2 block"></i>
-                Nem találtuk az adatbázisban. Hívjon minket: <a href="tel:+3612345678" class="text-forest font-bold underline">+36 1 234 5678</a>
-            </div>`;
-            el.classList.remove('hidden');
-            return;
-        }
-        const d = HULLADEK_DB[found];
-        el.innerHTML = `
-            <div class="p-5 rounded-2xl ${d.bg} border ${d.border}">
-                <div class="flex items-center gap-3 mb-3">
-                    <div class="w-10 h-10 rounded-xl flex items-center justify-center" style="background:${d.color}20">
-                        <i class="fa-solid ${d.icon} text-sm" style="color:${d.color}"></i>
-                    </div>
-                    <div>
-                        <p class="font-bold text-sm" style="color:${d.color}">${d.hova}</p>
-                        <p class="text-[10px] text-muted uppercase tracking-wider">${d.kategoria}</p>
-                    </div>
-                </div>
-                <p class="text-sm text-muted flex items-start gap-2">
-                    <i class="fa-solid fa-circle-info mt-0.5 flex-shrink-0" style="color:${d.color}"></i>
-                    ${d.tipp}
-                </p>
-            </div>`;
-        el.classList.remove('hidden');
-    }
-
-    document.getElementById('kisokos-kereso').addEventListener('input', function() {
-        const found = findHulladek(this.value);
-        const mini = document.getElementById('kisokos-mini-result');
-        if (!mini) return;
-        if (found) {
-            mini.textContent = '→ ' + HULLADEK_DB[found].hova;
-        } else if (this.value.length > 1) {
-            mini.textContent = 'Nincs találat – próbálja meg a teljes böngészőben!';
-        } else {
-            mini.textContent = '';
-        }
+// Counter
+(function(){
+  var done=new Set();
+  var obs=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(!e.isIntersecting||done.has(e.target))return;
+      done.add(e.target);
+      var el=e.target,t=+el.dataset.t,s=el.dataset.s||'',start=performance.now(),dur=1500;
+      (function tick(now){
+        var p=Math.min((now-start)/dur,1),ease=1-Math.pow(1-p,3);
+        el.textContent=Math.round(ease*t)+s;
+        if(p<1)requestAnimationFrame(tick);
+      })(start);
     });
+  },{threshold:.5});
+  document.querySelectorAll('.counter').forEach(function(el){obs.observe(el)});
+})();
 
-    document.getElementById('modal-kereso').addEventListener('input', function() {
-        const found = findHulladek(this.value);
-        renderResult(found, 'kisokos-eredmeny-doboz');
-    });
+// Datepicker
+(function(){
+  var inp=document.getElementById('dpick');
+  if(!inp)return;
+  var d=new Date(); inp.min=d.toISOString().split('T')[0];
+  var days=['vasárnap','hétfő','kedd','szerda','csütörtök','péntek','szombat'];
+  var months=['január','február','március','április','május','június','július','augusztus','szeptember','október','november','december'];
+  inp.addEventListener('change',function(){
+    var r=document.getElementById('dp-result');
+    if(!this.value){r.innerHTML='';return}
+    var d2=new Date(this.value+'T12:00:00'),dn=d2.getDay(),we=dn===0||dn===6;
+    var lbl=d2.getFullYear()+'. '+months[d2.getMonth()]+' '+d2.getDate()+'., '+days[dn];
+    r.innerHTML=we
+      ?'<div style="padding:11px 13px;background:#fff7ed;border:1.5px solid #fed7aa;border-radius:13px;font-size:.8rem;color:#9a3412;display:flex;gap:7px"><i class="fa-solid fa-circle-info" style="color:#f97316;margin-top:1px;flex-shrink:0"></i><div><b>'+lbl+'</b><br>Hétvégi nap – sürgős esetben: <a href="tel:+3612345678" style="font-weight:700">+36 1 234 5678</a></div></div>'
+      :'<div style="padding:11px 13px;background:#f0fdf4;border:1.5px solid #bbf7d0;border-radius:13px;font-size:.8rem;color:#166534;display:flex;gap:7px"><i class="fa-solid fa-circle-check" style="color:#16a34a;margin-top:1px;flex-shrink:0"></i><div><b>'+lbl+'</b><br>Elszállítás lehetséges. Veszélyes: <b>08:00–15:00</b> · Inert: <b>07:00–17:00</b></div></div>';
+  });
+})();
 
-    function modalSearch(term) {
-        const input = document.getElementById('modal-kereso');
-        if (input) { input.value = term; input.dispatchEvent(new Event('input')); }
-    }
+// Kisokos DB
+var DB={
+  'pet':{h:'Sárga kukás (Műanyag)',i:'fa-bottle-water',c:'#CA8A04',bg:'#fefce8',br:'#fef08a',t:'Lapítsa össze, kupak nélkül!',k:'Műanyag'},
+  'műanyag':{h:'Sárga kukás (Műanyag)',i:'fa-recycle',c:'#CA8A04',bg:'#fefce8',br:'#fef08a',t:'Tisztítsa ki, lapítsa össze!',k:'Műanyag'},
+  'flakon':{h:'Sárga kukás (Műanyag)',i:'fa-bottle-droplet',c:'#CA8A04',bg:'#fefce8',br:'#fef08a',t:'Tisztán és kupaklezárva.',k:'Műanyag'},
+  'tetrapak':{h:'Sárga kukás (Műanyag)',i:'fa-box',c:'#CA8A04',bg:'#fefce8',br:'#fef08a',t:'Öblítse ki, lapítsa össze!',k:'Műanyag'},
+  'papír':{h:'Kék kukás (Papír)',i:'fa-file',c:'#2563EB',bg:'#eff6ff',br:'#bfdbfe',t:'Csak száraz, tiszta papír! Zsíros papír kukába.',k:'Papír'},
+  'karton':{h:'Kék kukás (Papír)',i:'fa-box-open',c:'#2563EB',bg:'#eff6ff',br:'#bfdbfe',t:'Hajtsa össze a dobozokat!',k:'Papír'},
+  'újság':{h:'Kék kukás (Papír)',i:'fa-newspaper',c:'#2563EB',bg:'#eff6ff',br:'#bfdbfe',t:'Összekötve is leadható.',k:'Papír'},
+  'üveg':{h:'Zöld kukás (Üveg)',i:'fa-wine-bottle',c:'#16A34A',bg:'#f0fdf4',br:'#bbf7d0',t:'Kupak nélkül, öblítve. Tükör NEM idevaló!',k:'Üveg'},
+  'palack':{h:'Zöld kukás (Üveg)',i:'fa-wine-bottle',c:'#16A34A',bg:'#f0fdf4',br:'#bbf7d0',t:'Kupak nélkül dobja be!',k:'Üveg'},
+  'festék':{h:'Veszélyes hulladékgyűjtő',i:'fa-flask',c:'#DC2626',bg:'#fef2f2',br:'#fecaca',t:'TILOS a kukába! Hulladékgyűjtő udvarba.',k:'Veszélyes'},
+  'akkumulátor':{h:'Veszélyes hulladékgyűjtő',i:'fa-battery-full',c:'#DC2626',bg:'#fef2f2',br:'#fecaca',t:'Autóakksi: szervizbe. Lakásakksi: üzletbe.',k:'Veszélyes'},
+  'elem':{h:'Elemgyűjtő (bolt/iskola)',i:'fa-battery-half',c:'#EA580C',bg:'#fff7ed',br:'#fed7aa',t:'Szupermarketek elemgyűjtőibe.',k:'Veszélyes'},
+  'gyógyszer':{h:'Patikába visszavinni!',i:'fa-pills',c:'#DC2626',bg:'#fef2f2',br:'#fecaca',t:'Lejárt gyógyszert kizárólag gyógyszertárba!',k:'Veszélyes'},
+  'olaj':{h:'Veszélyes hulladékgyűjtő',i:'fa-oil-can',c:'#DC2626',bg:'#fef2f2',br:'#fecaca',t:'Fáradt olaj: szervizbe. TILOS leönteni!',k:'Veszélyes'},
+  'elektronika':{h:'WEEE-gyűjtőpont (Telecom/áruház)',i:'fa-laptop',c:'#7C3AED',bg:'#faf5ff',br:'#e9d5ff',t:'Vásárláskor a kereskedő köteles átvenni!',k:'Elektronika'},
+  'telefon':{h:'WEEE-gyűjtőpont',i:'fa-mobile',c:'#7C3AED',bg:'#faf5ff',br:'#e9d5ff',t:'Telefonboltban leadható.',k:'Elektronika'},
+  'bio':{h:'Barna kukás (Bio)',i:'fa-seedling',c:'#92400E',bg:'#fffbeb',br:'#fde68a',t:'Maradék étel, kávézacc, tojáshéj.',k:'Bio'},
+  'veszélyes':{h:'Veszélyes hulladékgyűjtő',i:'fa-triangle-exclamation',c:'#DC2626',bg:'#fef2f2',br:'#fecaca',t:'Hulladékgyűjtő udvarra kell vinni.',k:'Veszélyes'},
+};
+function norm(s){return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'')}
+function find(q){if(!q)return null;var nq=norm(q);return Object.keys(DB).find(function(k){return nq.includes(norm(k))})||null}
+function renderResult(found,id){
+  var el=document.getElementById(id);if(!el)return;
+  if(!found){
+    el.innerHTML='<div style="padding:12px;background:#f8fafc;border:1.5px solid #e2e8f0;border-radius:13px;text-align:center;font-size:.8rem;color:var(--muted)"><i class="fa-solid fa-circle-question" style="font-size:1.4rem;color:#cbd5e1;display:block;margin-bottom:5px"></i>Nem találtuk. Hívjon: <a href="tel:+3612345678" style="color:var(--forest);font-weight:700">+36 1 234 5678</a></div>';
+    el.style.display='block';return;
+  }
+  var d=DB[found];
+  el.innerHTML='<div style="padding:13px;background:'+d.bg+';border:1.5px solid '+d.br+';border-radius:13px"><div style="display:flex;align-items:center;gap:9px;margin-bottom:7px"><div style="width:34px;height:34px;border-radius:9px;background:'+d.c+'22;display:flex;align-items:center;justify-content:center;flex-shrink:0"><i class="fa-solid '+d.i+'" style="color:'+d.c+';font-size:.85rem"></i></div><div><div style="font-weight:700;color:'+d.c+';font-size:.85rem">'+d.h+'</div><div style="font-size:.62rem;color:var(--muted);text-transform:uppercase;letter-spacing:.07em">'+d.k+'</div></div></div><div style="font-size:.78rem;color:var(--muted);display:flex;gap:5px;align-items:flex-start"><i class="fa-solid fa-circle-info" style="color:'+d.c+';margin-top:2px;flex-shrink:0;font-size:.65rem"></i>'+d.t+'</div></div>';
+  el.style.display='block';
+}
+document.getElementById('ks-input').addEventListener('input',function(){
+  var f=find(this.value),m=document.getElementById('ks-mini');
+  m.textContent=f?'→ '+DB[f].h:this.value.length>1?'Nincs találat – próbálja a teljes böngészőben!':'';
+});
+document.getElementById('msearch').addEventListener('input',function(){renderResult(find(this.value),'mresult')});
+function doSearch(t){var i=document.getElementById('msearch');i.value=t;i.dispatchEvent(new Event('input'))}
 
-    // ── Kisokos Modal ─────────────────────────────────────────────────────
-    const kisokosModal = document.getElementById('kisokos-modal');
+// Modal
+function openModal(){
+  var m=document.getElementById('modal');
+  m.classList.replace('closed','open');
+  document.body.style.overflow='hidden';
+  setTimeout(function(){document.getElementById('msearch').focus()},280);
+}
+function closeModal(){
+  var m=document.getElementById('modal');
+  m.classList.replace('open','closed');
+  document.body.style.overflow='';
+}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeModal()});
 
-    function openKisokos() {
-        if (!kisokosModal) return;
-        kisokosModal.classList.remove('closed');
-        kisokosModal.classList.add('open');
-        document.body.style.overflow = 'hidden';
-        setTimeout(() => {
-            const input = document.getElementById('modal-kereso');
-            if (input) input.focus();
-        }, 300);
-    }
+// Form
+document.getElementById('cform').addEventListener('submit',function(e){
+  e.preventDefault();
+  var btn=document.getElementById('sbtn'),txt=document.getElementById('stxt'),ico=document.getElementById('sico'),ld=document.getElementById('sload');
+  btn.disabled=true;btn.style.opacity='.7';ico.style.display='none';ld.style.display='inline-block';txt.textContent='Küldés...';
+  setTimeout(function(){
+    btn.style.background='var(--teal)';btn.style.opacity='1';ld.style.display='none';
+    ico.className='fa-solid fa-circle-check';ico.style.display='inline-block';txt.textContent='Sikeresen elküldve!';
+    document.getElementById('cform').reset();
+    setTimeout(function(){
+      btn.disabled=false;btn.style.background='var(--forest)';ico.className='fa-solid fa-paper-plane';txt.textContent='Üzenet Küldése';
+    },3000);
+  },1600);
+});
 
-    function closeKisokos() {
-        if (!kisokosModal) return;
-        kisokosModal.classList.remove('open');
-        kisokosModal.classList.add('closed');
-        document.body.style.overflow = '';
-    }
-
-    function closeKisokosBackdrop(e) {
-        if (e.target === kisokosModal) closeKisokos();
-    }
-
-    // Close on Escape
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeKisokos(); });
-
-    // ── Contact Form ──────────────────────────────────────────────────────
-    document.getElementById('contact-form').addEventListener('submit', function(e) {
-        e.preventDefault();
-        const btn = document.getElementById('submit-btn');
-        const text = document.getElementById('btn-text');
-        const icon = document.getElementById('btn-icon');
-        const loader = document.getElementById('btn-loader');
-
-        btn.disabled = true;
-        btn.classList.add('opacity-75', 'cursor-not-allowed');
-        icon.classList.add('hidden');
-        loader.classList.remove('hidden');
-        text.textContent = 'Küldés folyamatban...';
-
-        // Simulate API call
-        setTimeout(() => {
-            btn.classList.remove('opacity-75', 'cursor-not-allowed', 'bg-forest');
-            btn.classList.add('bg-teal');
-            icon.classList.remove('hidden');
-            icon.className = 'fa-solid fa-circle-check';
-            loader.classList.add('hidden');
-            text.textContent = 'Sikeresen elküldve!';
-            this.reset();
-
-            setTimeout(() => {
-                btn.classList.remove('bg-teal');
-                btn.classList.add('bg-forest');
-                btn.disabled = false;
-                btn.classList.remove('opacity-75', 'cursor-not-allowed');
-                icon.className = 'fa-solid fa-paper-plane';
-                text.textContent = 'Üzenet Küldése';
-            }, 3000);
-        }, 1800);
-    });
-
-    // ── Smooth scroll for anchors ─────────────────────────────────────────
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-        a.addEventListener('click', e => {
-            const target = document.querySelector(a.getAttribute('href'));
-            if (target) {
-                e.preventDefault();
-                const offset = 88;
-                const top = target.getBoundingClientRect().top + window.scrollY - offset;
-                window.scrollTo({ top, behavior: 'smooth' });
-            }
-        });
-    });
-    </script>
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click',function(e){
+    var t=document.querySelector(this.getAttribute('href'));
+    if(t){e.preventDefault();window.scrollTo({top:t.getBoundingClientRect().top+scrollY-78,behavior:'smooth'})}
+  });
+});
+</script>
 </body>
 </html>
