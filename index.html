@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="https://npmcdn.com/flatpickr/dist/l10n/hu.js"></script>
-    
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
@@ -19,13 +18,7 @@
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: {
-                        deepgreen: '#0B4F36',
-                        earthbeige: '#FDFBF7',
-                        slate: '#475569',
-                        accent: '#F97316',
-                        turq: '#0D9488'
-                    },
+                    colors: { deepgreen: '#0B4F36', earthbeige: '#FDFBF7', slate: '#475569', accent: '#F97316', turq: '#0D9488' },
                     fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'], }
                 }
             }
@@ -35,27 +28,17 @@
     <style>
         body { background-color: #FDFBF7; color: #1e293b; -webkit-font-smoothing: antialiased; overflow-x: hidden; padding-bottom: 80px; }
         @media (min-width: 768px) { body { padding-bottom: 0; } }
-        
-        .noise::after {
-            content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-            opacity: 0.02; z-index: 100; pointer-events: none;
-        }
-
+        .noise::after { content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"); opacity: 0.02; z-index: 100; pointer-events: none; }
         .animated-bg-blob { position: absolute; filter: blur(100px); z-index: 0; opacity: 0.4; pointer-events: none; }
         .soft-shadow { box-shadow: 0 10px 40px -10px rgba(11, 79, 54, 0.08); }
         .gsap-reveal { opacity: 0; visibility: hidden; }
-        
         .card-hover { transition: all 0.4s ease; }
         .card-hover:hover { transform: translateY(-5px); box-shadow: 0 20px 40px -10px rgba(11, 79, 54, 0.12); }
-        
         .img-card { overflow: hidden; position: relative; }
         .img-card img { transition: transform 0.6s ease; width: 100%; height: 100%; object-fit: cover; }
         .img-card:hover img { transform: scale(1.05); }
-
         .flatpickr-calendar { background: white !important; border-radius: 20px !important; border: 1px solid rgba(0,0,0,0.05) !important; box-shadow: 0 10px 40px -10px rgba(11, 79, 54, 0.1) !important; font-family: 'Plus Jakarta Sans', sans-serif !important; }
         .flatpickr-day.selected { background: #10B981 !important; border-color: #10B981 !important; }
-        
         .img-fallback { background-color: #cbd5e1; display: flex; align-items: center; justify-content: center; color: #64748b; font-size: 0.875rem; text-align: center; padding: 1rem;}
     </style>
 </head>
@@ -72,12 +55,10 @@
                 </div>
                 <span class="font-bold text-xl text-deepgreen tracking-tight">VH<span class="text-slate-400 font-light">.net</span></span>
             </a>
-            
             <div class="hidden md:flex items-center space-x-8 text-sm font-semibold text-slate-600">
                 <a href="#szolgaltatasok" class="hover:text-deepgreen transition-colors">Szolgáltatások</a>
                 <a onclick="openKisokos()" class="hover:text-deepgreen transition-colors cursor-pointer">Szelektív Kisokos</a>
             </div>
-
             <div class="hidden md:flex items-center gap-6 relative z-10">
                 <a href="#kapcsolat" class="text-sm font-bold text-deepgreen hover:text-turq transition-colors">Ajánlatkérés</a>
                 <button class="bg-accent text-white px-6 py-2.5 rounded-full text-sm font-bold hover:bg-orange-500 transition-all shadow-lg shadow-orange-500/20">
@@ -105,7 +86,6 @@
                     </a>
                 </div>
             </div>
-
             <div id="hero-image" class="relative lg:ml-10">
                 <div class="relative w-full aspect-[4/3] rounded-[2.5rem] shadow-2xl overflow-hidden img-fallback">
                     <img src="hero.png" alt="Professzionális hulladékkezelés" class="absolute inset-0 w-full h-full object-cover z-10">
@@ -126,7 +106,6 @@
 
     <section id="ux-centre" class="py-10 px-4 -mt-12 relative z-20">
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
-            
             <div class="bento-item bg-white rounded-[2rem] p-8 soft-shadow border border-gray-100 flex flex-col justify-between">
                 <div>
                     <i class="fa-regular fa-calendar-days text-3xl text-accent mb-4"></i>
@@ -139,7 +118,6 @@
                 </div>
                 <div id="naptar-eredmeny" class="mt-4"></div>
             </div>
-
             <div id="kisokos-bento" class="bento-item bg-deepgreen rounded-[2rem] p-8 soft-shadow relative overflow-hidden flex flex-col justify-between">
                 <i class="fa-solid fa-recycle text-4xl text-white/10 absolute right-6 top-6"></i>
                 <div>
@@ -155,7 +133,6 @@
                     Teljes böngészés <i class="fa-solid fa-arrow-right ml-1"></i>
                 </a>
             </div>
-
             <div class="bento-item bg-white rounded-[2rem] p-8 soft-shadow border border-gray-100 flex flex-col justify-between">
                 <div>
                     <i class="fa-regular fa-file-invoice text-3xl text-turq mb-4"></i>
@@ -175,7 +152,6 @@
                 <h2 class="text-3xl md:text-5xl font-extrabold text-deepgreen mb-4">Komplex Megoldások</h2>
                 <p class="text-slate max-w-2xl mx-auto text-lg font-light">Hulladékok szakszerű kezelése a legmagasabb minőségi sztenderdek szerint.</p>
             </div>
-
             <div id="service-grid" class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="service-card img-card bg-earthbeige rounded-[2.5rem] border border-gray-100 flex flex-col card-hover gsap-reveal">
                     <div class="h-52 overflow-hidden rounded-t-[2.5rem] img-fallback relative">
@@ -187,7 +163,6 @@
                         <p class="text-sm text-slate font-light leading-relaxed">Vegyszerek, fáradt olaj és ipari maradékok szigorú engedélyek alapján történő elszállítása és megsemmisítése.</p>
                     </div>
                 </div>
-
                 <div class="service-card img-card bg-earthbeige rounded-[2.5rem] border border-gray-100 flex flex-col card-hover gsap-reveal">
                     <div class="h-52 overflow-hidden rounded-t-[2.5rem] img-fallback relative">
                         <img src="szolg2.png" alt="Inert hulladék" class="absolute inset-0 z-10">
@@ -198,7 +173,6 @@
                         <p class="text-sm text-slate font-light leading-relaxed">Bontási törmelék, kitermelt föld és nagy mennyiségű ipari maradék elszállítása multiliftes konténerekkel.</p>
                     </div>
                 </div>
-
                 <div class="service-card img-card bg-earthbeige rounded-[2.5rem] border border-gray-100 flex flex-col card-hover gsap-reveal">
                     <div class="h-52 overflow-hidden rounded-t-[2.5rem] img-fallback relative">
                         <img src="szolg3.png" alt="Tanácsadás" class="absolute inset-0 z-10">
@@ -217,7 +191,6 @@
         <div class="absolute inset-0 z-0 bg-deepgreen flex items-center justify-center text-white/50">
             <img src="tech.png" alt="Válogató üzem" class="absolute inset-0 w-full h-full object-cover opacity-30 mix-blend-overlay z-10">
         </div>
-        
         <div id="tech-content" class="relative z-20 text-center max-w-4xl mx-auto gsap-reveal">
             <h2 class="text-4xl md:text-6xl font-extrabold text-white mb-6">M.I. alapú Hulladékválogatás</h2>
             <p class="text-lg md:text-xl text-white/80 mb-10 font-light px-4 leading-relaxed">
@@ -242,7 +215,6 @@
             <div class="text-center mb-16 gsap-reveal">
                 <h2 class="text-3xl md:text-5xl font-extrabold text-deepgreen mb-4">Szakmai Hírek</h2>
             </div>
-
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <article class="bg-white rounded-[2rem] p-6 soft-shadow flex flex-col sm:flex-row gap-6 card-hover cursor-pointer border border-gray-100 gsap-reveal">
                     <div class="w-full sm:w-40 h-40 rounded-xl overflow-hidden img-fallback relative flex-shrink-0">
@@ -254,7 +226,6 @@
                         <p class="text-sm text-slate line-clamp-2">Hogyan segíti a mesterséges intelligencia a körforgásos gazdaságot.</p>
                     </div>
                 </article>
-                
                 <article class="bg-white rounded-[2rem] p-6 soft-shadow flex flex-col sm:flex-row gap-6 card-hover cursor-pointer border border-gray-100 gsap-reveal">
                     <div class="w-full sm:w-40 h-40 rounded-xl overflow-hidden img-fallback relative flex-shrink-0">
                         <img src="blog2.png" alt="Blog 2" class="absolute inset-0 w-full h-full object-cover z-10">
@@ -272,18 +243,12 @@
     <section id="kapcsolat" class="py-24 px-4 bg-white border-t border-gray-100 relative z-10">
         <div class="max-w-4xl mx-auto bg-earthbeige rounded-[2.5rem] p-8 md:p-16 soft-shadow border border-gray-100 gsap-reveal relative overflow-hidden">
             <div class="absolute top-0 right-0 w-32 h-32 bg-accent/10 rounded-bl-full"></div>
-            
             <h2 class="text-3xl md:text-4xl font-extrabold text-deepgreen mb-2 relative z-10">Kérjen árajánlatot!</h2>
             <p class="text-base text-slate mb-10 relative z-10 font-light">Mérnökeink 24 órán belül felveszik Önnel a kapcsolatot.</p>
-            
             <form id="contact-form" class="space-y-6 relative z-10">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                        <input type="text" required placeholder="Név / Cégnév" class="form-input w-full bg-white border border-gray-200 rounded-2xl px-5 py-4 focus:outline-none focus:border-turq focus:ring-1 focus:ring-turq transition text-sm">
-                    </div>
-                    <div>
-                        <input type="email" required placeholder="E-mail cím" class="form-input w-full bg-white border border-gray-200 rounded-2xl px-5 py-4 focus:outline-none focus:border-turq focus:ring-1 focus:ring-turq transition text-sm">
-                    </div>
+                    <div><input type="text" required placeholder="Név / Cégnév" class="form-input w-full bg-white border border-gray-200 rounded-2xl px-5 py-4 focus:outline-none focus:border-turq focus:ring-1 focus:ring-turq transition text-sm"></div>
+                    <div><input type="email" required placeholder="E-mail cím" class="form-input w-full bg-white border border-gray-200 rounded-2xl px-5 py-4 focus:outline-none focus:border-turq focus:ring-1 focus:ring-turq transition text-sm"></div>
                 </div>
                 <div>
                     <select required class="form-input w-full bg-white border border-gray-200 rounded-2xl px-5 py-4 focus:outline-none focus:border-turq focus:ring-1 focus:ring-turq text-slate-600 transition text-sm">
@@ -293,9 +258,7 @@
                         <option>Egyéb / Tanácsadás ESG Pro</option>
                     </select>
                 </div>
-                <div>
-                    <textarea rows="4" required placeholder="Hulladék pontos típusa és becsült mennyisége..." class="form-input w-full bg-white border border-gray-200 rounded-2xl px-5 py-4 focus:outline-none focus:border-turq focus:ring-1 focus:ring-turq transition resize-none text-sm"></textarea>
-                </div>
+                <div><textarea rows="4" required placeholder="Hulladék pontos típusa és becsült mennyisége..." class="form-input w-full bg-white border border-gray-200 rounded-2xl px-5 py-4 focus:outline-none focus:border-turq focus:ring-1 focus:ring-turq transition resize-none text-sm"></textarea></div>
                 <button type="submit" id="submit-btn" class="w-full bg-deepgreen text-white font-bold py-5 rounded-2xl hover:bg-[#083A28] transition-all duration-300 shadow-lg shadow-deepgreen/20 text-base md:text-lg">
                     Üzenet Küldése <i class="fa-solid fa-paper-plane ml-2"></i>
                 </button>
@@ -304,16 +267,12 @@
     </section>
 
     <footer class="py-12 px-6 border-t border-gray-100 text-center bg-deepgreen text-white relative z-10">
-        <p class="text-sm text-white/60 font-light">
-            &copy; 2026 VeszélyesHulladék.net Elite Pro. Tiszta környezet, biztonságos jövő.
-        </p>
+        <p class="text-sm text-white/60 font-light">&copy; 2026 VeszélyesHulladék.net Elite Pro. Tiszta környezet, biztonságos jövő.</p>
     </footer>
 
     <button id="ai-robot" class="fixed bottom-28 md:bottom-8 right-8 w-16 h-16 bg-accent text-white rounded-full flex items-center justify-center text-3xl shadow-xl hover:scale-110 hover:bg-orange-500 transition-all z-50 group border-2 border-white">
         <i class="fa-solid fa-robot"></i>
-        <span class="absolute right-20 bg-white text-deepgreen text-sm font-bold px-4 py-2 rounded-xl shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap border border-gray-100">
-            Segítsek válogatni?
-        </span>
+        <span class="absolute right-20 bg-white text-deepgreen text-sm font-bold px-4 py-2 rounded-xl shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap border border-gray-100">Segítsek válogatni?</span>
     </button>
 
     <div class="md:hidden fixed bottom-0 left-0 w-full z-40 bg-white/95 backdrop-blur-md border-t border-gray-100 px-6 py-2 pb-6 shadow-[0_-10px_20px_rgba(0,0,0,0.05)]">
@@ -322,11 +281,9 @@
                 <i class="fa-solid fa-recycle text-2xl"></i>
                 <span class="text-[10px] font-semibold uppercase tracking-wider">Kisokos</span>
             </a>
-            
             <a href="#kapcsolat" class="absolute left-1/2 -translate-x-1/2 -top-10 bg-deepgreen text-white w-18 h-18 rounded-full flex items-center justify-center shadow-lg border-4 border-white hover:bg-turq transition">
                 <i class="fa-solid fa-paper-plane text-2xl"></i>
             </a>
-
             <a href="tel:+3612345678" class="flex flex-col items-center gap-1.5 text-slate-400 hover:text-deepgreen transition">
                 <i class="fa-solid fa-phone text-2xl"></i>
                 <span class="text-[10px] font-semibold uppercase tracking-wider">Hívás</span>
@@ -346,14 +303,12 @@
                 <i class="fa-solid fa-magnifying-glass absolute left-5 top-1/2 -translate-y-1/2 text-slate-400"></i>
                 <input type="text" id="modal-kereso" placeholder="Mit dobna ki? (Pl: sörösüveg)" class="w-full bg-gray-50 border border-gray-200 rounded-full px-6 py-4 pl-14 focus:outline-none focus:border-turq transition text-sm">
             </div>
-            <div id="kisokos-eredmeny-doboz" class="hidden min-h-[150px] p-6 rounded-2xl bg-earthbeige border border-gray-100 flex flex-col items-center justify-center text-center animate-[fadeUp_0.3s_ease]">
-            </div>
+            <div id="kisokos-eredmeny-doboz" class="hidden min-h-[150px] p-6 rounded-2xl bg-earthbeige border border-gray-100 flex flex-col items-center justify-center text-center animate-[fadeUp_0.3s_ease]"></div>
         </div>
     </div>
 
     <script>
         gsap.registerPlugin(ScrollTrigger);
-
         window.addEventListener("load", () => {
             gsap.set(".gsap-reveal", { autoAlpha: 1 }); 
             const tlHero = gsap.timeline({ defaults: { ease: "power4.out" } });
@@ -361,15 +316,10 @@
                   .from("#hero-text > *", { y: 50, opacity: 0, duration: 1.2, stagger: 0.1 }, "-=0.8")
                   .from("#hero-image", { x: 50, opacity: 0, scale: 0.9, duration: 1.5 }, "-=1")
                   .from("#hero-badge", { x: -30, opacity: 0, scale: 0.8, duration: 1 }, "-=1");
-
             gsap.to("#ai-robot", { scale: 1.05, duration: 1.5, repeat: -1, yoyo: true, ease: "sine.inOut" });
         });
-
         gsap.from(".bento-item", { scrollTrigger: { trigger: "#ux-centre", start: "top 80%" }, y: 60, opacity: 0, duration: 1, stagger: 0.2, ease: "back.out(1.2)" });
-        gsap.utils.toArray('.gsap-reveal').forEach((el) => {
-            gsap.from(el, { scrollTrigger: { trigger: el, start: "top 85%" }, y: 50, opacity: 0, duration: 1, ease: "power3.out" });
-        });
-
+        gsap.utils.toArray('.gsap-reveal').forEach((el) => { gsap.from(el, { scrollTrigger: { trigger: el, start: "top 85%" }, y: 50, opacity: 0, duration: 1, ease: "power3.out" }); });
         if (window.innerWidth >= 768) {
             document.addEventListener("mousemove", (event) => {
                 const mouseX = event.clientX; const mouseY = event.clientY;
@@ -377,7 +327,6 @@
                 gsap.to("#blob-2", { x: -(mouseX / 40), y: -(mouseY / 40), duration: 2, ease: "power2.out" });
             });
         }
-
         flatpickr("#datepicker-input", {
             locale: "hu", dateFormat: "Y. F d., l", minDate: "today",
             onChange: function(selectedDates, dateStr) {
@@ -386,19 +335,16 @@
                 gsap.from(eredmeny.firstChild, { opacity: 0, y: 10, duration: 0.4 });
             }
         });
-
         const HULLADEK_ADATBAZIS = {
             "pet": { "hova": "Sárga (Műanyag)", "icon": "fa-bottle-water", "color": "text-yellow-500", "szov": "Lapítsa ki!" },
             "papir": { "hova": "Kék (Papír)", "icon": "fa-box", "color": "text-blue-500", "szov": "Csak tiszta papír!" },
             "uveg": { "hova": "Zöld (Üveg)", "icon": "fa-wine-bottle", "color": "text-green-500", "szov": "Kupak nélkül!" },
             "festek": { "hova": "Veszélyes", "icon": "fa-flask", "color": "text-red-500", "szov": "Tilos a kukába dobni!" }
         };
-
         function kisokosKereses(inputScov) {
             const input = inputScov.toLowerCase().trim();
             const e = document.getElementById('kisokos-eredmeny-doboz');
             if(!input) { e.classList.add('hidden'); return; }
-            
             let found = Object.keys(HULLADEK_ADATBAZIS).find(k => input.includes(k));
             if(found) {
                 const data = HULLADEK_ADATBAZIS[found];
@@ -411,11 +357,9 @@
         }
         document.getElementById('kisokos-kereso').addEventListener('input', e => kisokosKereses(e.target.value));
         document.getElementById('modal-kereso').addEventListener('input', e => kisokosKereses(e.target.value));
-
         const modal = document.getElementById('kisokos-modal'), modalContent = document.getElementById('kisokos-content');
         function openKisokos() { modal.classList.remove('hidden'); gsap.to(modal, { opacity: 1, duration: 0.3 }); gsap.fromTo(modalContent, { scale: 0.9, y: 30 }, { scale: 1, y: 0, duration: 0.5 }); }
         function closeKisokos() { gsap.to(modal, { opacity: 0, duration: 0.3, onComplete: () => modal.classList.add('hidden') }); }
-        
         document.getElementById('contact-form').addEventListener('submit', function(e) {
             e.preventDefault();
             gsap.to('#submit-btn', { scale: 1.05, duration: 0.2, yoyo: true, repeat: 1, onComplete: () => alert('Sikeres küldés!') });
